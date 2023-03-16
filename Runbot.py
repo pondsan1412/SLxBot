@@ -39,19 +39,34 @@ class CustomHelpCommand(commands.DefaultHelpCommand):
             if commands_signatures:
                 cog_name = getattr(cog, "qualified_name","Other")
                 embed.add_field(
-                    name="cog_name",
+                    name="Tracks List ",
                     value="\n".join(commands_signatures),
                     inline=False,
                 )
-        embed.set_footer(text="For help, contact developer team")
-#this is button class i dont know why it doesn't red instead of grey wtf
+        embed.set_footer(text="Page 1/2 | Developer team")
         button = discord.ui.Button(
             style=discord.ButtonStyle.green,
-            label="Developer Team",
-            url="https://twitter.com/pondsan1412",
+            label="Next Page",
+            custom_id="help_next_page",
         )
         view = discord.ui.View()
         view.add_item(button)
         await self.get_destination().send(embed=embed,view=view)
+
+    async def send_help_page(self, interaction:discord.Interaction, page_number):
+        if page_number == 1:
+            await self.send_bot_help(self.context.bot.cogs)
+        elif page_number == 2:
+           embed = discord.Embed(title="555")
+           await interaction.response.send_message(embed=embed)
+
+    async def interaction_check(self, interaction: discord.Interaction) -> bool:
+        if interaction.custom_id == "help_next_page":
+            await interaction.response.defer()
+            await self.send_help_page(2)
+            return True
+        return False
+    
+
 bot = bot()
 bot.run(secret.discord_token, reconnect=True)
