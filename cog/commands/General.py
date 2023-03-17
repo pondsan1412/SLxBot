@@ -13,7 +13,7 @@ class General(commands.Cog):
     )
     async def _test(self,ctx):
          # Create Embed object
-        embed = discord.Embed(title="Title", description="Description", color=discord.Color.blue())
+        embed = discord.Embed(title="Page1/2", description="Description", color=discord.Color.blue())
 
         #Add fields to Embed object
         embed.add_field(name="Field 1", value="Value 1", inline=False)
@@ -37,16 +37,17 @@ class General(commands.Cog):
 
         while True:
             try:
-                reaction, user = await self.bot.wait_for('reaction_add', timeout=60.0, check=check)
+                reaction, user = await self.bot.wait_for('reaction_add', timeout=5.0,check=check)
             except asyncio.TimeoutError:
-               # If user does not reply within 60 seconds
+                embed_timeout = discord.Embed(title="Timeout", description="this page was delete so try to command again I was set timeout in 10s", color=discord.Color.red())
+                await message.edit(embed=embed_timeout)
                 await message.clear_reactions()
                 break
             else:
                 if str(reaction.emoji) == "➡️" and current_embed_page == 1:
-                   
-            # Send the second Embed object
-                    embed2 = discord.Embed(title="Page 2", description="This is page 2", color=discord.Color.green())
+                # Your code for switching to page 2
+                    # Send the second Embed object
+                    embed2 = discord.Embed(title="Page 2/2", description="This is page 2 Zquka kung", color=discord.Color.green())
                     await message.edit(embed=embed2)
                     current_embed_page = 2
                 elif str(reaction.emoji) == "⬅️" and current_embed_page == 2:
