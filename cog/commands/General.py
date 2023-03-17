@@ -13,7 +13,7 @@ class General(commands.Cog):
     )
     async def _test(self,ctx):
          # Create Embed object
-        embed = discord.Embed(title="Page1/2", description="Description", color=discord.Color.blue())
+        embed = discord.Embed(title="Page 1/2", description="Description", color=discord.Color.blue())
 
         #Add fields to Embed object
         embed.add_field(name="Field 1", value="Value 1", inline=False)
