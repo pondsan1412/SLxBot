@@ -2,9 +2,9 @@ import discord
 from discord.ext import commands
 import os
 from cog import config
-from cog import TracksList
+from cog.commands import TracksList
 from cog import secret
-from cog import General
+from cog.commands import General
 class CustomHelpCommand(commands.DefaultHelpCommand):
     def __init__(self, **options):
         super().__init__(**options)
@@ -23,8 +23,8 @@ class bot(commands.Bot):
         bot = self.get_channel(ch_ready)
         await bot.send("I'm ready sir")
     async def setup_hook(self):
-        await bot.load_extension("cog.TracksList")
-        await bot.load_extension("cog.General")
+        await bot.load_extension("cog.commands.TracksList")
+        await bot.load_extension("cog.commands.General")
         await bot.tree.sync()
 
 bot = bot()
