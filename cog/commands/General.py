@@ -48,8 +48,8 @@ class General(commands.Cog):
                 # Your code for switching to page 2
                     # Send the second Embed object
                     embed2 = discord.Embed(title="Page 2/2", description="This is page 2 Zquka kung", color=discord.Color.green())
-                    embed.add_field(name="Field 1", value="Value 1", inline=False)
-                    embed.add_field(name="Field 2", value="Value 2", inline=False)
+                    embed2.add_field(name="Field 1", value="Value 1", inline=False)
+                    embed2.add_field(name="Field 2", value="Value 2", inline=False)
                     await message.edit(embed=embed2)
                     current_embed_page = 2
                 elif str(reaction.emoji) == "⬅️" and current_embed_page == 2:
