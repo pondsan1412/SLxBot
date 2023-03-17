@@ -26,8 +26,10 @@ class bot(commands.Bot):
         await bot.load_extension("cog.commands.General")
         bot.remove_command('help')
         cog = ['cog.help']
-        await bot.load_extension("cog.help")
+        await bot.load_extension("cog.testhelp")
         await bot.tree.sync()
+
+   
 
 bot = bot()
 bot.run(secret.discord_token, reconnect=True)
