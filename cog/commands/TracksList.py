@@ -9,7 +9,7 @@ class TracksList(commands.Cog):
     @commands.hybrid_command(
         name="babypark",
         description="",
-        help="|babypark track",
+        help="babypark track",
         aliases=["dBP","dbp","DBP","Dbp","dbP","5-1"]
     )
     async def _track_dBP(self,ctx):
