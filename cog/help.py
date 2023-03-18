@@ -60,7 +60,7 @@ class Help(commands.Cog):
                 elif command.help is None:
                     temp += f'{command}\n'
                 else:
-                    temp += f'`{command}`'
+                    temp += f'{command}'
                     for i in range(0, max - len(f'{command}') + 1):
                         temp += '   '
                     temp += f'{command.help}\n'
