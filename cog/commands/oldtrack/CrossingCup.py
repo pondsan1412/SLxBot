@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 from cog import config
 import os
-class Crossing(commands.Cog):
+class CrossingCup(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     @commands.hybrid_command(
@@ -25,12 +25,11 @@ class Crossing(commands.Cog):
         await ctx.send(embed=embedVar)
 
 
-
     @commands.hybrid_command(
         name="cheeseland",
         description="",
         help="Cheese Land Track",
-        aliases=["dCL","dcl","DCl","dcL","6-2"]
+        aliases=["dCL","dcl","DCl","dcL","DcL", "6-2"]
     )
     async def _track_dCL(self,ctx):
         embedVar = discord.Embed(
@@ -45,4 +44,4 @@ class Crossing(commands.Cog):
         await ctx.send(embed=embedVar)
     
 async def setup(bot):
-    await bot.add_cog(Crossing(bot))
+    await bot.add_cog(CrossingCup(bot))
