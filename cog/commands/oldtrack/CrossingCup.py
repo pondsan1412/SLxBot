@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
-import json
 from cog import config
+import json
 import os
 
 class CrossingCup(commands.Cog):
@@ -11,7 +11,7 @@ class CrossingCup(commands.Cog):
         name="babypark",
         description="Baby Park",
         help="Baby Park Track",
-        aliases=["dBP","dbp","DBP","dBp","dbP","6-1"]
+        aliases=["bp","BP","dBP","dbp","DBP","dBp","dbP","6-1"]
     )
     async def _track_dBP(self,ctx):
         embedVar = discord.Embed(
@@ -30,7 +30,7 @@ class CrossingCup(commands.Cog):
         name="cheeseland",
         description="Cheese Land",
         help="Cheese Land Track",
-        aliases=["dCL","dcl","DCl","dcL","DcL", "6-2"]
+        aliases=["cl","CL","dCL","dcl","DCl","dcL","DcL", "6-2"]
     )
     async def _track_dCL(self,ctx):
         embedVar = discord.Embed(
@@ -51,7 +51,7 @@ class CrossingCup(commands.Cog):
         help="Wild Woods Track",
         aliases=["ww","WW","dWW","dww","DWW","DwW","dWw","dWw","dwW","6-3"]
     )
-    async def _track_dBP(self,ctx):
+    async def _track_dWW(self,ctx):
         embedVar = discord.Embed(
             title="Crossing Cup",
             description="Wild Woods",
@@ -68,15 +68,15 @@ class CrossingCup(commands.Cog):
         name="animalcrossing",
         description="Animal Crossing",
         help="Animal Crossing Track",
-        aliases=["ac","AC","dAC","dac","DAC","DaC","dAc","dAc","daC","6-4"]
+        aliases=["ac","AC","dAC","dac","DAC","DaC","dAc","daC","6-4"]
     )
-    async def _track_dBP(self,ctx):
+    async def _track_dAC(self,ctx):
         embedVar = discord.Embed(
             title="Crossing Cup",
             description="Animal Crossing",
             color=discord.Color.dark_purple()
         )
-        embedVar.set_image(url=config.WildWoods)
+        embedVar.set_image(url=config.AnimalCrossing)
         embedVar.set_thumbnail(url=config.Crossing)
         embedVar.add_field(name="Track",value="6-4",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
