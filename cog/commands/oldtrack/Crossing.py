@@ -23,6 +23,9 @@ class Crossing(commands.Cog):
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
 
+async def setup(bot):
+    await bot.add_cog(Crossing(bot))
+
     @commands.hybrid_command(
         name="cheeseland",
         description="",
