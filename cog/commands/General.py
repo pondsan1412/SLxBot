@@ -66,21 +66,6 @@ class General(commands.Cog):
                     await message.edit(embed=embed)
                     current_embed_page = 1
                 await message.remove_reaction(str(reaction.emoji), user)
-    @commands.hybrid_command(
-        name="testname",
-        description="",
-        help="there are no conflict",
-        aliases=["bmc3","bMC3","mc3","MC3"]
-    ) 
-    async def _testname(self,ctx):
-        await ctx.reply("this is bMC3 track")
-    @commands.hybrid_command(
-        name="testname1",
-        description="",
-        help="there are no conflict",
-        aliases=["mc","MC"]
-    ) 
-    async def _testname1(self,ctx):
-        await ctx.reply("this is mc track")   
+    
 async def setup(bot):
     await bot.add_cog(General(bot))
