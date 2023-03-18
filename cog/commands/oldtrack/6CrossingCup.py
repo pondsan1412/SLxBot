@@ -10,7 +10,7 @@ class CrossingCup(commands.Cog):
     @commands.hybrid_command(
         name="babypark",
         description="Baby Park",
-        help="track code: dBP, 6-1 or lowerletter ",
+        help="track code: `dBP, 6-1` or lowerletter ",
         aliases=["bp","BP","dBP","dbp","DBP","dBp","dbP","6-1"]
     )
     async def _track_dBP(self,ctx):

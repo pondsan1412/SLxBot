@@ -10,7 +10,7 @@ class BoomerangCup(commands.Cog):
     @commands.hybrid_command(
         name="bangkokrush",
         description="Bangkok Rush",
-        help="Track Code: bBR, bbr, or 20-1",
+        help="Track Code: `bBR, bbr, or 20-1`",
         aliases=["bBR","bbr","20-1"]
     )
     async def _track_bBR(self,ctx):
@@ -29,7 +29,7 @@ class BoomerangCup(commands.Cog):
     @commands.hybrid_command(
         name="mariocircuit",
         description="Mario Circuit",
-        help="Track Code: bMC, bmc, or 20-2",
+        help="Track Code: `bMC, bmc, or 20-2`",
         aliases=["bMC","bmc","20-2"]
     )
     async def _track_bMC(self,ctx):
@@ -48,7 +48,7 @@ class BoomerangCup(commands.Cog):
     @commands.hybrid_command(
         name="waluigistadium",
         description="Waluigi Stadium",
-        help="Track Code: bWS, bws, or 20-3",
+        help="Track Code: `bWS, bws, or 20-3`",
         aliases=["bWS","bws","20-3"]
     )
     async def _track_SSC(self,ctx):
@@ -67,7 +67,7 @@ class BoomerangCup(commands.Cog):
     @commands.hybrid_command(
         name="singaporespeedway",
         description="Singapore Speedway",
-        help="Track Code: bSSy, bssy, or 20-4",
+        help="Track Code: `bSSy, bssy, or 20-4`",
         aliases=["bSSy","bssy","20-4"]
     )
     async def _track_TR(self,ctx):

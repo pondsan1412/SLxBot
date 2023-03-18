@@ -28,6 +28,8 @@ class bot(commands.Bot):
         await bot.load_extension("cog.commands.oldtrack.1MushroomCup")
         await bot.load_extension("cog.commands.dlctrack.20BoomerangCup")
         await bot.tree.sync()
+        bot.remove_command("help")
+        await bot.load_extension("cog.help")
 
    
 
