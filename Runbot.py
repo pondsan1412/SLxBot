@@ -25,8 +25,6 @@ class bot(commands.Bot):
         await bot.load_extension("cog.commands.TracksList")
         await bot.load_extension("cog.commands.General")
         await bot.load_extension("cog.commands.oldtrack.Crossing")
-        
-        
         await bot.tree.sync()
 
    
