@@ -5,15 +5,18 @@ from cog import config
 from cog.commands import TracksList
 from cog import secret
 from cog.commands import General
-from cog.help import Help
+from cog.help import CustomHelpCommand
 
 class bot(commands.Bot):
     def __init__(self):
         super().__init__(
             command_prefix=commands.when_mentioned_or("."),
             intents=discord.Intents.all(),
-            
-        )
+            help_command= CustomHelpCommand(
+            no_category=None
+            )
+            )
+        
     async def on_ready(self):
         print(self.user)
         ch_ready = int(secret.ch_onready)
@@ -28,8 +31,8 @@ class bot(commands.Bot):
         await bot.load_extension("cog.commands.oldtrack.1MushroomCup")
         await bot.load_extension("cog.commands.dlctrack.20BoomerangCup")
         await bot.tree.sync()
-        bot.remove_command("help")
-        await bot.load_extension("cog.help")
+       
+       
 
    
 
