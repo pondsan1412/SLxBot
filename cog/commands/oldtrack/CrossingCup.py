@@ -3,6 +3,7 @@ from discord.ext import commands
 import json
 from cog import config
 import os
+
 class CrossingCup(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
