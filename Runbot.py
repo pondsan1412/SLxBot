@@ -2,11 +2,7 @@ import discord
 from discord.ext import commands
 import os
 from cog import config
-from cog.commands import TracksList
 from cog import secret
-from cog.commands import General
-from cog.help import Help
-
 class bot(commands.Bot):
     def __init__(self):
         super().__init__(

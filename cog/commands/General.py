@@ -10,8 +10,7 @@ from discord.ext.commands import HelpCommand, CommandNotFound
 class General(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self._original_help_command = bot.help_command
-        bot.help_command.cog = self
+
     def cog_unload(self):
         self.bot.help_command = self._original_help_command
     async def help(self, ctx):

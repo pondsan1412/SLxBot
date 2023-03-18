@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands
 
 prefix = '.'
-bot_title = 'Bot title'
+bot_title = 'Mario Kart Track List'
 bot_description = ''
 bottom_info = ''
 
@@ -102,9 +102,6 @@ class Help(commands.Cog):
         else:
             msg = ' '.join(commands)
             embed.add_field(name="Not found", value=f'Command/category `{msg}` not found.')
-
-        await ctx.send(f'{ctx.author.mention}', embed=embed)
-        
 #button class9o0p-[il.=;'0-p[']\
         button = discord.ui.Button(
             style=discord.ButtonStyle.green,
