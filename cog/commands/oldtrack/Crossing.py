@@ -19,7 +19,8 @@ class Crossing(commands.Cog):
             color=discord.Color.dark_purple()
         )
         embedVar.set_image(url=config.BabyPark)
-        embedVar.add_field(name="babypark",value="None",inline=False)
+        embedVar.set_thumbnail(url=config.Crossing)
+        embedVar.add_field(name="Track Code:",value="6-1",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
 
@@ -32,7 +33,7 @@ async def setup(bot):
         help="Cheese Land Track",
         aliases=["dCL","dcl","DCl","dcL","6-2"]
     )
-    async def _track_dBP(self,ctx):
+    async def _track_dCL(self,ctx):
         embedVar = discord.Embed(
             title="Cheese Land",
             description="GBA Cheese Land",
