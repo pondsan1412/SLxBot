@@ -3,7 +3,9 @@
 
 import discord
 from discord.ext import commands
-
+from discord.ui import Button
+from discord.ui import View
+from discord import app_commands
 prefix = '.'
 bot_title = 'Mario Kart Track List'
 bot_description = ''
@@ -104,13 +106,14 @@ class Help(commands.Cog):
             embed.add_field(name="Not found", value=f'Command/category `{msg}` not found.')
 #button class9o0p-[il.=;'0-p[']\
         button = discord.ui.Button(
-            style=discord.ButtonStyle.green,
+            style=discord.ButtonStyle.red,
             label="contact developer",
             url="https://c4.wallpaperflare.com/wallpaper/560/855/635/spy-x-family-anya-forger-hd-wallpaper-preview.jpg",
         )
         view = discord.ui.View()
         view.add_item(button)
         await ctx.send(f'{ctx.author.mention}', embed=embed,view=view)
+        
         return
 # Cog setup
 async def setup(bot):

@@ -17,9 +17,6 @@ class bot(commands.Bot):
         print(self.user)
         ch_ready = int(secret.ch_onready)
         print(ch_ready)
-        bot = self.get_channel(ch_ready)
-        await bot.send("I'm ready")
-        
     async def setup_hook(self):
         await bot.load_extension("cog.commands.TracksList")
         await bot.load_extension("cog.commands.General")
