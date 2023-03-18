@@ -9,18 +9,18 @@ class TracksList(commands.Cog):
     @commands.hybrid_command(
         name="babypark",
         description="",
-        help="babypark track",
-        aliases=["dBP","dbp","DBP","Dbp","dbP","5-1"]
+        help="Baby Park Track",
+        aliases=["dBP","dbp","DBP","dBp","dbP","5-1"]
     )
     async def _track_dBP(self,ctx):
         embedVar = discord.Embed(
-            title="dBP baby park ベビパ 5-1",
+            title="Baby Park",
             description="GCN Baby Park",
-            color=discord.Color.dark_blue()
+            color=discord.Color.dark_purple()
         )
-        embedVar.set_image(url=config.babypark)
+        embedVar.set_image(url=config.BabyPark)
         embedVar.add_field(name="babypark",value="None",inline=False)
-        embedVar.set_footer(text=f"using command by{ctx.author}")
+        embedVar.set_footer(text=f"Using a command by{ctx.author}")
         await ctx.send(embed=embedVar)
     
 async def setup(bot):
