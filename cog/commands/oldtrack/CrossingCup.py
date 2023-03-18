@@ -49,7 +49,7 @@ class CrossingCup(commands.Cog):
         name="wildwoods",
         description="Wild Woods",
         help="Wild Woods Track",
-        aliases=["ww","WW","dWW","dww","DWW","DwW","dWw","dWw","dwW","6-3"]
+        aliases=["ww","WW","dWW","dww","DWW","DwW","dWw","dwW","6-3"]
     )
     async def _track_dWW(self,ctx):
         embedVar = discord.Embed(
