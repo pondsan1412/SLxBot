@@ -21,7 +21,7 @@ class CrossingCup(commands.Cog):
         )
         embedVar.set_image(url=config.BabyPark)
         embedVar.set_thumbnail(url=config.Crossing)
-        embedVar.add_field(name="Track Code",value="6-1",inline=False)
+        embedVar.add_field(name="Track Code:",value="6-1",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
 
@@ -40,7 +40,7 @@ class CrossingCup(commands.Cog):
         )
         embedVar.set_image(url=config.CheeseLand)
         embedVar.set_thumbnail(url=config.Crossing)       
-        embedVar.add_field(name="Track Code",value="6-2",inline=False)
+        embedVar.add_field(name="Track Code:",value="6-2",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
     
@@ -49,7 +49,7 @@ class CrossingCup(commands.Cog):
         name="wildwoods",
         description="Wild Woods",
         help="Wild Woods Track",
-        aliases=["ww","WW","dWW","dww","DWW","DwW","dWw","dWw","dwW","6-3"]
+        aliases=["ww","WW","dWW","dww","DWW","DwW","dWw","dwW","6-3"]
     )
     async def _track_dWW(self,ctx):
         embedVar = discord.Embed(
@@ -59,7 +59,7 @@ class CrossingCup(commands.Cog):
         )
         embedVar.set_image(url=config.WildWoods)
         embedVar.set_thumbnail(url=config.Crossing)
-        embedVar.add_field(name="Track Code",value="6-3",inline=False)
+        embedVar.add_field(name="Track Code:",value="6-3",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
 
@@ -78,7 +78,7 @@ class CrossingCup(commands.Cog):
         )
         embedVar.set_image(url=config.AnimalCrossing)
         embedVar.set_thumbnail(url=config.Crossing)
-        embedVar.add_field(name="Track",value="6-4",inline=False)
+        embedVar.add_field(name="Track Code:",value="6-4",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
 

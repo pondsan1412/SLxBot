@@ -24,7 +24,9 @@ class bot(commands.Bot):
     async def setup_hook(self):
         await bot.load_extension("cog.commands.TracksList")
         await bot.load_extension("cog.commands.General")
-        await bot.load_extension("cog.commands.oldtrack.CrossingCup")
+        await bot.load_extension("cog.commands.oldtrack.6CrossingCup")
+        await bot.load_extension("cog.commands.oldtrack.1MushroomCup")
+        await bot.load_extension("cog.commands.dlctrack.20BoomerangCup")
         await bot.tree.sync()
 
    
