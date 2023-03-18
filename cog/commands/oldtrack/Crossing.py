@@ -20,7 +20,7 @@ class TracksList(commands.Cog):
         )
         embedVar.set_image(url=config.BabyPark)
         embedVar.add_field(name="babypark",value="None",inline=False)
-        embedVar.set_footer(text=f"Using a command by{ctx.author}")
+        embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
     
 async def setup(bot):
