@@ -20,7 +20,7 @@ class Crossing(commands.Cog):
         )
         embedVar.set_image(url=config.BabyPark)
         embedVar.set_thumbnail(url=config.Crossing)
-        embedVar.add_field(name="Track Code:",value="6-1",inline=False)
+        embedVar.add_field(name="Track",value="6-1",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
 
@@ -40,7 +40,8 @@ async def setup(bot):
             color=discord.Color.dark_purple()
         )
         embedVar.set_image(url=config.CheeseLand)
-        embedVar.add_field(name="cheeseland",value="None",inline=False)
+        embedVar.set_thumbnail(url=config.Crossing)       
+        embedVar.add_field(name="Track Code",value="6-2",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
     
