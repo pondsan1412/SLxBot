@@ -10,7 +10,7 @@ class TracksList(commands.Cog):
         name="babypark",
         description="",
         help="Baby Park Track",
-        aliases=["dBP","dbp","DBP","dBp","dbP","5-1"]
+        aliases=["dBP","dbp","DBP","dBp","dbP","6-1"]
     )
     async def _track_dBP(self,ctx):
         embedVar = discord.Embed(
