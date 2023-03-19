@@ -38,8 +38,8 @@ class BoomerangCup(commands.Cog):
             description="DS Mario Circuit",
             color=discord.Color.dark_purple()
         )
-        embedVar.set_image(url=config.WaterPark)
-        embedVar.set_thumbnail(url=config.Mushroom)       
+        embedVar.set_image(url=config.bMarioCircuit)
+        embedVar.set_thumbnail(url=config.Boomerang)       
         embedVar.add_field(name="Track Code:",value="20-2",inline=False)
         embedVar.set_footer(text=f"Using a command by {ctx.author}")
         await ctx.send(embed=embedVar)
@@ -51,7 +51,7 @@ class BoomerangCup(commands.Cog):
         help="Track Code: `bWS, bws, or 20-3`",
         aliases=["bWS","bws","20-3"]
     )
-    async def _track_SSC(self,ctx):
+    async def _track_bWS(self,ctx):
         embedVar = discord.Embed(
             title="Boomerang Cup",
             description="GCN Waluigi Stadium",
@@ -70,7 +70,7 @@ class BoomerangCup(commands.Cog):
         help="Track Code: `bSSy, bssy, or 20-4`",
         aliases=["bSSy","bssy","20-4"]
     )
-    async def _track_TR(self,ctx):
+    async def _track_bSSy(self,ctx):
         embedVar = discord.Embed(
             title="Boomerang Cup",
             description="Tour Singapore Speedway",

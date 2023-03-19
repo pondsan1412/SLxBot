@@ -107,7 +107,7 @@ class Help(commands.Cog):
 #button class9o0p-[il.=;'0-p[']\
         button = discord.ui.Button(
             style=discord.ButtonStyle.red,
-            label="contact developer",
+            label="Contact Developer",
             url="https://c4.wallpaperflare.com/wallpaper/560/855/635/spy-x-family-anya-forger-hd-wallpaper-preview.jpg",
         )
         view = discord.ui.View()
