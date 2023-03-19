@@ -8,12 +8,15 @@ from discord.ext.commands import HelpCommand, CommandNotFound
 from discord import app_commands
 from discord.ui import View,Button
 from googletrans import Translator
+
+
 class General(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+        self.words_txt = ""
     def cog_unload(self):
         self.bot.help_command = self._original_help_command
+    
     async def help(self, ctx):
         pass
     @commands.hybrid_command(
@@ -95,25 +98,75 @@ class General(commands.Cog):
         embed.set_image(url="https://cdn.discordapp.com/attachments/960467344826720277/1086732556369661993/image.png")
         
         await ctx.send(embed=embed,view=view)
+    
     @commands.hybrid_command(
         name="translate",
-        help="test translate command",
-        description="test translate command",
+        help="useful command to translate ",
+        description="useful command to translate",
         aliases=["tl","แปล","trans"]
     )
-    async def _translate(
-        self,
-        ctx:commands.Context,
-        dest,
-        *,
-        words:str
-    ):
+    async def _translate(self, ctx:commands.Context, *, message):
+        # Define the flag emoji for Germany and Japan
+        flag_emoji_ger = "🇩🇪"
+        flag_emoji_jp = "🇯🇵"
+        flag_emoji_nl = "🇳🇱"
+        flag_emoji_us = "🇺🇸"
+        flag_emoji_th = "🇹🇭"
+        # Translate the message to English
         translator = Translator()
-        translated_text = translator.translate(f"{words}",dest = dest)
-        print(translated_text.text)
-        await ctx.reply(
-            f" `{translated_text.text}`"
-        )
-         
+        translated_text = translator.translate(message, dest="de")
+        
+        # Create the message with the translated text and the flag emoji
+        message_with_emoji = f"`{ctx.author.nick}`: {translated_text.text}"
+        
+        # Send the message to the channel
+        message = await ctx.send(message_with_emoji)
+        
+        # Add the flag emoji as a reaction to the message
+        await message.add_reaction(flag_emoji_ger)
+        await message.add_reaction(flag_emoji_jp)
+        await message.add_reaction(flag_emoji_nl)
+        await message.add_reaction(flag_emoji_us)
+        await message.add_reaction(flag_emoji_th)
+        
+        # Define a check function to filter the reactions
+        def check(reaction, user):
+            if user == ctx.author and str(reaction.emoji) == flag_emoji_ger:
+                dest_lang = "de"
+            elif user == ctx.author and str(reaction.emoji) == flag_emoji_jp:
+                dest_lang = "ja"
+            elif user == ctx.author and str(reaction.emoji) == flag_emoji_nl:
+                dest_lang = "nl"
+            elif user == ctx.author and str(reaction.emoji) == flag_emoji_us:
+                dest_lang = "en"
+            elif user == ctx.author and str(reaction.emoji) == flag_emoji_th:
+                dest_lang = "th"
+            else:
+                return False
+
+            # Translate the message to the corresponding language
+            new_translate = translator.translate(translated_text.text, dest=dest_lang)
+
+            # Send the translated message to the channel
+            asyncio.create_task(ctx.send(f"`{new_translate.dest}`: {new_translate.text}"))
+            return True
+
+        # Wait for the user to react with the flag emoji
+        while True:
+            try:
+                reaction, user = await self.bot.wait_for('reaction_add', timeout=15.0, check=check)
+            except asyncio.TimeoutError:
+                await ctx.send(f"command is timout ❌ ")
+                break
+
+
+
+    
+   
+    
+        
+        
+    
+    
 async def setup(bot):
     await bot.add_cog(General(bot))

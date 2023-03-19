@@ -1,3 +1,4 @@
+
 #mario kart track photo parameter
 MarioKartStadium = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342531597606912/MKS.png"
 WaterPark = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342564564828210/WP.png"

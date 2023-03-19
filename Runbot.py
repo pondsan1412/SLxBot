@@ -19,7 +19,6 @@ class bot(commands.Bot):
         ch_ready = int(secret.ch_onready)
         print(ch_ready)
     async def setup_hook(self):
-        await bot.load_extension("cog.commands.TracksList")
         await bot.load_extension("cog.commands.General")
         await bot.load_extension("cog.commands.oldtrack.1MushroomCup")
         await bot.load_extension("cog.commands.oldtrack.2FlowerCup")
@@ -55,7 +54,7 @@ class bot(commands.Bot):
             tl_txt = tl.translate(message.content, dest="en")
             await message.channel.send(tl_txt.text)
         await bot.process_commands(message)
-
+    
    
 
 bot = bot()
