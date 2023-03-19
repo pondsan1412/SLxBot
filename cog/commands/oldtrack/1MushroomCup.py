@@ -11,7 +11,7 @@ class MushroomCup(commands.Cog):
         name="mariokartstadium",
         description="Mario Kart Stadium",
         help="Track Code: `MKS, mks, or 1-1`",
-        aliases=["mks","MKS","mKs","MkS","mkS","mKS","1-1"]
+        aliases=["mks","MKS","1-1"]
     )
     async def _track_MKS(self,ctx):
         embedVar = discord.Embed(
@@ -30,7 +30,7 @@ class MushroomCup(commands.Cog):
         name="waterpark",
         description="Water Park",
         help="Track Code: `WP, wp, or 1-2`",
-        aliases=["WP","wp","Wp","wP","1-2"]
+        aliases=["WP","wp","1-2"]
     )
     async def _track_WP(self,ctx):
         embedVar = discord.Embed(
