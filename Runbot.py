@@ -3,6 +3,7 @@ from discord.ext import commands
 import os
 from cog import config
 from cog import secret
+from googletrans import Translator
 class bot(commands.Bot):
     def __init__(self):
         super().__init__(
@@ -43,8 +44,17 @@ class bot(commands.Bot):
         bot.remove_command("help")
         await bot.load_extension("cog.help")
         await bot.tree.sync()
-       
-       
+    async def on_message(self,
+            message
+    ):
+        bot = self
+        if message.author == bot.user:
+            return
+        if message.author.nick =="":
+            tl = Translator()
+            tl_txt = tl.translate(message.content, dest="en")
+            await message.channel.send(tl_txt.text)
+        await bot.process_commands(message)
 
    
 

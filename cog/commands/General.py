@@ -7,6 +7,7 @@ import asyncio
 from discord.ext.commands import HelpCommand, CommandNotFound
 from discord import app_commands
 from discord.ui import View,Button
+from googletrans import Translator
 class General(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -94,5 +95,25 @@ class General(commands.Cog):
         embed.set_image(url="https://cdn.discordapp.com/attachments/960467344826720277/1086732556369661993/image.png")
         
         await ctx.send(embed=embed,view=view)
+    @commands.hybrid_command(
+        name="translate",
+        help="test translate command",
+        description="test translate command",
+        aliases=["tl","แปล","trans"]
+    )
+    async def _translate(
+        self,
+        ctx:commands.Context,
+        dest,
+        *,
+        words:str
+    ):
+        translator = Translator()
+        translated_text = translator.translate(f"{words}",dest = dest)
+        print(translated_text.text)
+        await ctx.reply(
+            f" `{translated_text.text}`"
+        )
+         
 async def setup(bot):
     await bot.add_cog(General(bot))
