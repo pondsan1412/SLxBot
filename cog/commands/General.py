@@ -32,14 +32,14 @@ class General(commands.Cog):
 
         
 # Add a button to the message to switch to the second page
-        await message.add_reaction("➡️")
+        await message.add_reaction("⬅️")
 
         # Add a button to go back to the previous page
-        await message.add_reaction("⬅️")
+        await message.add_reaction("➡️")
 
         # Create a function to check the user's reaction
         def check(reaction, user):
-            return user == ctx.author and str(reaction.emoji) in ["➡️", "⬅️"]
+            return user == ctx.author and str(reaction.emoji) in ["⬅️", "➡️"]
 
         current_embed_page = 1
 
