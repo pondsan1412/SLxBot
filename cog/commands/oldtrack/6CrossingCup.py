@@ -10,8 +10,8 @@ class CrossingCup(commands.Cog):
     @commands.hybrid_command(
         name="babypark",
         description="Baby Park",
-        help="track code: `dBP, 6-1` or lowerletter ",
-        aliases=["bp","BP","dBP","dbp","DBP","dBp","dbP","6-1"]
+        help="Track Code: `dBP, dbp, 6-1`",
+        aliases=["dBP","dbp","6-1"]
     )
     async def _track_dBP(self,ctx):
         embedVar = discord.Embed(
@@ -29,8 +29,8 @@ class CrossingCup(commands.Cog):
     @commands.hybrid_command(
         name="cheeseland",
         description="Cheese Land",
-        help="Cheese Land Track",
-        aliases=["cl","CL","dCL","dcl","DCl","dcL","DcL", "6-2"]
+        help="Track Code: `dCL, dcl, 6-2`",
+        aliases=["dCL","dcl","6-2"]
     )
     async def _track_dCL(self,ctx):
         embedVar = discord.Embed(
@@ -48,8 +48,8 @@ class CrossingCup(commands.Cog):
     @commands.hybrid_command(
         name="wildwoods",
         description="Wild Woods",
-        help="Wild Woods Track",
-        aliases=["ww","WW","dWW","dww","DWW","DwW","dWw","dwW","6-3"]
+        help="Track Code: `dWW, dww, 6-3`",
+        aliases=["dWW","dww","6-3"]
     )
     async def _track_dWW(self,ctx):
         embedVar = discord.Embed(
@@ -67,8 +67,8 @@ class CrossingCup(commands.Cog):
     @commands.hybrid_command(
         name="animalcrossing",
         description="Animal Crossing",
-        help="Animal Crossing Track",
-        aliases=["ac","AC","dAC","dac","DAC","DaC","dAc","daC","6-4"]
+        help="Track Code: `dAC, dac, 6-4`",
+        aliases=["dAC","dac","6-4"]
     )
     async def _track_dAC(self,ctx):
         embedVar = discord.Embed(

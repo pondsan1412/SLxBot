@@ -27,7 +27,7 @@ class BoomerangCup(commands.Cog):
 
 
     @commands.hybrid_command(
-        name="mariocircuit",
+        name="bmariocircuit",
         description="Mario Circuit",
         help="Track Code: `bMC, bmc, or 20-2`",
         aliases=["bMC","bmc","20-2"]

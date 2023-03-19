@@ -10,7 +10,7 @@ class MushroomCup(commands.Cog):
     @commands.hybrid_command(
         name="mariokartstadium",
         description="Mario Kart Stadium",
-        help="Mario Kart Stadium Track",
+        help="Track Code: `MKS, mks, or 1-1`",
         aliases=["mks","MKS","mKs","MkS","mkS","mKS","1-1"]
     )
     async def _track_MKS(self,ctx):
@@ -29,7 +29,7 @@ class MushroomCup(commands.Cog):
     @commands.hybrid_command(
         name="waterpark",
         description="Water Park",
-        help="Water Park Track",
+        help="Track Code: `WP, wp, or 1-2`",
         aliases=["WP","wp","Wp","wP","1-2"]
     )
     async def _track_WP(self,ctx):
@@ -48,8 +48,8 @@ class MushroomCup(commands.Cog):
     @commands.hybrid_command(
         name="sweetsweetcanyon",
         description="Sweet Sweet Canyon",
-        help="Sweet Sweet Canyon Track",
-        aliases=["SSC","ssc","Ssc","sSc","ssC","SSc","sSC","1-3"]
+        help="Track Code: `SSC, ssc, or 1-3`",
+        aliases=["SSC","ssc","1-3"]
     )
     async def _track_SSC(self,ctx):
         embedVar = discord.Embed(
@@ -67,8 +67,8 @@ class MushroomCup(commands.Cog):
     @commands.hybrid_command(
         name="thwompruins",
         description="Thwomp Ruins",
-        help="Thwomp Ruins Track",
-        aliases=["tr","TR","tR","Tr","1-4"]
+        help="Track Code: `TR, tr, or 1-4`",
+        aliases=["TR","tr","1-4"]
     )
     async def _track_TR(self,ctx):
         embedVar = discord.Embed(
