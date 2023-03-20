@@ -12,11 +12,8 @@ class eventbot(commands.Cog):
     ):
         if message.author == self.bot.user:
             return
-        if message.content =="emojitest":
-            await message.reply(config.emoji_mushroom)
+        if "what" in message.content:
+            await message.channel.send("what?")
         
-
-
-    
 async def setup(bot):
     await bot.add_cog(eventbot(bot))
