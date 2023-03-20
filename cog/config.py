@@ -106,6 +106,3 @@ Boomerang = "https://cdn.discordapp.com/attachments/1066340666436747304/10858938
 #team photo parameter
 SilentLightning = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363539377369128/Silent_Lightning.png"
 SilentBolt = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363527092260984/Silent_Bolt.png"
-
-#mario kart EMOJI 
-emoji_mushroom = "<:Mushroom:1087361067568607232>"
