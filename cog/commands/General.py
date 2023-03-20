@@ -166,5 +166,8 @@ class General(commands.Cog):
         await message.edit(content="the messages is editted")
 
 
+     
+    
+    
 async def setup(bot):
     await bot.add_cog(General(bot))

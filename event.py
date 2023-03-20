@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord.utils import get
 
 
 class eventbot(commands.Cog):
@@ -12,8 +13,8 @@ class eventbot(commands.Cog):
     ):
         if message.author == self.bot.user:
             return
-        if message.content =="emojisend":
-            await message.reply(content="https://cdn.discordapp.com/emojis/1087361067568607232.webp?size=96&quality=lossless")
+        if message.content =="emoji":
+            await message.reply("<:Boomerang:1087361059247104060>")
         
 
 

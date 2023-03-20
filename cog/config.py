@@ -106,3 +106,23 @@ Boomerang = "https://cdn.discordapp.com/attachments/1066340666436747304/10858938
 #team photo parameter
 SilentLightning = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363539377369128/Silent_Lightning.png"
 SilentBolt = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363527092260984/Silent_Bolt.png"
+
+#cup emoji parameter
+MushroomCup = "<:Mushroom:1087361067568607232>"
+FlowerCup = "<:Flower:1087361062812274699>"
+StarCup = "<:Star:1087361176687628318>"
+SpecialCup = "<:Special:1087361175530000404>"
+EggCup = "<:Egg:1087361061008707605>"
+CrossingCup = "<:Crossing:1087361060182433882>"
+ShellCup = "<:Shell:1087361174607237281>"
+BananaCup = "<:Banana:1087361056512422111>"
+LeafCup = "<:Leaf:1087361239199522906>"
+LightningCup = "<:Lightning:1087361240919179335>"
+GoldenDashCup = "<:GoldenDash:1087361064540328018>"
+LuckyCatCup = "<:LuckyCat:1087361242219429945>"
+TurnipCup = "<:Turnip:1087361179229356095>"
+PropellerCup = "<:Propeller:1087361208342020096>"
+RockCup = "<:Rock:1087361172778536970>"
+MoonCup = "<:Moon:1087361243167330364>"
+FruitCup = "<:Fruit:1087361063701467236>"
+BoomerangCup = "<:Boomerang:1087361059247104060>"
