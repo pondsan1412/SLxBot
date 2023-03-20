@@ -4,6 +4,7 @@ import os
 from cog import config
 from cog import secret
 from googletrans import Translator
+from event import eventbot
 class bot(commands.Bot):
     def __init__(self):
         super().__init__(
@@ -20,6 +21,7 @@ class bot(commands.Bot):
         print(ch_ready)
     async def setup_hook(self):
         await bot.load_extension("cog.commands.General")
+        await bot.load_extension("event")
         await bot.load_extension("cog.commands.oldtrack.1MushroomCup")
         await bot.load_extension("cog.commands.oldtrack.2FlowerCup")
         await bot.load_extension("cog.commands.oldtrack.3StarCup")
@@ -43,17 +45,8 @@ class bot(commands.Bot):
         bot.remove_command("help")
         await bot.load_extension("cog.help")
         await bot.tree.sync()
-    async def on_message(self,
-            message
-    ):
-        bot = self
-        if message.author == bot.user:
-            return
-        if message.author.nick =="":
-            tl = Translator()
-            tl_txt = tl.translate(message.content, dest="en")
-            await message.channel.send(tl_txt.text)
-        await bot.process_commands(message)
+    
+       
     
    
 

@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 from cog import config
 import os
-import asyncio
+import asyncio,time
 from discord.ext.commands import HelpCommand, CommandNotFound
 from discord import app_commands
 from discord.ui import View,Button
@@ -117,7 +117,7 @@ class General(commands.Cog):
         translated_text = translator.translate(message, dest="de")
         
         # Create the message with the translated text and the flag emoji
-        message_with_emoji = f"`{ctx.author.nick}`: {translated_text.text}"
+        message_with_emoji = f"`Default is German`: {translated_text.text}"
         
         # Send the message to the channel
         message = await ctx.send(message_with_emoji)
@@ -148,17 +148,22 @@ class General(commands.Cog):
             new_translate = translator.translate(translated_text.text, dest=dest_lang)
 
             # Send the translated message to the channel
-            asyncio.create_task(ctx.send(f"`{new_translate.dest}`: {new_translate.text}"))
+            asyncio.create_task(message.edit(content=f"`{new_translate.dest}`: {new_translate.text}"))
             return True
 
         # Wait for the user to react with the flag emoji
         while True:
             try:
-                reaction, user = await self.bot.wait_for('reaction_add', timeout=15.0, check=check)
+                reaction, user = await self.bot.wait_for('reaction_add', timeout=10000.0, check=check)
             except asyncio.TimeoutError:
                 await ctx.send(f"command is timout ❌ ")
                 break
 
+    @commands.hybrid_command(name="send")
+    async def _ctx_send(self,ctx):
+        message = await ctx.send("hello,world")
+        time.sleep(5)
+        await message.edit(content="the messages is editted")
 
 
     
