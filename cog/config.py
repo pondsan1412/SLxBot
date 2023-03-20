@@ -1,5 +1,5 @@
 
-#mario kart track photo parameter
+#mario kart track photo variable
 MarioKartStadium = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342531597606912/MKS.png"
 WaterPark = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342564564828210/WP.png"
 SweetSweetCanyon = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342580461256785/SSC.png"
@@ -81,7 +81,7 @@ bMarioCircuit = "https://cdn.discordapp.com/attachments/1066340666436747304/1085
 WaluigiStadium = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893982099361892/bWS.png"
 SingaporeSpeedway = "https://cdn.discordapp.com/attachments/1066340666436747304/1085894036101009498/bSSy.png"
 
-#mario kart cup photo parameter
+#mario kart cup photo variable
 Mushroom = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342499989327892/MK8_MushroomCup.png"
 Flower = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342645451989062/MK8_FlowerCup.png"
 Star = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342875262103552/MK8_Star_Cup_Emblem.png"
@@ -103,11 +103,11 @@ Moon = "https://cdn.discordapp.com/attachments/1066340666436747304/1066353849541
 Fruit = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893267087958056/MK8D_BCP_Fruit_Emblem.png"
 Boomerang = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893823189753876/MK8D_BCP_Boomerang_Emblem.png"
 
-#team photo parameter
+#team photo variable
 SilentLightning = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363539377369128/Silent_Lightning.png"
 SilentBolt = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363527092260984/Silent_Bolt.png"
 
-#cup emoji photo parameter
+#cup emoji photo variable
 MushroomCup = "<:Mushroom:1087361067568607232>"
 FlowerCup = "<:Flower:1087361062812274699>"
 StarCup = "<:Star:1087361176687628318>"
