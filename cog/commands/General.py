@@ -154,7 +154,7 @@ class General(commands.Cog):
         # Wait for the user to react with the flag emoji
         while True:
             try:
-                reaction, user = await self.bot.wait_for('reaction_add', timeout=10.0, check=check)
+                reaction, user = await self.bot.wait_for('reaction_add', timeout=20.0, check=check)
             except asyncio.TimeoutError:
                 asyncio.create_task(message.edit(content=f"timeout❌"))
                 break
@@ -166,7 +166,7 @@ class General(commands.Cog):
         await message.edit(content="the messages is editted")
 
 
-     
+
     
     
 async def setup(bot):
