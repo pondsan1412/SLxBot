@@ -156,7 +156,7 @@ class General(commands.Cog):
             try:
                 reaction, user = await self.bot.wait_for('reaction_add', timeout=10.0, check=check)
             except asyncio.TimeoutError:
-                await ctx.send(f"command is timout ❌ ")
+                asyncio.create_task(message.edit(content=f"timeout❌"))
                 break
 
     @commands.hybrid_command(name="send")
