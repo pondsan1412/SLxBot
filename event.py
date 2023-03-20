@@ -12,7 +12,8 @@ class eventbot(commands.Cog):
     ):
         if message.author == self.bot.user:
             return
-
+        if message.content =="emojisend":
+            await message.reply(content="https://cdn.discordapp.com/emojis/1087361067568607232.webp?size=96&quality=lossless")
         
 
 
