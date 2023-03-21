@@ -12,8 +12,8 @@ class eventbot(commands.Cog):
     ):
         if message.author == self.bot.user:
             return
-        if "what" in message.content:
-            await message.channel.send("what?")
+        if "fire" in message.content:
+            await message.channel.send(content=config.x3Fire)
         
 async def setup(bot):
     await bot.add_cog(eventbot(bot))
