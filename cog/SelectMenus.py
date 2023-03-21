@@ -107,11 +107,18 @@ class Select(discord.ui.Select):
             ),
         ]
         super().__init__(
-            placeholder=f"📒 Help Commands Book",
+            placeholder=f"🤏Select some option",
             max_values=1,
             min_values=1,
             options=options
         )
+    async def callback(self, int:discord.Interaction):
+        if self.values[0] == "Mushroom Cup Commands":
+            await int.response.edit_message(embed=config.embedMushroomcup)
+        elif self.values[0] == "Flower Cup Commands":
+            await int.response.edit_message(embed=config.embedSelect)
+             
+
 class SelectView(discord.ui.View):
     def __init__(
             self,

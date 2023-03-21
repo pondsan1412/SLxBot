@@ -1,4 +1,5 @@
-
+import discord
+from discord.ext import commands
 #mario kart track photo variable
 MarioKartStadium = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342531597606912/MKS.png"
 WaterPark = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342564564828210/WP.png"
@@ -147,3 +148,17 @@ pond_icon_url = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
 
 #picture_url for embed set_image
 some_of_anime_girl = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
+
+#embed variable for select menus
+embedSelect = discord.Embed(
+        color=discord.Color.red(),
+        title="This is Select Menus",
+        description="Developer team \n Pondsan1412 \n Zquka",
+)
+embedMushroomcup = discord.Embed(
+        color=discord.Color.red(),
+        title="555555555555",
+        description="12d3as4d6a4sd84as6d4a6sd84a6s8d\nsdoasdoiajsodijaosdjoasijdoiajsd\nsajdoiasjdoiajsdoiajsdoiajsd",
+)
+embedMushroomcup.set_author(name="KUYYY SEX DOGS",icon_url=some_of_anime_girl)
+embedMushroomcup.set_image(url="https://j.gifs.com/vQ8doY.gif")

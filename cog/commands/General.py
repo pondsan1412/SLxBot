@@ -8,7 +8,7 @@ from discord.ext.commands import HelpCommand, CommandNotFound
 from discord import app_commands
 from discord.ui import View,Button
 from googletrans import Translator
-from cog.SelectMenus import Select,SelectView
+from cog.SelectMenus import *
 
 class General(commands.Cog):
     def __init__(self, bot):
@@ -170,11 +170,7 @@ class General(commands.Cog):
         self,
         ctx
     ):
-        embed = discord.Embed(
-            color=discord.Color.red(),
-            title="This is Select Menus",
-            description="Developer team \n Pondsan1412 \n Zquka",
-        )
+        embed = config.embedSelect
         embed.set_author(
             name=ctx.author,
             icon_url=config.pond_icon_url
