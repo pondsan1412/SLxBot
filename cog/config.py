@@ -128,3 +128,7 @@ RockCup = "<:Rock:1087361243167330364>"
 MoonCup ="<:Moon:1087361172778536970>"
 FruitCup = "<:Fruit:1087361063701467236"
 BoomerangCup = "<:Boomerang:1087361059247104060>"
+
+#random emoji variable
+FireEmoji = "<a:Fire:966125372942983178>"
+Boohoo = "<:boohoo:1059828958184620053>"
