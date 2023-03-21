@@ -141,4 +141,3 @@ Successful = "<a:MarioWin:1087800676215701604>"
 Pass = "<a:RosalinaDodge:1087794095243665425>"
 Problem = "<a:LuigiBlind:1087800673569087578>"
 Lucky = "<a:PeachStar:1087800677427859586>"
-Unfortunately 
