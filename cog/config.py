@@ -141,3 +141,9 @@ Successful = "<a:MarioWin:1087800676215701604>"
 Pass = "<a:RosalinaDodge:1087794095243665425>"
 Problem = "<a:LuigiBlind:1087800673569087578>"
 Lucky = "<a:PeachStar:1087800677427859586>"
+
+#icon_url for embed
+pond_icon_url = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
+
+#picture_url for embed set_image
+some_of_anime_girl = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"

@@ -8,7 +8,7 @@ from discord.ext.commands import HelpCommand, CommandNotFound
 from discord import app_commands
 from discord.ui import View,Button
 from googletrans import Translator
-
+from cog.SelectMenus import Select,SelectView
 
 class General(commands.Cog):
     def __init__(self, bot):
@@ -162,16 +162,31 @@ class General(commands.Cog):
             except asyncio.TimeoutError:
                 asyncio.create_task(message.edit(content=f"timeout❌"))
                 break
-
-    @commands.hybrid_command(name="send")
-    async def _ctx_send(self,ctx):
-        message = await ctx.send("hello,world")
-        time.sleep(5)
-        await message.edit(content="the messages is editted")
-
-
-
+    @commands.hybrid_command(
+        name="select",
+        description="test select menus"
+    )
+    async def _selectmenus(
+        self,
+        ctx
+    ):
+        embed = discord.Embed(
+            color=discord.Color.red(),
+            title="This is Select Menus",
+            description="Developer team \n Pondsan1412 \n Zquka",
+        )
+        embed.set_author(
+            name=ctx.author,
+            icon_url=config.pond_icon_url
+        )
+        embed.set_image(
+            url=config.some_of_anime_girl
+        )
+        await ctx.send(
+            embed=embed,
+            view=SelectView()
+        )            
     
-    
+
 async def setup(bot):
     await bot.add_cog(General(bot))

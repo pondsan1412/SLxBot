@@ -26,7 +26,7 @@ class Help(commands.Cog):
         """ Shows this message """
         bot = ctx.bot
         embed = discord.Embed(title=bot_title, description=bot_description)
-      
+        
         def generate_usage(command_name):
             """ Generates a string of how to use a command """
             temp = f'{prefix}'
