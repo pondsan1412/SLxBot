@@ -131,26 +131,30 @@ class General(commands.Cog):
         
         # Define a check function to filter the reactions
         def check(reaction, user):
-            if user == ctx.author and str(reaction.emoji) == flag_emoji_ger:
-                dest_lang = "de"
-            elif user == ctx.author and str(reaction.emoji) == flag_emoji_jp:
-                dest_lang = "ja"
-            elif user == ctx.author and str(reaction.emoji) == flag_emoji_nl:
-                dest_lang = "nl"
-            elif user == ctx.author and str(reaction.emoji) == flag_emoji_us:
-                dest_lang = "en"
-            elif user == ctx.author and str(reaction.emoji) == flag_emoji_th:
-                dest_lang = "th"
-            else:
-                return False
+            if str(reaction.emoji) in [
+                flag_emoji_ger,flag_emoji_jp,
+                flag_emoji_nl,flag_emoji_us,
+                flag_emoji_th
+            ]:
+                if user != self.bot.user:
+                    dest_lang = None
+                
+                    if str(reaction.emoji) == flag_emoji_ger:
+                        dest_lang = "de"
+                    elif str(reaction.emoji) == flag_emoji_jp:
+                        dest_lang = "ja"
+                    elif str(reaction.emoji) == flag_emoji_nl:
+                        dest_lang = "nl"
+                    elif str(reaction.emoji) == flag_emoji_us:
+                        dest_lang = "en"
+                    elif str(reaction.emoji) == flag_emoji_th:
+                        dest_lang = "th"
 
-            # Translate the message to the corresponding language
-            new_translate = translator.translate(translated_text.text, dest=dest_lang)
-
-            # Send the translated message to the channel
-            asyncio.create_task(message.edit(content=f"`{new_translate.dest}`: {new_translate.text}"))
-            return True
-
+                    if dest_lang is not None:
+                        new_translate = translator.translate(translated_text.text, dest=dest_lang)
+                        asyncio.create_task(message.edit(content=f"`{new_translate.dest}`: {new_translate.text}"))
+                        return True
+            return False       
         # Wait for the user to react with the flag emoji
         while True:
             try:
