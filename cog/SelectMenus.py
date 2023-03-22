@@ -116,8 +116,44 @@ class Select(discord.ui.Select):
         if self.values[0] == "Mushroom Cup Commands":
             await int.response.edit_message(embed=config.embedMushroomcup)
         elif self.values[0] == "Flower Cup Commands":
-            await int.response.edit_message(embed=config.embedSelect)
-             
+            await int.response.edit_message(embed=config.embedFlowercup)
+        elif self.values[0] == "Star Cup Commands":
+            await int.response.edit_message(embed=config.embedStarcup)
+        elif self.values[0] == "Special Cup Commands":
+            await int.response.edit_message(embed=config.embedSpecialcup)
+        elif self.values[0] == "Egg Cup Commands":
+            await int.response.edit_message(embed=config.embedEggcup)
+        elif self.values[0] == "Crossing Cup Commands":
+            await int.response.edit_message(embed=config.embedCrossingcup)
+        elif self.values[0] == "Shell Cup Commands":
+            await int.response.edit_message(embed=config.embedShellcup)
+        elif self.values[0] == "Banana Cup Commands":
+            await int.response.edit_message(embed=config.embedBananacup)
+        elif self.values[0] == "Leaf Cup Commands":
+            await int.response.edit_message(embed=config.embedLeafcup)
+        elif self.values[0] == "Lightning Cup Commands":
+            await int.response.edit_message(embed=config.embedLightningcup)
+        elif self.values[0] == "Triforce Cup Commands":
+            await int.response.edit_message(embed=config.embedTriforcecup)
+        elif self.values[0] == "Bell Cup Commands":
+            await int.response.edit_message(embed=config.embedBellcup)
+        elif self.values[0] == "Golden Dash Cup Commands":
+            await int.response.edit_message(embed=config.embedGoldenDashcup)
+        elif self.values[0] == "Lucky Cat Cup Commands":
+            await int.response.edit_message(embed=config.embedLuckyCatcup)
+        elif self.values[0] == "Turnip Cup Commands":
+            await int.response.edit_message(embed=config.embedTurnipcup)
+        elif self.values[0] == "Propeller Cup Commands":
+            await int.response.edit_message(embed=config.embedPropellercup)
+        elif self.values[0] == "Rock Cup Commands":
+            await int.response.edit_message(embed=config.embedRockcup)
+        elif self.values[0] == "Moon Cup Commands":
+            await int.response.edit_message(embed=config.embedMooncup)
+        elif self.values[0] == "Fruit Cup Commands":
+            await int.response.edit_message(embed=config.embedFruitcup)
+        elif self.values[0] == "Boomerang Cup Commands":
+            await int.response.edit_message(embed=config.embedBoomerangcup)
+
 
 class SelectView(discord.ui.View):
     def __init__(
