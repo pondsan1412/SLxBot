@@ -166,7 +166,7 @@ Problem = "<a:LuigiBlind:1087800673569087578>"
 Lucky = "<a:PeachStar:1087800677427859586>"
 
 #user_id for embed
-developer_id = "<@324207503816654859> (Founder) \n <@257332011075764224> (Co-Founder) \n <@209006928272162816> (Assistant for (TT))"
+developer_id = "<@324207503816654859> (Founder) \n <@257332011075764224> (Co-Founder) \n **Assistant:** \n <@209006928272162816> (Assistant for (TT))"
 
 #icon_url for embed
 pond_icon_url = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
@@ -345,8 +345,8 @@ embedBoomerangcup.set_image(url=Boomer)
 
 embedDevsTeam = discord.Embed(
         color=discord.Color.dark_purple(),
-        title="A Team:",
+        title="A Developer Team:",
         description=developer_id
 )
-embedDevsTeam.set_author(name="Developer Team",icon_url=SilentLightning)
+embedDevsTeam.set_author(name="Silent Lightning",icon_url=SilentLightning)
 embedDevsTeam.set_image(url=SilentLightning)
