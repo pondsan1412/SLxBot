@@ -314,7 +314,7 @@ embedPropellercup.set_image(url=Pro)
 embedRockcup = discord.Embed(
         color=discord.Color.dark_grey(),
         title="#17 Track",
-        description="**London Loop Commands:** \n `bLL, bll, 17-1` \n **Boo Lake Commands:** \n `bBL, bll, 17-2` \n **Rock Rock Mountain Commands:** \n `bRRM, brrm, 17-3` \n **Maple Treeway Commands:** \n `bMT, bmt, 17-4`",
+        description="**London Loop Commands:** \n `bLL, bll, 17-1` \n **Boo Lake Commands:** \n `bBL, bbl, 17-2` \n **Rock Rock Mountain Commands:** \n `bRRM, brrm, 17-3` \n **Maple Treeway Commands:** \n `bMT, bmt, 17-4`",
 )
 embedRockcup.set_author(name="Rock Cup",icon_url=Rock)
 embedRockcup.set_image(url=Rck)
