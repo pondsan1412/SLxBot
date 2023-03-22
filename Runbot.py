@@ -19,6 +19,7 @@ class bot(commands.Bot):
         ch_ready = int(secret.ch_onready)
         print(ch_ready)
     async def setup_hook(self):
+        bot.remove_command("help")
         await bot.load_extension("cog.commands.General")
         await bot.load_extension("event")
         await bot.load_extension("cog.commands.error")
@@ -42,8 +43,7 @@ class bot(commands.Bot):
         await bot.load_extension("cog.commands.dlctrack.18MoonCup")
         await bot.load_extension("cog.commands.dlctrack.19FruitCup")
         await bot.load_extension("cog.commands.dlctrack.20BoomerangCup")
-        bot.remove_command("help")
-        await bot.load_extension("cog.help")
+
         await bot.tree.sync()
     
        

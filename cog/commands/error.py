@@ -18,5 +18,11 @@ class error(commands.Cog):
             await ctx.send("you idiots does not have [dev] role!")
         else:
             pass
+        if isinstance(
+            error,
+            AttributeError
+        ):
+            await ctx.send(error,AttributeError)
+    
 async def setup(bot):
     await bot.add_cog(error(bot))

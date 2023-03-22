@@ -164,7 +164,7 @@ class General(commands.Cog):
                 asyncio.create_task(message.edit(content=f"timeout❌"))
                 break
     @commands.hybrid_command(
-        name="select",
+        name="help",
         description="test select menus"
     )
     async def _selectmenus(
