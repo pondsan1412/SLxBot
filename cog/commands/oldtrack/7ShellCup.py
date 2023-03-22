@@ -17,7 +17,7 @@ class ShellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Shell Cup",
             description="Wii Moo Moo Meadows",
-            color=discord.Color.dark_purple()
+            color=discord.Color.brand_green()
         )
         embedVar.set_image(url=config.MooMooMeadows)
         embedVar.set_thumbnail(url=config.Shell)
@@ -36,7 +36,7 @@ class ShellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Shell Cup",
             description="GBA Mario Circuit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.green()
         )
         embedVar.set_image(url=config.rMarioCircuit)
         embedVar.set_thumbnail(url=config.Shell)       
@@ -55,7 +55,7 @@ class ShellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Shell Cup",
             description="DS Cheep Cheep Beach",
-            color=discord.Color.dark_purple()
+            color=discord.Color.blue()
         )
         embedVar.set_image(url=config.CheepCheepBeach)
         embedVar.set_thumbnail(url=config.Shell)
@@ -74,7 +74,7 @@ class ShellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Shell Cup",
             description="N64 Toad\'s Turnpike",
-            color=discord.Color.dark_purple()
+            color=discord.Color.blurple()
         )
         embedVar.set_image(url=config.ToadsTurnpike)
         embedVar.set_thumbnail(url=config.Shell)

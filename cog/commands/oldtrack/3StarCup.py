@@ -17,7 +17,7 @@ class StarCup(commands.Cog):
         embedVar = discord.Embed(
             title="Star Cup",
             description="Sunshine Airport",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_blue()
         )
         embedVar.set_image(url=config.SunshineAirport)
         embedVar.set_thumbnail(url=config.Star)
@@ -36,7 +36,7 @@ class StarCup(commands.Cog):
         embedVar = discord.Embed(
             title="Star Cup",
             description="Dolphin Shoals",
-            color=discord.Color.dark_purple()
+            color=discord.Color.teal()
         )
         embedVar.set_image(url=config.DolphinShoals)
         embedVar.set_thumbnail(url=config.Star)       
@@ -55,7 +55,7 @@ class StarCup(commands.Cog):
         embedVar = discord.Embed(
             title="Star Cup",
             description="Electrodrome",
-            color=discord.Color.dark_purple()
+            color=discord.Color.magenta()
         )
         embedVar.set_image(url=config.Electrodrome)
         embedVar.set_thumbnail(url=config.Star)
@@ -74,7 +74,7 @@ class StarCup(commands.Cog):
         embedVar = discord.Embed(
             title="Star Cup",
             description="Mount Wario",
-            color=discord.Color.dark_purple()
+            color=discord.Color.purple()
         )
         embedVar.set_image(url=config.MountWario)
         embedVar.set_thumbnail(url=config.Star)

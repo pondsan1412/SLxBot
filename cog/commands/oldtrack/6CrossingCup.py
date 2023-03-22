@@ -17,7 +17,7 @@ class CrossingCup(commands.Cog):
         embedVar = discord.Embed(
             title="Crossing Cup",
             description="GCN Baby Park",
-            color=discord.Color.dark_purple()
+            color=discord.Color.red()
         )
         embedVar.set_image(url=config.BabyPark)
         embedVar.set_thumbnail(url=config.Crossing)
@@ -36,7 +36,7 @@ class CrossingCup(commands.Cog):
         embedVar = discord.Embed(
             title="Crossing Cup",
             description="GBA Cheese Land",
-            color=discord.Color.dark_purple()
+            color=discord.Color.yellow()
         )
         embedVar.set_image(url=config.CheeseLand)
         embedVar.set_thumbnail(url=config.Crossing)       
@@ -55,7 +55,7 @@ class CrossingCup(commands.Cog):
         embedVar = discord.Embed(
             title="Crossing Cup",
             description="Wild Woods",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_green()
         )
         embedVar.set_image(url=config.WildWoods)
         embedVar.set_thumbnail(url=config.Crossing)
@@ -74,7 +74,7 @@ class CrossingCup(commands.Cog):
         embedVar = discord.Embed(
             title="Crossing Cup",
             description="Animal Crossing",
-            color=discord.Color.dark_purple()
+            color=discord.Color.greyple()
         )
         embedVar.set_image(url=config.AnimalCrossing)
         embedVar.set_thumbnail(url=config.Crossing)

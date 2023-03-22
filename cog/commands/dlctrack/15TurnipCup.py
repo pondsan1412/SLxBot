@@ -17,7 +17,7 @@ class TurnipCup(commands.Cog):
         embedVar = discord.Embed(
             title="Turnip Cup",
             description="Tour New York Minute",
-            color=discord.Color.dark_purple()
+            color=discord.Color.darker_grey()
         )
         embedVar.set_image(url=config.NewYorkMinute)
         embedVar.set_thumbnail(url=config.Turnip)
@@ -36,7 +36,7 @@ class TurnipCup(commands.Cog):
         embedVar = discord.Embed(
             title="Turnip Cup",
             description="SNES Mario Circuit 3",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_green()
         )
         embedVar.set_image(url=config.MarioCircuit3)
         embedVar.set_thumbnail(url=config.Turnip)       
@@ -55,7 +55,7 @@ class TurnipCup(commands.Cog):
         embedVar = discord.Embed(
             title="Turnip Cup",
             description="N64 Kalimari Desert",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.KalimariDesert)
         embedVar.set_thumbnail(url=config.Turnip)

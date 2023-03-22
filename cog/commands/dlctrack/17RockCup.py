@@ -17,7 +17,7 @@ class RockCup(commands.Cog):
         embedVar = discord.Embed(
             title="Rock Cup",
             description="Tour London Loop",
-            color=discord.Color.dark_purple()
+            color=discord.Color.greyple()
         )
         embedVar.set_image(url=config.LondonLoop)
         embedVar.set_thumbnail(url=config.Rock)
@@ -36,7 +36,7 @@ class RockCup(commands.Cog):
         embedVar = discord.Embed(
             title="Rock Cup",
             description="GBA Boo Lake",
-            color=discord.Color.dark_purple()
+            color=discord.Color.teal()
         )
         embedVar.set_image(url=config.BooLake)
         embedVar.set_thumbnail(url=config.Rock)       
@@ -55,7 +55,7 @@ class RockCup(commands.Cog):
         embedVar = discord.Embed(
             title="Rock Cup",
             description="3DS Rock Rock Mountain",
-            color=discord.Color.dark_purple()
+            color=discord.Color.red()
         )
         embedVar.set_image(url=config.RockRockMountain)
         embedVar.set_thumbnail(url=config.Rock)
@@ -74,7 +74,7 @@ class RockCup(commands.Cog):
         embedVar = discord.Embed(
             title="Rock Cup",
             description="Wii MapleTreeway",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.MapleTreeway)
         embedVar.set_thumbnail(url=config.Rock)

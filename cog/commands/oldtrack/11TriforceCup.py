@@ -17,7 +17,7 @@ class TriforceCup(commands.Cog):
         embedVar = discord.Embed(
             title="Triforce Cup",
             description="Wii Wario\'s Gold Mine",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_gold()
         )
         embedVar.set_image(url=config.WariosGoldMine)
         embedVar.set_thumbnail(url=config.Triforce)
@@ -36,7 +36,7 @@ class TriforceCup(commands.Cog):
         embedVar = discord.Embed(
             title="Triforce Cup",
             description="SNES Rainbow Road",
-            color=discord.Color.dark_purple()
+            color=discord.Color.purple()
         )
         embedVar.set_image(url=config.dRainbowRoad)
         embedVar.set_thumbnail(url=config.Triforce)       
@@ -55,7 +55,7 @@ class TriforceCup(commands.Cog):
         embedVar = discord.Embed(
             title="Triforce Cup",
             description="Ice Ice Outpost",
-            color=discord.Color.dark_purple()
+            color=discord.Color.yellow()
         )
         embedVar.set_image(url=config.IceIceOutpost)
         embedVar.set_thumbnail(url=config.Triforce)
@@ -74,7 +74,7 @@ class TriforceCup(commands.Cog):
         embedVar = discord.Embed(
             title="Triforce Cup",
             description="Hyrule Circuit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_green()
         )
         embedVar.set_image(url=config.HyruleCircuit)
         embedVar.set_thumbnail(url=config.Triforce)

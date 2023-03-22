@@ -17,7 +17,7 @@ class MoonCup(commands.Cog):
         embedVar = discord.Embed(
             title="Moon Cup",
             description="Tour Berlin Byways",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.BerlinByways)
         embedVar.set_thumbnail(url=config.Moon)
@@ -36,7 +36,7 @@ class MoonCup(commands.Cog):
         embedVar = discord.Embed(
             title="Moon Cup",
             description="DS Peach Gardens",
-            color=discord.Color.dark_purple()
+            color=discord.Color.magenta()
         )
         embedVar.set_image(url=config.PeachGardens)
         embedVar.set_thumbnail(url=config.Moon)       
@@ -55,7 +55,7 @@ class MoonCup(commands.Cog):
         embedVar = discord.Embed(
             title="Moon Cup",
             description="Merry Mountain",
-            color=discord.Color.dark_purple()
+            color=discord.Color.lighter_grey()
         )
         embedVar.set_image(url=config.MerryMountain)
         embedVar.set_thumbnail(url=config.Moon)
@@ -74,7 +74,7 @@ class MoonCup(commands.Cog):
         embedVar = discord.Embed(
             title="Moon Cup",
             description="3DS Rainbow Road",
-            color=discord.Color.dark_purple()
+            color=discord.Color.yellow()
         )
         embedVar.set_image(url=config.RainbowRoad7)
         embedVar.set_thumbnail(url=config.Moon)

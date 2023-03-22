@@ -17,7 +17,7 @@ class BananaCup(commands.Cog):
         embedVar = discord.Embed(
             title="Banana Cup",
             description="GCN Dry Dry Desert",
-            color=discord.Color.dark_purple()
+            color=discord.Color.gold()
         )
         embedVar.set_image(url=config.DryDryDesert)
         embedVar.set_thumbnail(url=config.Banana)
@@ -36,7 +36,7 @@ class BananaCup(commands.Cog):
         embedVar = discord.Embed(
             title="Banana Cup",
             description="SNES Donut Plains 3",
-            color=discord.Color.dark_purple()
+            color=discord.Color.green()
         )
         embedVar.set_image(url=config.DonutPlains3)
         embedVar.set_thumbnail(url=config.Banana)       
@@ -55,7 +55,7 @@ class BananaCup(commands.Cog):
         embedVar = discord.Embed(
             title="Banana Cup",
             description="N64 Royal Raceway",
-            color=discord.Color.dark_purple()
+            color=discord.Color.magenta()
         )
         embedVar.set_image(url=config.RoyalRaceway)
         embedVar.set_thumbnail(url=config.Banana)
@@ -74,7 +74,7 @@ class BananaCup(commands.Cog):
         embedVar = discord.Embed(
             title="Banana Cup",
             description="3DS DK Jungle",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_orange()
         )
         embedVar.set_image(url=config.DKJungle)
         embedVar.set_thumbnail(url=config.Banana)

@@ -17,7 +17,7 @@ class EggCup(commands.Cog):
         embedVar = discord.Embed(
             title="Egg Cup",
             description="GCN Yoshi Circuit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.green()
         )
         embedVar.set_image(url=config.YoshiCircuit)
         embedVar.set_thumbnail(url=config.Egg)
@@ -36,7 +36,7 @@ class EggCup(commands.Cog):
         embedVar = discord.Embed(
             title="Egg Cup",
             description="Excitebike Arena",
-            color=discord.Color.dark_purple()
+            color=discord.Color.red()
         )
         embedVar.set_image(url=config.ExcitebikeArena)
         embedVar.set_thumbnail(url=config.Egg)       
@@ -55,7 +55,7 @@ class EggCup(commands.Cog):
         embedVar = discord.Embed(
             title="Egg Cup",
             description="Dragon Driftway",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.DragonDriftway)
         embedVar.set_thumbnail(url=config.Egg)

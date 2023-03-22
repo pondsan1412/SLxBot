@@ -17,7 +17,7 @@ class LuckyCatCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lucky Cat Cup",
             description="Tour Tokyo Blur",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_red()
         )
         embedVar.set_image(url=config.TokyoBlur)
         embedVar.set_thumbnail(url=config.LuckyCat)
@@ -36,7 +36,7 @@ class LuckyCatCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lucky Cat Cup",
             description="DS Shroom Ridge",
-            color=discord.Color.dark_purple()
+            color=discord.Color.red()
         )
         embedVar.set_image(url=config.ShroomRidge)
         embedVar.set_thumbnail(url=config.LuckyCat)       
@@ -55,7 +55,7 @@ class LuckyCatCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lucky Cat Cup",
             description="GBA Sky Garden",
-            color=discord.Color.dark_purple()
+            color=discord.Color.lighter_grey()
         )
         embedVar.set_image(url=config.SkyGarden)
         embedVar.set_thumbnail(url=config.LuckyCat)
@@ -74,7 +74,7 @@ class LuckyCatCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lucky Cat Cup",
             description="Ninja Hideaway",
-            color=discord.Color.dark_purple()
+            color=discord.Color.magenta()
         )
         embedVar.set_image(url=config.NinjaHideaway)
         embedVar.set_thumbnail(url=config.LuckyCat)

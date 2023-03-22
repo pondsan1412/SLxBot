@@ -17,7 +17,7 @@ class BoomerangCup(commands.Cog):
         embedVar = discord.Embed(
             title="Boomerang Cup",
             description="Tour Bangkok Rush",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.BangkokRush)
         embedVar.set_thumbnail(url=config.Boomerang)
@@ -36,7 +36,7 @@ class BoomerangCup(commands.Cog):
         embedVar = discord.Embed(
             title="Boomerang Cup",
             description="DS Mario Circuit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_orange()
         )
         embedVar.set_image(url=config.bMarioCircuit)
         embedVar.set_thumbnail(url=config.Boomerang)       
@@ -74,7 +74,7 @@ class BoomerangCup(commands.Cog):
         embedVar = discord.Embed(
             title="Boomerang Cup",
             description="Tour Singapore Speedway",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_gold()
         )
         embedVar.set_image(url=config.SingaporeSpeedway)
         embedVar.set_thumbnail(url=config.Boomerang)

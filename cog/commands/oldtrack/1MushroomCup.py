@@ -17,7 +17,7 @@ class MushroomCup(commands.Cog):
         embedVar = discord.Embed(
             title="Mushroom Cup",
             description="Mario Kart Stadium",
-            color=discord.Color.dark_purple()
+            color=discord.Color.brand_red()
         )
         embedVar.set_image(url=config.MarioKartStadium)
         embedVar.set_thumbnail(url=config.Mushroom)
@@ -36,7 +36,7 @@ class MushroomCup(commands.Cog):
         embedVar = discord.Embed(
             title="Mushroom Cup",
             description="Water Park",
-            color=discord.Color.dark_purple()
+            color=discord.Color.brand_green()
         )
         embedVar.set_image(url=config.WaterPark)
         embedVar.set_thumbnail(url=config.Mushroom)       
@@ -55,7 +55,7 @@ class MushroomCup(commands.Cog):
         embedVar = discord.Embed(
             title="Mushroom Cup",
             description="Sweet Sweet Canyon",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.SweetSweetCanyon)
         embedVar.set_thumbnail(url=config.Mushroom)
@@ -74,7 +74,7 @@ class MushroomCup(commands.Cog):
         embedVar = discord.Embed(
             title="Mushroom Cup",
             description="Thwomp Ruins",
-            color=discord.Color.dark_purple()
+            color=discord.Color.greyple()
         )
         embedVar.set_image(url=config.ThwompRuins)
         embedVar.set_thumbnail(url=config.Mushroom)

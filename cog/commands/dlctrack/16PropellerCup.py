@@ -17,7 +17,7 @@ class PropellerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Propeller Cup",
             description="Tour Sydeny Sprint",
-            color=discord.Color.dark_purple()
+            color=discord.Color.gold()
         )
         embedVar.set_image(url=config.SydneySprint)
         embedVar.set_thumbnail(url=config.Propeller)
@@ -36,7 +36,7 @@ class PropellerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Propeller Cup",
             description="GBA Snow Land",
-            color=discord.Color.dark_purple()
+            color=discord.Color.teal()
         )
         embedVar.set_image(url=config.SnowLand)
         embedVar.set_thumbnail(url=config.Propeller)       
@@ -55,7 +55,7 @@ class PropellerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Propeller Cup",
             description="Wii Mushroom Gorge",
-            color=discord.Color.dark_purple()
+            color=discord.Color.red()
         )
         embedVar.set_image(url=config.MushroomGorge)
         embedVar.set_thumbnail(url=config.Propeller)
@@ -74,7 +74,7 @@ class PropellerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Propeller Cup",
             description="Sky-High Sundae",
-            color=discord.Color.dark_purple()
+            color=discord.Color.lighter_grey()
         )
         embedVar.set_image(url=config.SkyHighSundae)
         embedVar.set_thumbnail(url=config.Propeller)

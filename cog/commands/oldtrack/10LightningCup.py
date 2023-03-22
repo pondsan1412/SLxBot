@@ -17,7 +17,7 @@ class LightningCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lightning Cup",
             description="DS Tick-Tock Clock",
-            color=discord.Color.dark_purple()
+            color=discord.Color.gold()
         )
         embedVar.set_image(url=config.TickTockClock)
         embedVar.set_thumbnail(url=config.Lightning)
@@ -36,7 +36,7 @@ class LightningCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lightning Cup",
             description="3DS Piranha Plant Slide",
-            color=discord.Color.dark_purple()
+            color=discord.Color.darker_grey()
         )
         embedVar.set_image(url=config.PiranhaPlantSlide)
         embedVar.set_thumbnail(url=config.Lightning)       
@@ -55,7 +55,7 @@ class LightningCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lightning Cup",
             description="Wii Grumble Volcano",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_red()
         )
         embedVar.set_image(url=config.GrumbleVolcano)
         embedVar.set_thumbnail(url=config.Lightning)
@@ -74,7 +74,7 @@ class LightningCup(commands.Cog):
         embedVar = discord.Embed(
             title="Lightning Cup",
             description="N64 Rainbow Road",
-            color=discord.Color.dark_purple()
+            color=discord.Color.yellow()
         )
         embedVar.set_image(url=config.nRainbowRoad)
         embedVar.set_thumbnail(url=config.Lightning)

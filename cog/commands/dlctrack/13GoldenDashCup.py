@@ -17,7 +17,7 @@ class GoldenDashCup(commands.Cog):
         embedVar = discord.Embed(
             title="Golden Dash Cup",
             description="Tour Paris Promenade",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.ParisPromenade)
         embedVar.set_thumbnail(url=config.GoldenDash)
@@ -36,7 +36,7 @@ class GoldenDashCup(commands.Cog):
         embedVar = discord.Embed(
             title="Golden Dash Cup",
             description="3DS Toad Circuit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.yellow()
         )
         embedVar.set_image(url=config.ToadCircuit)
         embedVar.set_thumbnail(url=config.GoldenDash)       
@@ -55,7 +55,7 @@ class GoldenDashCup(commands.Cog):
         embedVar = discord.Embed(
             title="Golden Dash Cup",
             description="N64 Choco Mountain",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_orange()
         )
         embedVar.set_image(url=config.ChocoMountain)
         embedVar.set_thumbnail(url=config.GoldenDash)
@@ -74,7 +74,7 @@ class GoldenDashCup(commands.Cog):
         embedVar = discord.Embed(
             title="Golden Dash Cup",
             description="Wii Coconut Mall",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.CoconutMall)
         embedVar.set_thumbnail(url=config.GoldenDash)

@@ -17,7 +17,7 @@ class LeafCup(commands.Cog):
         embedVar = discord.Embed(
             title="Leaf Cup",
             description="DS Wario Stadium",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_gold()
         )
         embedVar.set_image(url=config.WarioStadium)
         embedVar.set_thumbnail(url=config.Leaf)
@@ -36,7 +36,7 @@ class LeafCup(commands.Cog):
         embedVar = discord.Embed(
             title="Leaf Cup",
             description="GCN Sherbet Land",
-            color=discord.Color.dark_purple()
+            color=discord.Color.teal()
         )
         embedVar.set_image(url=config.SherbetLand)
         embedVar.set_thumbnail(url=config.Leaf)       
@@ -55,7 +55,7 @@ class LeafCup(commands.Cog):
         embedVar = discord.Embed(
             title="Leaf Cup",
             description="3DS Music Park",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.MusicPark)
         embedVar.set_thumbnail(url=config.Leaf)
@@ -74,7 +74,7 @@ class LeafCup(commands.Cog):
         embedVar = discord.Embed(
             title="Leaf Cup",
             description="N64 Yoshi Valley",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_orange()
         )
         embedVar.set_image(url=config.YoshiValley)
         embedVar.set_thumbnail(url=config.Leaf)

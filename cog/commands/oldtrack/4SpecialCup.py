@@ -17,7 +17,7 @@ class SpecialCup(commands.Cog):
         embedVar = discord.Embed(
             title="Special Cup",
             description="Cloudtop Cruise",
-            color=discord.Color.dark_purple()
+            color=discord.Color.greyple()
         )
         embedVar.set_image(url=config.CloudtopCruise)
         embedVar.set_thumbnail(url=config.Special)
@@ -36,7 +36,7 @@ class SpecialCup(commands.Cog):
         embedVar = discord.Embed(
             title="Special Cup",
             description="Bone-Dry Dunes",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_orange()
         )
         embedVar.set_image(url=config.BoneDryDunes)
         embedVar.set_thumbnail(url=config.Special)       
@@ -55,7 +55,7 @@ class SpecialCup(commands.Cog):
         embedVar = discord.Embed(
             title="Special Cup",
             description="Bowser\'s Castle",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.BowserCastle)
         embedVar.set_thumbnail(url=config.Special)
@@ -74,7 +74,7 @@ class SpecialCup(commands.Cog):
         embedVar = discord.Embed(
             title="Special Cup",
             description="Rainbow Road",
-            color=discord.Color.dark_purple()
+            color=discord.Color.greyple()
         )
         embedVar.set_image(url=config.RainbowRoad)
         embedVar.set_thumbnail(url=config.Special)

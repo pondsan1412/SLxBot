@@ -17,7 +17,7 @@ class FlowerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Flower Cup",
             description="Mario Circuit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.magenta()
         )
         embedVar.set_image(url=config.MarioCiruit)
         embedVar.set_thumbnail(url=config.Flower)
@@ -36,7 +36,7 @@ class FlowerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Flower Cup",
             description="Toad Harbor",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_red()
         )
         embedVar.set_image(url=config.ToadHarbor)
         embedVar.set_thumbnail(url=config.Flower)       
@@ -55,7 +55,7 @@ class FlowerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Flower Cup",
             description="Twisted Mansion",
-            color=discord.Color.dark_purple()
+            color=discord.Color.darker_grey()
         )
         embedVar.set_image(url=config.TwistedMansion)
         embedVar.set_thumbnail(url=config.Flower)
@@ -74,7 +74,7 @@ class FlowerCup(commands.Cog):
         embedVar = discord.Embed(
             title="Flower Cup",
             description="Shy Guy Falls",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_red()
         )
         embedVar.set_image(url=config.ShyGuyFalls)
         embedVar.set_thumbnail(url=config.Flower)

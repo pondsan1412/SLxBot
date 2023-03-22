@@ -17,7 +17,7 @@ class FruitCup(commands.Cog):
         embedVar = discord.Embed(
             title="Fruit Cup",
             description="Tour Amsterdam Drift",
-            color=discord.Color.dark_purple()
+            color=discord.Color.orange()
         )
         embedVar.set_image(url=config.AmsterdamDrift)
         embedVar.set_thumbnail(url=config.Fruit)
@@ -36,7 +36,7 @@ class FruitCup(commands.Cog):
         embedVar = discord.Embed(
             title="Fruit Cup",
             description="GBA Riverside Park",
-            color=discord.Color.dark_purple()
+            color=discord.Color.dark_orange()
         )
         embedVar.set_image(url=config.RiversidePark)
         embedVar.set_thumbnail(url=config.Fruit)       
@@ -55,7 +55,7 @@ class FruitCup(commands.Cog):
         embedVar = discord.Embed(
             title="Fruit Cup",
             description="Wii DK Summit",
-            color=discord.Color.dark_purple()
+            color=discord.Color.teal()
         )
         embedVar.set_image(url=config.DKSummit)
         embedVar.set_thumbnail(url=config.Fruit)
@@ -74,7 +74,7 @@ class FruitCup(commands.Cog):
         embedVar = discord.Embed(
             title="Fruit Cup",
             description="Yoshi\'s Island",
-            color=discord.Color.dark_purple()
+            color=discord.Color.teal()
         )
         embedVar.set_image(url=config.YoshisIsland)
         embedVar.set_thumbnail(url=config.Fruit)
