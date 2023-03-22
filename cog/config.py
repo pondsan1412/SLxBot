@@ -104,6 +104,28 @@ Moon = "https://cdn.discordapp.com/attachments/1066340666436747304/1066353849541
 Fruit = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893267087958056/MK8D_BCP_Fruit_Emblem.png"
 Boomerang = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893823189753876/MK8D_BCP_Boomerang_Emblem.png"
 
+#full track info photo variable
+Mush = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173261495484466/MushroomList.png"
+Flwer = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173336120524860/FlowerList.png"
+Sr = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173432677613669/StarList.png"
+Spec = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173525212344340/SpecialList.png"
+Eg = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173594770669668/EggList.png"
+Crss = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173663628574871/CrossingList.png"
+Shll = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173737217642507/ShellList.png"
+Bana = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173810383077396/BananaList.png"
+Lf = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173884135723018/LeafList.png"
+Light = "https://cdn.discordapp.com/attachments/1088173176464343221/1088173964486000660/LightningList.png"
+Tri = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174040042184784/TriforceList.png"
+Bel = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174155792396349/BellList.png"
+Golden = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174228739739739/GoldenDashList.png"
+LCat = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174316845289614/LuckyCatList.png"
+Turn = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174417626005585/TurnipList.png"
+Pro = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174482570608801/PropellerList.png"
+Rck = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174560567885945/Rock.png"
+Mon = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174615710400532/Moon.png"
+Frut = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174699671998554/FruitList.png"
+Boomer = "https://cdn.discordapp.com/attachments/1088173176464343221/1088174758060888124/Boomerang.png"
+
 #team photo variable
 SilentLightning = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363539377369128/Silent_Lightning.png"
 SilentBolt = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363527092260984/Silent_Bolt.png"
@@ -151,17 +173,17 @@ some_of_anime_girl = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.g
 
 #embed variable for select menus
 embedSelect = discord.Embed(
-        color=discord.Color.red(),
-        title="This is Select Menus",
-        description="Developer team \n Pondsan1412 \n Zquka",
+        color=discord.Color.dark_purple(),
+        title="This is Help Commands",
+        description="Developer Team: \n Pondsan1412 \n Zquka",
 
 )
 embedSelect.set_image(url=some_of_anime_girl)
-embedSelect.set_author(name="my name is pond",icon_url=pond_icon_url)
+embedSelect.set_author(name="Silent Lightning",icon_url=SilentLightning)
 embedMushroomcup = discord.Embed(
         color=discord.Color.red(),
-        title="555555555555",
-        description="12d3as4d6a4sd84as6d4a6sd84a6s8d\nsdoasdoiajsodijaosdjoasijdoiajsd\nsajdoiasjdoiajsdoiajsdoiajsd",
+        title="#1 Track",
+        description="**Mario Stadium Kart Commands:** \n `MKS, mks, 1-1` \n **Water Park Commands:** \n `WP, wp, 1-2` \n **Sweet Sweet Canyon Commands:** \n `SSC, ssc, 1-3` \n T**hwomp Ruin Commands:** \n `TR, tr, 1-4`",
 )
-embedMushroomcup.set_author(name="KUYYY SEX DOGS",icon_url=some_of_anime_girl)
-embedMushroomcup.set_image(url="https://j.gifs.com/vQ8doY.gif")
+embedMushroomcup.set_author(name="Mushroom Cup",icon_url=Mushroom)
+embedMushroomcup.set_image(url=Mush)
