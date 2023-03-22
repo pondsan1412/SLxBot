@@ -11,9 +11,10 @@ from googletrans import Translator
 from cog.SelectMenus import *
 
 class General(commands.Cog):
-    def __init__(self, bot):
+    def __init__(self, bot:commands.Bot):
         self.bot = bot
         self.words_txt = ""
+        
     def cog_unload(self):
         self.bot.help_command = self._original_help_command
     
@@ -174,7 +175,29 @@ class General(commands.Cog):
             embed=config.embedSelect,
             view=SelectView()
         )            
-    
+    @commands.hybrid_command(
+        name="send",
+        help="send messages into channel author",
+        description="send messages to channel"
+    )
+    async def _send_messages(
+        self,
+        ctx:commands.Context,
+        channel_to_send:discord.TextChannel,
+        messages_to_send:str
+    ):
+        channel = discord.utils.get(
+            ctx.guild.channels,
+            name=f"{channel_to_send}"
+        )
+        channel_id = channel.id
+        ch_to_send = self.bot.get_channel(channel_id)
+        await ch_to_send.send(messages_to_send)
+        await ctx.send(
+            f"channel id is :{channel_id}",
+            delete_after=0.1
+        )
+
 
 async def setup(bot):
     await bot.add_cog(General(bot))
