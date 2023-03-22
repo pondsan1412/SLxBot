@@ -154,7 +154,10 @@ embedSelect = discord.Embed(
         color=discord.Color.red(),
         title="This is Select Menus",
         description="Developer team \n Pondsan1412 \n Zquka",
+
 )
+embedSelect.set_image(url=some_of_anime_girl)
+embedSelect.set_author(name="my name is pond",icon_url=pond_icon_url)
 embedMushroomcup = discord.Embed(
         color=discord.Color.red(),
         title="555555555555",

@@ -10,7 +10,6 @@ class bot(commands.Bot):
         super().__init__(
             command_prefix=commands.when_mentioned_or("."),
             intents=discord.Intents.all(),
-           
             no_category=None
             )
             

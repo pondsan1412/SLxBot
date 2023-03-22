@@ -170,16 +170,8 @@ class General(commands.Cog):
         self,
         ctx
     ):
-        embed = config.embedSelect
-        embed.set_author(
-            name=ctx.author,
-            icon_url=config.pond_icon_url
-        )
-        embed.set_image(
-            url=config.some_of_anime_girl
-        )
         await ctx.send(
-            embed=embed,
+            embed=config.embedSelect,
             view=SelectView()
         )            
     
