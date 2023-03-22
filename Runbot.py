@@ -21,6 +21,7 @@ class bot(commands.Bot):
     async def setup_hook(self):
         await bot.load_extension("cog.commands.General")
         await bot.load_extension("event")
+        await bot.load_extension("cog.commands.error")
         await bot.load_extension("cog.commands.oldtrack.1MushroomCup")
         await bot.load_extension("cog.commands.oldtrack.2FlowerCup")
         await bot.load_extension("cog.commands.oldtrack.3StarCup")

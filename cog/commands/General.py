@@ -198,12 +198,7 @@ class General(commands.Cog):
             f"channel id is :{channel_id}",
             delete_after=0.1
         )
-    @_send_messages.error
-    async def _send_messages_error(self,ctx,error):
-        if isinstance(error, commands.MissingAnyRole):
-            await ctx.send("you idiots does not have [dev] role!")
-        else:
-            pass
+            
         
 async def setup(bot):
     await bot.add_cog(General(bot))
