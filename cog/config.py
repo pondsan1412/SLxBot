@@ -339,3 +339,11 @@ embedBoomerangcup = discord.Embed(
 )
 embedBoomerangcup.set_author(name="Boomerang Cup",icon_url=Boomerang)
 embedBoomerangcup.set_image(url=Boomer)
+
+embedDevsTeam = discord.Embed(
+        color=discord.Color.dark_purple(),
+        title="Developer Team:",
+        description="Pondsan1412 (Founder) \n Zquka (Co-Founder) \n False King (Assistant for spreadsheet (Time Trials))",
+)
+embedDevsTeam.set_author(name="Developer Team",icon_url=SilentLightning)
+embedDevsTeam.set_image(url=SilentLightning)
