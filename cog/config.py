@@ -274,7 +274,7 @@ embedTriforcecup.set_image(url=Tri)
 embedBellcup = discord.Embed(
         color=discord.Color.gold(),
         title="#12 Track",
-        description="**Neo Bowser City Commands:** \n `dNBC, dnbc, 12-1` \n **Ribbon Road Commands:** \n `dRiR, dRiR, 12-2` \n **Super Bell Subway Commands:** \n `dSBS, dsbs, 12-3` \n **Big Blue Commands:** \n `dBB, dbb, 12-4`",
+        description="**Neo Bowser City Commands:** \n `dNBC, dnbc, 12-1` \n **Ribbon Road Commands:** \n `dRiR, drir, 12-2` \n **Super Bell Subway Commands:** \n `dSBS, dsbs, 12-3` \n **Big Blue Commands:** \n `dBB, dbb, 12-4`",
 )
 embedBellcup.set_author(name="Bell Cup",icon_url=Bell)
 embedBellcup.set_image(url=Bel)
@@ -345,7 +345,7 @@ embedBoomerangcup.set_image(url=Boomer)
 
 embedDevsTeam = discord.Embed(
         color=discord.Color.dark_purple(),
-        title="Developer Team:",
+        title="A Team:",
         description=developer_id
 )
 embedDevsTeam.set_author(name="Developer Team",icon_url=SilentLightning)
