@@ -23,7 +23,7 @@ class bot(commands.Bot):
     "cog.commands.General",
     "cog.commands.event",
     "cog.commands.error",
-    "cog.commands.dev",
+    "cog.commands.TTUpdate",
     "cog.commands.oldtrack.1MushroomCup",
     "cog.commands.oldtrack.2FlowerCup",
     "cog.commands.oldtrack.3StarCup",
