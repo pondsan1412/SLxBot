@@ -13,9 +13,9 @@ class admins(commands.Cog):
         self.bot = bot
     @commands.hybrid_command(
         name="ttupdate",
-        help="update submissions in leaderboard",
-        description="update TT",
-        aliase=["ttadd","ttsubmit","tt"]
+        help="submissions update",
+        description="5555555",
+        aliases=["tt"]
     )
     async def _update_tt(
         self,
