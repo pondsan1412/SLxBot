@@ -350,3 +350,13 @@ embedDevsTeam = discord.Embed(
 )
 embedDevsTeam.set_author(name="Silent Lightning",icon_url=SilentLightning)
 embedDevsTeam.set_image(url=SilentLightning)
+
+embedGeneral1 = discord.Embed(
+            title="General Command List",
+            color=discord.Color.gold(),
+            type='rich',
+        )
+embedGeneral1.set_author(name="Pondsan1412",url=pond_icon_url)
+embedGeneral1.add_field(name="default command",value="translate: any")
+embedGeneral1.set_image(url=some_of_anime_girl)
+embedGeneral1.set_footer(text="555Zquka make tihs commana",icon_url=pond_icon_url)

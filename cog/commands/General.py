@@ -71,36 +71,6 @@ class General(commands.Cog):
                     current_embed_page = 1
                 await message.remove_reaction(str(reaction.emoji), user)
     @commands.hybrid_command(
-        name="button",
-        help="test button",
-        description="test button"
-    )
-    async def _buttontest(
-        self,
-        ctx: commands.Context
-    ):
-        button1 = discord.ui.Button(
-            style=discord.ButtonStyle.blurple,
-            label="Zquka baka",
-        )
-        button2 = discord.ui.Button(
-            style=discord.ButtonStyle.red,
-            label="Sleeping allday",
-        )
-        button3 = discord.ui.Button(
-            style=discord.ButtonStyle.green,
-            label="when you wakeup",
-        )
-        view = discord.ui.View()
-        view.add_item(button1)
-        view.add_item(button2)
-        view.add_item(button3)
-        embed = discord.Embed()
-        embed.set_image(url="https://cdn.discordapp.com/attachments/960467344826720277/1086732556369661993/image.png")
-        
-        await ctx.send(embed=embed,view=view)
-    
-    @commands.hybrid_command(
         name="translate",
         help="useful command to translate ",
         description="useful command to translate",
@@ -199,12 +169,7 @@ class General(commands.Cog):
             f"channel id is :{channel_id}",
             delete_after=0.1
         )
-    @commands.hybrid_command(name="buttonsend")
-    async def _buttonsend(self,i:commands.Context):
-        await i.send(
-            "Hello Zquka this is messages await to edit by clicking button!",
-            view=Buttons()
-        )        
+
         
 async def setup(bot):
     await bot.add_cog(General(bot))

@@ -1,10 +1,15 @@
 import discord
 from discord.ext import commands
 from cog import config
-
+from cog.button import *
 class Select(discord.ui.Select):
     def __init__(self):
         options=[
+            discord.SelectOption(
+            label="General Command list",
+            emoji=config.Fire,
+            description="show all general command"
+            ),
             discord.SelectOption(
             label="Mushroom Cup Commands",
             emoji=config.MushroomCup,
@@ -118,7 +123,9 @@ class Select(discord.ui.Select):
             options=options
         )
     async def callback(self, int:discord.Interaction):
-        if self.values[0] == "Mushroom Cup Commands":
+        if self.values[0] == "General Command list":
+            await int.response.edit_message(embed=config.embedGeneral1)
+        elif self.values[0] == "Mushroom Cup Commands":
             await int.response.edit_message(embed=config.embedMushroomcup)
         elif self.values[0] == "Flower Cup Commands":
             await int.response.edit_message(embed=config.embedFlowercup)
@@ -171,6 +178,6 @@ class SelectView(discord.ui.View):
     ):
         super().__init__(timeout=timeout)
         self.add_item(Select())
-
+        
 async def setup(bot):
     await bot.add_cog(Select(bot))

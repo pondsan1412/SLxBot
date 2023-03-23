@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+from cog import config
 class Buttons(discord.ui.View):
     def __init__(self,*, timeout=100):
         super().__init__(timeout=timeout)
@@ -15,22 +15,14 @@ class Buttons(discord.ui.View):
         button:discord.ui.Button
         
     ):
-        await i.response.edit_message(content=f"hello Zquka",view=self)
-    @discord.ui.button(label="of",style=discord.ButtonStyle.red)
-    async def red_button(
-        self,
-        i:discord.Interaction,
-        button:discord.ui.Button
-        
-    ):
-        await i.response.edit_message(content=f"what are you doing?",view=self)
-    @discord.ui.button(label="commands",style=discord.ButtonStyle.green)
-    async def green_button(
-        self,
-        i:discord.Interaction,
-        button:discord.ui.Button
-        
-    ):
-        await i.response.edit_message(content=f"how are you today?",view=self)          
+        embedGeneral1 = discord.Embed(
+            title="General Command List",
+            color=discord.Color.gold,
+            type='rich',
+        )
+        embedGeneral1.set_author(name=i.author,url=config.some_of_anime_girl)
+        embedGeneral1.add_field(name="default command",value="translate: any")
+        await i.response.edit_message(embed=embedGeneral1,view=self)
+            
 async def setup(bot):
     await bot.add_cog(Buttons(bot))
