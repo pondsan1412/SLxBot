@@ -175,7 +175,7 @@ class General(commands.Cog):
             embed=config.embedSelect,
             view=SelectView()
         )
-    @commands.has_any_role('dev','TTUpdater')            
+    @commands.has_any_role('dev')            
     @commands.hybrid_command(
         name="send",
         help="send messages into channel author",
