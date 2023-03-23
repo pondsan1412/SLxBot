@@ -9,7 +9,7 @@ from discord import app_commands
 from discord.ui import View,Button
 from googletrans import Translator
 from cog.SelectMenus import *
-
+from cog.button import *
 class General(commands.Cog):
     def __init__(self, bot:commands.Bot):
         self.bot = bot
@@ -169,11 +169,12 @@ class General(commands.Cog):
     )
     async def _selectmenus(
         self,
-        ctx
+        ctx:commands.Context
     ):
         await ctx.send(
             embed=config.embedSelect,
-            view=SelectView()
+            view=SelectView(),
+            delete_after=100
         )
     @commands.has_any_role('dev')            
     @commands.hybrid_command(
@@ -198,7 +199,12 @@ class General(commands.Cog):
             f"channel id is :{channel_id}",
             delete_after=0.1
         )
-            
+    @commands.hybrid_command(name="buttonsend")
+    async def _buttonsend(self,i:commands.Context):
+        await i.send(
+            "Hello Zquka this is messages await to edit by clicking button!",
+            view=Buttons()
+        )        
         
 async def setup(bot):
     await bot.add_cog(General(bot))
