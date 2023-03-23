@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 cog/secret.py
 secret.py
+creds.json
