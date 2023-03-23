@@ -15,7 +15,7 @@ class error(commands.Cog):
             error,
             commands.MissingAnyRole
         ):
-            await ctx.send("Access Denied! You does not have a [dev],[ttupdater] role!")
+            await ctx.send("Access Denied! You does not have a [dev] role!")
         else:
             pass
         if isinstance(
