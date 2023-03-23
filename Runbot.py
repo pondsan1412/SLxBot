@@ -23,6 +23,7 @@ class bot(commands.Bot):
     "cog.commands.General",
     "cog.commands.event",
     "cog.commands.error",
+    "cog.commands.admins",
     "cog.commands.oldtrack.1MushroomCup",
     "cog.commands.oldtrack.2FlowerCup",
     "cog.commands.oldtrack.3StarCup",
@@ -47,8 +48,6 @@ class bot(commands.Bot):
         bot.remove_command("help")
         for extension in extensions:
             await bot.load_extension(extension)
- 
-              
         await bot.tree.sync()
     
        
