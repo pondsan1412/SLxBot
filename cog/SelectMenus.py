@@ -105,6 +105,11 @@ class Select(discord.ui.Select):
             emoji=config.BoomerangCup,
             description="Boomerang Cup Track List"
             ),
+            discord.SelectOption(
+            label="Developer Team",
+            emoji=config.Lucky,
+            description=""
+            ),
         ]
         super().__init__(
             placeholder=f"🤏Select some option",
@@ -153,6 +158,8 @@ class Select(discord.ui.Select):
             await int.response.edit_message(embed=config.embedFruitcup)
         elif self.values[0] == "Boomerang Cup Commands":
             await int.response.edit_message(embed=config.embedBoomerangcup)
+        elif self.values[0] == "Developer Team":
+            await int.response.edit_message(embed=config.embedDevsTeam)            
 
 
 class SelectView(discord.ui.View):

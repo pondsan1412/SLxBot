@@ -165,6 +165,9 @@ Pass = "<a:RosalinaDodge:1087794095243665425>"
 Problem = "<a:LuigiBlind:1087800673569087578>"
 Lucky = "<a:PeachStar:1087800677427859586>"
 
+#user_id for embed
+developer_id = "<@324207503816654859> (Founder) \n <@257332011075764224> (Co-Founder) \n \n **Assistant:** \n <@209006928272162816> (Assistant for (TT))"
+
 #icon_url for embed
 pond_icon_url = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
 
@@ -175,7 +178,7 @@ some_of_anime_girl = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.g
 embedSelect = discord.Embed(
         color=discord.Color.purple(),
         title="A Help Commands",
-        description="Info Prefix: `.` \n \n Developer Team: \n Pondsan1412 \n Zquka ",
+        description="Info Prefix: `.`",
 
 )
 embedSelect.set_image(url=SilentLightning)
@@ -255,7 +258,7 @@ embedLeafcup.set_image(url=Lf)
 embedLightningcup = discord.Embed(
         color=discord.Color.gold(),
         title="#10 Track",
-        description="**Tick-Tock Clock:** \n `rTTC, rttc, 10-1` \n **Piranha Plant Slide Commands:** \n `rPPS, rpps, 10-2` \n **Grumble Volcano Commands:** \n `rGV, rgv, 10-3` \n **Rainbow Road Commands:** \n `rRRd, rrrd, 10-4`",
+        description="**Tick-Tock Clock Commands:** \n `rTTC, rttc, 10-1` \n **Piranha Plant Slide Commands:** \n `rPPS, rpps, 10-2` \n **Grumble Volcano Commands:** \n `rGV, rgv, 10-3` \n **Rainbow Road Commands:** \n `rRRd, rrrd, 10-4`",
 )
 embedLightningcup.set_author(name="Lightning Cup",icon_url=Lightning)
 embedLightningcup.set_image(url=Light)
@@ -263,7 +266,7 @@ embedLightningcup.set_image(url=Light)
 embedTriforcecup = discord.Embed(
         color=discord.Color.orange(),
         title="#11 Track",
-        description="**Wario\'s Gold Mine Commands:** \n `dWGM, dWGM, 11-1` \n **Rainbow Road:** \n `dRR, drr, 11-2` \n **Ice Ice Outpost Commands:** \n `dIIO, diio, 11-3` \n **Hyrule Circuit Commands:** \n `rHC, rhc, 11-4`",
+        description="**Wario\'s Gold Mine Commands:** \n `dWGM, dWGM, 11-1` \n **Rainbow Road Commands:** \n `dRR, drr, 11-2` \n **Ice Ice Outpost Commands:** \n `dIIO, diio, 11-3` \n **Hyrule Circuit Commands:** \n `rHC, rhc, 11-4`",
 )
 embedTriforcecup.set_author(name="Triforce Cup",icon_url=Triforce)
 embedTriforcecup.set_image(url=Tri)
@@ -271,7 +274,7 @@ embedTriforcecup.set_image(url=Tri)
 embedBellcup = discord.Embed(
         color=discord.Color.gold(),
         title="#12 Track",
-        description="**Neo Bowser City Commands:** \n `dNBC, dnbc, 12-1` \n **Ribbon Road Commands:** \n `dRiR, dRiR, 12-2` \n **Super Bell Subway Commands:** \n `dSBS, dsbs, 12-3` \n **Big Blue Commands:** \n `dBB, dbb, 12-4`",
+        description="**Neo Bowser City Commands:** \n `dNBC, dnbc, 12-1` \n **Ribbon Road Commands:** \n `dRiR, drir, 12-2` \n **Super Bell Subway Commands:** \n `dSBS, dsbs, 12-3` \n **Big Blue Commands:** \n `dBB, dbb, 12-4`",
 )
 embedBellcup.set_author(name="Bell Cup",icon_url=Bell)
 embedBellcup.set_image(url=Bel)
@@ -279,7 +282,7 @@ embedBellcup.set_image(url=Bel)
 embedGoldenDashcup = discord.Embed(
         color=discord.Color.yellow(),
         title="#13 Track",
-        description="**Paris Promenade:** \n `bPP, bpp, 12-1` \n **Toad Circuit Commands:** \n `bTC, btc, 13-2` \n **Choco Mountain Commands:** \n `bCMo, bcmo, 13-3` \n **Coconut Mall Commands:** \n `bCMa, bcma, 13-4`",
+        description="**Paris Promenade Commands:** \n `bPP, bpp, 12-1` \n **Toad Circuit Commands:** \n `bTC, btc, 13-2` \n **Choco Mountain Commands:** \n `bCMo, bcmo, 13-3` \n **Coconut Mall Commands:** \n `bCMa, bcma, 13-4`",
 )
 embedGoldenDashcup.set_author(name="Golden Dash Cup",icon_url=GoldenDash)
 embedGoldenDashcup.set_image(url=Golden)
@@ -303,7 +306,7 @@ embedTurnipcup.set_image(url=Turn)
 embedPropellercup = discord.Embed(
         color=discord.Color.orange(),
         title="#16 Track",
-        description="**Sydney Sprint Commands:** \n `bSS, bss, 16-1` \n **Snow Land Commands:** \n `bSL, bsl, 16-2` \n **Mushroom Gorge Commands:** \n `bMG, bmg, 16-3` \n **Sky-High Sundae Commands:** \n `bSHS, bshs, 15-4`",
+        description="**Sydney Sprint Commands:** \n `bSS, bss, 16-1` \n **Snow Land Commands:** \n `bSL, bsl, 16-2` \n **Mushroom Gorge Commands:** \n `bMG, bmg, 16-3` \n **Sky-High Sundae Commands:** \n `bSHS, bshs, 16-4`",
 )
 embedPropellercup.set_author(name="Propeller Cup",icon_url=Propeller)
 embedPropellercup.set_image(url=Pro)
@@ -311,7 +314,7 @@ embedPropellercup.set_image(url=Pro)
 embedRockcup = discord.Embed(
         color=discord.Color.dark_grey(),
         title="#17 Track",
-        description="**London Loop Commands:** \n `bLL, bll, 17-1` \n **Boo Lake Commands:** \n `bBL, bll, 17-2` \n **Rock Rock Mountain Commands:** \n `bRRM, brrm, 17-3` \n **Maple Treeway Commands:** \n `rRRd, rrrd, 17-4`",
+        description="**London Loop Commands:** \n `bLL, bll, 17-1` \n **Boo Lake Commands:** \n `bBL, bbl, 17-2` \n **Rock Rock Mountain Commands:** \n `bRRM, brrm, 17-3` \n **Maple Treeway Commands:** \n `bMT, bmt, 17-4`",
 )
 embedRockcup.set_author(name="Rock Cup",icon_url=Rock)
 embedRockcup.set_image(url=Rck)
@@ -327,7 +330,7 @@ embedMooncup.set_image(url=Mon)
 embedFruitcup = discord.Embed(
         color=discord.Color.red(),
         title="#19 Track",
-        description="**Amsterdam Drift Commands:** \n `bAD, bad, 19-1` \n **Riverside Park Commands:** \n `bRP, brp, 19-2` \n **DK Summit Commands:** \n `bDKS, bdks, 19-3` \n **Yoshi's Valley Commands:** \n `bYI, byi, 19-4`",
+        description="**Amsterdam Drift Commands:** \n `bAD, bad, 19-1` \n **Riverside Park Commands:** \n `bRP, brp, 19-2` \n **DK Summit Commands:** \n `bDKS, bdks, 19-3` \n **Yoshi's Island Commands:** \n `bYI, byi, 19-4`",
 )
 embedFruitcup.set_author(name="Fruit Cup",icon_url=Fruit)
 embedFruitcup.set_image(url=Fr)
@@ -335,7 +338,15 @@ embedFruitcup.set_image(url=Fr)
 embedBoomerangcup = discord.Embed(
         color=discord.Color.lighter_grey(),
         title="#20 Track",
-        description="**Bangkok Commands:** \n `bBR, bbr, 20-1` \n **Mario Circuit Commands:** \n `bMC, bmc, 20-2` \n **Waluigi Stadium Commands:** \n `bWS, bws, 20-3` \n **Singapore Speedway Commands:** \n `bSSy, bssy, 20-4`",
+        description="**Bangkok Rush Commands:** \n `bBR, bbr, 20-1` \n **Mario Circuit Commands:** \n `bMC, bmc, 20-2` \n **Waluigi Stadium Commands:** \n `bWS, bws, 20-3` \n **Singapore Speedway Commands:** \n `bSSy, bssy, 20-4`",
 )
 embedBoomerangcup.set_author(name="Boomerang Cup",icon_url=Boomerang)
 embedBoomerangcup.set_image(url=Boomer)
+
+embedDevsTeam = discord.Embed(
+        color=discord.Color.dark_purple(),
+        title="A Developer Team:",
+        description=developer_id
+)
+embedDevsTeam.set_author(name="Silent Lightning",icon_url=SilentLightning)
+embedDevsTeam.set_image(url=SilentLightning)
