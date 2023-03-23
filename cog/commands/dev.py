@@ -4,7 +4,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
 from discord import app_commands
-from typing import List
+
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
@@ -13,17 +13,38 @@ file_in_sheet_testsheet = sheet.worksheet("Submissions")
 class admins(commands.Cog):
     def __init__(self,bot:commands.Bot):
         self.bot = bot
-    @commands.has_any_role('dev','TTUpdater')
+    @commands.has_any_role('TT Updater')
     @commands.hybrid_command(
         name="submit",
-        help="submissions update",
-        description="for submission updater",
+        help="Submissions Update",
+        description="Time Trial Update",
         aliases=["tt"]
     )
-    @app_commands.choices(category=[app_commands.Choice(name="DLC",value="DLC"),app_commands.Choice(name="S",value="S")])
+    @app_commands.choices(category=[
+        app_commands.Choice(name="DLC",value="DLC"),
+        app_commands.Choice(name="S",value="S")])
     @app_commands.choices(player=[
+        app_commands.Choice(name="AMDX",value="AMDX"),
+        app_commands.Choice(name="Ant",value="Ant"),
+        app_commands.Choice(name="Benjames",value="Benjames"),
+        app_commands.Choice(name="BIGWILLI",value="BIGWILLI"),
+        app_commands.Choice(name="FalseKing",value="FalseKing"),
+        app_commands.Choice(name="FreeDobby",value="FreeDobby"),
+        app_commands.Choice(name="Holycomb",value="Holycomb"),
+        app_commands.Choice(name="JacKo",value="JacKo"),
+        app_commands.Choice(name="Kaleb112",value="Kaleb112"),
+        app_commands.Choice(name="Leftyginger",value="Leftyginger"),
+        app_commands.Choice(name="Ness",value="Ness"),
+        app_commands.Choice(name="Ole",value="Ole"),
+        app_commands.Choice(name="Paulo22",value="Paulo22"),
+        app_commands.Choice(name="Rick",value="Rick"),
+        app_commands.Choice(name="Robertala",value="Robertala"),
+        app_commands.Choice(name="Staff",value="Staff"),
+        app_commands.Choice(name="Stan",value="Stan"),
+        app_commands.Choice(name="Torasshi",value="Torasshi"),
+        app_commands.Choice(name="Vonz",value="Vonz"),
+        app_commands.Choice(name="Xenoph",value="Xenoph"),
         app_commands.Choice(name="Zquka",value="Zquka"),
-        app_commands.Choice(name="FalseKing",value="FalseKing")
     ])
     async def _update_tt(
         self,
