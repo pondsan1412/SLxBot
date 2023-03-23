@@ -19,13 +19,13 @@ class admins(commands.Cog):
     )
     async def _update_tt(
         self,
-        ctx:commands.Context,
-        Track:str,
-        Category:str,
-        Player:str,
-        Time:str,
+        ctx,
+        track,
+        category,
+        player,
+        time,
     ):
-        update_row_submit = [Track,Category,Player,Time]
+        update_row_submit = [track,category,player,time]
         file_in_sheet_testsheet.insert_row(update_row_submit, 1937)
         await ctx.send("done!")
         
