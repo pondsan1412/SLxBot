@@ -15,7 +15,7 @@ class error(commands.Cog):
             error,
             commands.MissingAnyRole
         ):
-            await ctx.send("Access Denied! You does not have a [dev] role!")
+            await ctx.send("Access Denied! You does not have a [dev],[ttupdater] role!")
         else:
             pass
         if isinstance(
@@ -23,6 +23,7 @@ class error(commands.Cog):
             AttributeError
         ):
             await ctx.send(error,AttributeError)
-    
+        else:
+            pass
 async def setup(bot):
     await bot.add_cog(error(bot))
