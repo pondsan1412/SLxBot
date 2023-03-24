@@ -8,7 +8,7 @@ from discord import app_commands
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
-sheet = client.open("Silent Lightning TT Leaderboard")
+sheet = client.open("Copy of Silent Lightning's TT Leaderboard")
 file_in_sheet_testsheet = sheet.worksheet("Submissions")
 class admins(commands.Cog):
     def __init__(self,bot:commands.Bot):
