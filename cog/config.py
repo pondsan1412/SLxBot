@@ -173,6 +173,7 @@ pond_icon_url = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
 
 #picture_url for embed set_image
 some_of_anime_girl = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
+help_info = "https://cdn.discordapp.com/attachments/1088911898638045246/1088912694423339191/image.png"
 
 #embed variable for select menus
 embedSelect = discord.Embed(
@@ -356,7 +357,7 @@ embedGeneral1 = discord.Embed(
             color=discord.Color.gold(),
             type='rich',
         )
-embedGeneral1.set_author(name="Pondsan1412",url=pond_icon_url)
-embedGeneral1.add_field(name="default command",value="translate: any")
-embedGeneral1.set_image(url=some_of_anime_girl)
-embedGeneral1.set_footer(text="555Zquka make tihs commana",icon_url=pond_icon_url)
+embedGeneral1.set_author(name="Silent Lightning",)
+embedGeneral1.add_field(name="A default command",value="")
+embedGeneral1.set_image(url=help_info)
+embedGeneral1.set_footer(text="Silent Lightning",icon_url=SilentLightning)
