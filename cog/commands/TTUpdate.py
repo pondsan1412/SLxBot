@@ -56,7 +56,7 @@ class admins(commands.Cog):
     ):
         
         update_row_submit = [track,category,player,time]
-        file_in_sheet_testsheet.insert_row(update_row_submit, 1937)
+        file_in_sheet_testsheet.insert_row(update_row_submit, 3)
         await ctx.send("Done!")
         
 async def setup(bot):
