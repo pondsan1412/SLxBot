@@ -119,7 +119,7 @@ class General(commands.Cog):
             f"channel id is :{channel_id}",
             delete_after=0.1
         )
-
-        
+    
+            
 async def setup(bot):
     await bot.add_cog(General(bot))
