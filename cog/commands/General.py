@@ -99,7 +99,7 @@ class General(commands.Cog):
     @commands.has_any_role('dev')            
     @commands.hybrid_command(
         name="send",
-        help="Bot send a message to any channel with commands.",
+        help="Bot send a message to any channel with commands",
         description="send messages to channel"
     )
     async def _send_messages(
@@ -119,7 +119,6 @@ class General(commands.Cog):
             f"channel id is :{channel_id}",
             delete_after=0.1
         )
-    
-            
+
 async def setup(bot):
     await bot.add_cog(General(bot))

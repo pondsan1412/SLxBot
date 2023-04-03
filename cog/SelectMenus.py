@@ -8,7 +8,7 @@ class Select(discord.ui.Select):
             discord.SelectOption(
             label="General Command List",
             emoji=config.Fire,
-            description="Show all a commands"
+            description="Show all commands"
             ),
             discord.SelectOption(
             label="Mushroom Cup",
@@ -26,7 +26,7 @@ class Select(discord.ui.Select):
             description="Star Cup Track List"
             ),
             discord.SelectOption(
-            label="Special",
+            label="Special Cup",
             emoji=config.SpecialCup,
             description="Special Cup Track List"
             ),
