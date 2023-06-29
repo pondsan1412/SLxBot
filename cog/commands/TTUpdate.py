@@ -8,9 +8,9 @@ from discord import app_commands
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
-sheet = client.open("Copy of Silent Lightning's TT Leaderboard")
+sheet = client.open("Silent Lightning's TT Leaderboard")
 file_in_sheet_testsheet = sheet.worksheet("Submissions")
-shroom_150cc = sheet.worksheet("150cc")
+shroom_150cc = sheet.worksheet("150ccS")
 class admins(commands.Cog):
     def __init__(self,bot:commands.Bot):
         self.bot = bot
@@ -22,8 +22,8 @@ class admins(commands.Cog):
         aliases=["tt"]
     )
     @app_commands.choices(category=[
-        app_commands.Choice(name="DLC",value="DLC"),
-        app_commands.Choice(name="S",value="S")])
+        app_commands.Choice(name="S",value="S"),
+        app_commands.Choice(name="DLC",value="DLC")])
     @app_commands.choices(player=[
         app_commands.Choice(name="AMDX",value="AMDX"),
         app_commands.Choice(name="Ant",value="Ant"),
@@ -40,7 +40,6 @@ class admins(commands.Cog):
         app_commands.Choice(name="Paulo22",value="Paulo22"),
         app_commands.Choice(name="Rick",value="Rick"),
         app_commands.Choice(name="Robertala",value="Robertala"),
-        app_commands.Choice(name="Staff",value="Staff"),
         app_commands.Choice(name="Stan",value="Stan"),
         app_commands.Choice(name="Torasshi",value="Torasshi"),
         app_commands.Choice(name="Vonz",value="Vonz"),
