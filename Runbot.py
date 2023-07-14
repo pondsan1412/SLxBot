@@ -44,6 +44,8 @@ class bot(commands.Bot):
     "cog.commands.infodlctrack.18MoonCup",
     "cog.commands.infodlctrack.19FruitCup",
     "cog.commands.infodlctrack.20BoomerangCup",
+    "cog.commands.infodlctrack.21FeatherCup",
+    "cog.commands.infodlctrack.22CherryCup",
 ]
         bot.remove_command("help")
         for extension in extensions:

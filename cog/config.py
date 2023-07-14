@@ -81,6 +81,14 @@ BangkokRush = "https://cdn.discordapp.com/attachments/1123118531328872498/112312
 bMarioCircuit = "https://cdn.discordapp.com/attachments/1123118531328872498/1123122779143819374/MK8D_DS_Mario_Circuit_Course_Icon.png"
 WaluigiStadium = "https://cdn.discordapp.com/attachments/1123118531328872498/1123122798454382642/MK8D_GCN_Waluigi_Stadium_Course_Icon.png"
 SingaporeSpeedway = "https://cdn.discordapp.com/attachments/1123118531328872498/1123122807358894111/MK8D_Tour_Singapore_Speedway_Course_Icon.png"
+AthensDash = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278412939333692/MK8D_Tour_Athens_Dash_Course_Icon.png"
+DaisyCrusier = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278457638043698/MK8D_GCN_Daisy_Cruiser_Course_Icon.png"
+MoonviewHighway = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278497387462757/MK8D_Wii_Moonview_Highway_Course_Icon.png"
+SqueakyCleanSprint = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278544606924900/MK8D_Squeaky_Clean_Sprint_Course_Icon.png"
+LosAngelesLaps = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278606833627176/MK8D_Tour_Los_Angeles_Laps_Course_Icon.png"
+SunsetWilds = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278678451363900/MK8D_GBA_Sunset_Wilds_Course_Icon.png"
+KoopaCape = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278693274046496/MK8D_Wii_Koopa_Cape_Course_Icon.png"
+VancouverVelocity = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278707375276042/MK8D_Tour_Vancouver_Velocity_Course_Icon.png"
 
 #mario kart cup photo variable
 Mushroom = "https://cdn.discordapp.com/attachments/1066340666436747304/1066342499989327892/MK8_MushroomCup.png"
@@ -103,7 +111,8 @@ Rock = "https://cdn.discordapp.com/attachments/1066340666436747304/1066353543474
 Moon = "https://cdn.discordapp.com/attachments/1066340666436747304/1066353849541070969/MK8D_BCP_Moon_Emblem.png"
 Fruit = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893267087958056/MK8D_BCP_Fruit_Emblem.png"
 Boomerang = "https://cdn.discordapp.com/attachments/1066340666436747304/1085893823189753876/MK8D_BCP_Boomerang_Emblem.png"
-
+Feather = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278175868878868/MK8D_BCP_Feather_Emblem.png"
+Cherry = "https://cdn.discordapp.com/attachments/1123118531328872498/1129278561526743060/MK8D_BCP_Cherry_Emblem.png"
 #full track info photo variable
 Mush = "https://cdn.discordapp.com/attachments/1088214244769681448/1088214465255845888/MushroomList.png"
 Flwer = "https://cdn.discordapp.com/attachments/1088214244769681448/1088214575402459196/FlowerList.png"
@@ -125,6 +134,8 @@ Rck = "https://cdn.discordapp.com/attachments/1088214244769681448/10882159610453
 Mon = "https://cdn.discordapp.com/attachments/1088214244769681448/1088216026379980910/MoonList.png"
 Fr = "https://cdn.discordapp.com/attachments/1088214244769681448/1088216107044851772/FruitList.png"
 Boomer = "https://cdn.discordapp.com/attachments/1088214244769681448/1088216172190769182/BoomerangList.png"
+Featr = "https://cdn.discordapp.com/attachments/1088214244769681448/1129280337013379132/FeatherList.png"
+Chrry = "https://cdn.discordapp.com/attachments/1088214244769681448/1129280389467340840/Cherry.png"
 
 #team photo variable
 SilentLightning = "https://cdn.discordapp.com/attachments/1066363054473883658/1066363539377369128/Silent_Lightning.png"
@@ -151,6 +162,8 @@ RockCup = "<:Rock:1087361172778536970>"
 MoonCup ="<:Moon:1087361243167330364>"
 FruitCup = "<:Fruit:1087361063701467236"
 BoomerangCup = "<:Boomerang:1087361059247104060>"
+FeatherCup = "<:Feather:1129278953287331840>"
+CherryCup = "<:Cherry:1129278955418030100>"
 
 #random emoji variable
 Fire = "<a:Fire:966125372942983178>"
@@ -343,6 +356,23 @@ embedBoomerangcup = discord.Embed(
 )
 embedBoomerangcup.set_author(name="Boomerang Cup",icon_url=Boomerang)
 embedBoomerangcup.set_image(url=Boomer)
+
+embedFeathercup = discord.Embed(
+        color=discord.Color.dark_orange(),
+        title="#21 Track",
+        description="**Athens Dash Commands:** \n `bAtD, batd, 21-1` \n **Daisy Cruiser Commands:** \n `bDC, bdc, 21-2` \n **Moonview Highway Commands:** \n `bMH, bmh, 21-3` \n **Squeaky Clean Sprint Commands:** \n `bSCS, bscs, 21-4`",
+)
+embedFeathercup.set_author(name="Feather Cup",icon_url=Feather)
+embedFeathercup.set_image(url=Featr)
+
+embedCherrycup = discord.Embed(
+        color=discord.Color.dark_red(),
+        title="#22 Track",
+        description="**Los Angeles Laps Commands:** \n `bLAL, blal, 22-1` \n **Sunset Wilds Commands:** \n `bSW, bsw, 22-2` \n **Koopa Cape Commands:** \n `bKC, bkc, 22-3` \n **Vancouver Velocity Commands:** \n `bVV, bvv, 22-4`",
+)
+embedCherrycup.set_author(name="Cherry Cup",icon_url=Cherry)
+embedCherrycup.set_image(url=Chrry)
+
 
 embedDevsTeam = discord.Embed(
         color=discord.Color.dark_purple(),

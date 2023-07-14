@@ -111,6 +111,16 @@ class Select(discord.ui.Select):
             description="Boomerang Cup Track List"
             ),
             discord.SelectOption(
+            label="Feather Cup",
+            emoji=config.FeatherCup,
+            description="Feather Cup Track List"
+            ),
+            discord.SelectOption(
+            label="Cherry Cup",
+            emoji=config.CherryCup,
+            description="Cherry Cup Track List"
+            ),
+            discord.SelectOption(
             label="Developer Team",
             emoji=config.Lucky,
             description=""
@@ -165,6 +175,10 @@ class Select(discord.ui.Select):
             await int.response.edit_message(embed=config.embedFruitcup)
         elif self.values[0] == "Boomerang Cup":
             await int.response.edit_message(embed=config.embedBoomerangcup)
+        elif self.values[0] == "Feather Cup":
+            await int.response.edit_message(embed=config.embedFeathercup)
+        elif self.values[0] == "Cherry Cup":
+            await int.response.edit_message(embed=config.embedCherrycup)
         elif self.values[0] == "Developer Team":
             await int.response.edit_message(embed=config.embedDevsTeam)            
 
