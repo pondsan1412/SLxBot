@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+from cog import embedconfig
 from cog import config
 from cog import secret
 from googletrans import Translator

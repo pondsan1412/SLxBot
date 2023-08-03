@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from cog import config
+from cog import embedconfig
 from cog.button import *
 class Select(discord.ui.Select):
     def __init__(self):
@@ -134,53 +135,53 @@ class Select(discord.ui.Select):
         )
     async def callback(self, int:discord.Interaction):
         if self.values[0] == "General Command List":
-            await int.response.edit_message(embed=config.embedGeneral1)
+            await int.response.edit_message(embed=embedconfig.embedGeneral1)
         elif self.values[0] == "Mushroom Cup":
-            await int.response.edit_message(embed=config.embedMushroomcup)
+            await int.response.edit_message(embed=embedconfig.embedMushroomcup)
         elif self.values[0] == "Flower Cup":
-            await int.response.edit_message(embed=config.embedFlowercup)
+            await int.response.edit_message(embed=embedconfig.embedFlowercup)
         elif self.values[0] == "Star Cup":
-            await int.response.edit_message(embed=config.embedStarcup)
+            await int.response.edit_message(embed=embedconfig.embedStarcup)
         elif self.values[0] == "Special Cup":
-            await int.response.edit_message(embed=config.embedSpecialcup)
+            await int.response.edit_message(embed=embedconfig.embedSpecialcup)
         elif self.values[0] == "Egg Cup":
-            await int.response.edit_message(embed=config.embedEggcup)
+            await int.response.edit_message(embed=embedconfig.embedEggcup)
         elif self.values[0] == "Crossing Cup":
-            await int.response.edit_message(embed=config.embedCrossingcup)
+            await int.response.edit_message(embed=embedconfig.embedCrossingcup)
         elif self.values[0] == "Shell Cup":
-            await int.response.edit_message(embed=config.embedShellcup)
+            await int.response.edit_message(embed=embedconfig.embedShellcup)
         elif self.values[0] == "Banana Cup":
-            await int.response.edit_message(embed=config.embedBananacup)
+            await int.response.edit_message(embed=embedconfig.embedBananacup)
         elif self.values[0] == "Leaf Cup":
-            await int.response.edit_message(embed=config.embedLeafcup)
+            await int.response.edit_message(embed=embedconfig.embedLeafcup)
         elif self.values[0] == "Lightning Cup":
-            await int.response.edit_message(embed=config.embedLightningcup)
+            await int.response.edit_message(embed=embedconfig.embedLightningcup)
         elif self.values[0] == "Triforce Cup":
-            await int.response.edit_message(embed=config.embedTriforcecup)
+            await int.response.edit_message(embed=embedconfig.embedTriforcecup)
         elif self.values[0] == "Bell Cup":
-            await int.response.edit_message(embed=config.embedBellcup)
+            await int.response.edit_message(embed=embedconfig.embedBellcup)
         elif self.values[0] == "Golden Dash Cup":
-            await int.response.edit_message(embed=config.embedGoldenDashcup)
+            await int.response.edit_message(embed=embedconfig.embedGoldenDashcup)
         elif self.values[0] == "Lucky Cat Cup":
-            await int.response.edit_message(embed=config.embedLuckyCatcup)
+            await int.response.edit_message(embed=embedconfig.embedLuckyCatcup)
         elif self.values[0] == "Turnip Cup":
-            await int.response.edit_message(embed=config.embedTurnipcup)
+            await int.response.edit_message(embed=embedconfig.embedTurnipcup)
         elif self.values[0] == "Propeller Cup":
-            await int.response.edit_message(embed=config.embedPropellercup)
+            await int.response.edit_message(embed=embedconfig.embedPropellercup)
         elif self.values[0] == "Rock Cup":
-            await int.response.edit_message(embed=config.embedRockcup)
+            await int.response.edit_message(embed=embedconfig.embedRockcup)
         elif self.values[0] == "Moon Cup":
-            await int.response.edit_message(embed=config.embedMooncup)
+            await int.response.edit_message(embed=embedconfig.embedMooncup)
         elif self.values[0] == "Fruit Cup":
-            await int.response.edit_message(embed=config.embedFruitcup)
+            await int.response.edit_message(embed=embedconfig.embedFruitcup)
         elif self.values[0] == "Boomerang Cup":
-            await int.response.edit_message(embed=config.embedBoomerangcup)
+            await int.response.edit_message(embed=embedconfig.embedBoomerangcup)
         elif self.values[0] == "Feather Cup":
-            await int.response.edit_message(embed=config.embedFeathercup)
+            await int.response.edit_message(embed=embedconfig.embedFeathercup)
         elif self.values[0] == "Cherry Cup":
-            await int.response.edit_message(embed=config.embedCherrycup)
+            await int.response.edit_message(embed=embedconfig.embedCherrycup)
         elif self.values[0] == "Developer Team":
-            await int.response.edit_message(embed=config.embedDevsTeam)            
+            await int.response.edit_message(embed=embedconfig.embedDevsTeam)            
 
 
 class SelectView(discord.ui.View):
