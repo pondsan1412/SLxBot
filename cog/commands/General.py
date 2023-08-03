@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import json
-from cog import config
+from cog import embedconfig
 import os
 import asyncio,time
 from discord.ext.commands import HelpCommand, CommandNotFound
@@ -23,7 +23,7 @@ class General(commands.Cog):
     @commands.hybrid_command(
         name="translate",
         help="useful command to translate ",
-        description="useful command to translate",
+        description="Useful command to translate",
         aliases=["tl","แปล","trans"]
     )
     async def _translate(self, ctx:commands.Context, *, message):
@@ -35,10 +35,10 @@ class General(commands.Cog):
         flag_emoji_th = "🇹🇭"
         # Translate the message to English
         translator = Translator()
-        translated_text = translator.translate(message, dest="de")
+        translated_text = translator.translate(message, dest="en")
         
         # Create the message with the translated text and the flag emoji
-        message_with_emoji = f"`Default is German`: {translated_text.text}"
+        message_with_emoji = f"`Default is English`: {translated_text.text}"
         
         # Send the message to the channel
         message = await ctx.send(message_with_emoji)
@@ -92,7 +92,7 @@ class General(commands.Cog):
         ctx:commands.Context
     ):
         await ctx.send(
-            embed=config.embedSelect,
+            embed=embedconfig.embedSelect,
             view=SelectView(),
             delete_after=100
         )
