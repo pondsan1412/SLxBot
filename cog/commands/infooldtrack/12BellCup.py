@@ -36,7 +36,7 @@ class BellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Bell Cup",
             description="GBA Ribbon Road",
-            color=discord.Color.dark_purple()
+            color=discord.Color.magenta()
         )
         embedVar.set_image(url=config.RibbonRoad)
         embedVar.set_thumbnail(url=config.Bell)       
@@ -55,7 +55,7 @@ class BellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Bell Cup",
             description="Super Bell Subway",
-            color=discord.Color.dark_purple()
+            color=discord.Color.blurple()
         )
         embedVar.set_image(url=config.SuperBellSubway)
         embedVar.set_thumbnail(url=config.Bell)
@@ -74,7 +74,7 @@ class BellCup(commands.Cog):
         embedVar = discord.Embed(
             title="Bell Cup",
             description="Big Blue",
-            color=discord.Color.dark_purple()
+            color=discord.Color.blue()
         )
         embedVar.set_image(url=config.BigBlue)
         embedVar.set_thumbnail(url=config.Bell)

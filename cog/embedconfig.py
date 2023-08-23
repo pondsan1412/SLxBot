@@ -205,22 +205,3 @@ embedGeneral1.set_author(name="Silent Lightning",)
 embedGeneral1.add_field(name="A default command",value="")
 embedGeneral1.set_image(url=config.help_info)
 embedGeneral1.set_footer(text="Silent Lightning",icon_url=config.SilentLightning)
-
-#embed variable for track through the numbers
-embedMKS = discord.Embed(
-        color=discord.Color.dark_red(),
-        title="Mario Kart Stadium",
-        description="**DE: Mario Kart-Stadion \n NL: Mario Kart-Stadion**"
-)
-embedMKS.set_author(name="Mushroom Cup",icon_url=config.Mushroom)
-embedMKS.set_thumbnail(url=config.Mushroom)
-embedMKS.set_image(url=config.MarioKartStadium)
-
-embedWP = discord.Embed(
-        color=discord.Color.brand_green(),
-        title="Water Park",
-        description="**DE: 	Wasserpark \n NL: Waterpretpark**"
-)
-embedWP.set_author(name="Mushroom Cup",icon_url=config.Mushroom)
-embedWP.set_thumbnail(url=config.Mushroom)
-embedWP.set_image(url=config.WaterPark)
