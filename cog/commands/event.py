@@ -14,27 +14,25 @@ class eventbot(commands.Cog):
     ):
         if message.author == self.bot.user:
             return
-        if "fire" in message.content.split()[0]:
+        elif "Fire" in message.content.split()[0]:
             await message.channel.send(content=config.x3Fire)
-        if "Fire" in message.content.split()[0]:
-            await message.channel.send(content=config.x3Fire)
-        if "1-1" in message.content.split()[0]:
+        elif "1-1" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedMKS)
-        if "1-2" in message.content.split()[0]:
+        elif "1-2" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedWP)
-        if "1-3" in message.content.split()[0]:
+        elif "1-3" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedSSC)
-        if "1-4" in message.content.split()[0]:
+        elif "1-4" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedTR)
-        if "2-1" in message.content.split()[0]:
+        elif "2-1" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedMC)
-        if "2-2" in message.content.split()[0]:
+        elif "2-2" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedTH)
-        if "2-3" in message.content.split()[0]:
+        elif "2-3" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedTM)
-        if "2-4" in message.content.split()[0]:
+        elif "2-4" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedSGF)
-        if "3-1" in message.content.split()[0]:
+        elif "3-1" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedSA)
         if "3-2" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedDS)
@@ -98,7 +96,7 @@ class eventbot(commands.Cog):
             await message.channel.send(embed=embedtrack.embedrGV)
         if "10-4" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embedrRRd)
-        if "11-1" in message.content.split()[0]:
+        elif "11-1" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embeddWGM)
         if "11-2" in message.content.split()[0]:
             await message.channel.send(embed=embedtrack.embeddRR)
