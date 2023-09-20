@@ -23,6 +23,7 @@ class bot(commands.Bot):
         extensions = [
     "cog.commands.General",
     "cog.commands.event",
+    "cog.commands.track",
     "cog.commands.error",
     "cog.commands.TTUpdate",
     "cog.commands.infooldtrack.1MushroomCup",
