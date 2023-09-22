@@ -4,6 +4,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
 from discord import app_commands
+import random
 
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
@@ -11,6 +12,14 @@ client = gspread.authorize(creds)
 sheet = client.open("Silent Lightning's TT Leaderboard")
 file_in_sheet_testsheet = sheet.worksheet("Submissions")
 shroom_150cc = sheet.worksheet("150ccS")
+#random text 
+Text_replying = [
+    "Finished",
+    "Done",
+    "your TT has been update!",
+    "thanks for submit your TT!!",
+    "great job!! your TT is amazing!"
+]
 class admins(commands.Cog):
     def __init__(self,bot:commands.Bot):
         self.bot = bot
@@ -59,7 +68,6 @@ class admins(commands.Cog):
         
         update_row_submit = [track,category,player,time]
         file_in_sheet_testsheet.insert_row(update_row_submit, 3)
-        await ctx.send("Done!")
     @commands.hybrid_command(
         name="show",
         help=".",
@@ -67,6 +75,7 @@ class admins(commands.Cog):
     )
     async def _show(self,ctx:commands.Context):
         show_info = shroom_150cc.get("B4:E15")  
+        await ctx.send("https://cdn.discordapp.com/attachments/1154810370884640833/1154810420943655094/MKS.PNG")
         for row in show_info:
             await ctx.send(row)
 async def setup(bot):

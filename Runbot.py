@@ -1,11 +1,13 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 import os
 from cog import embedconfig
 from cog import config
 from cog import secret
 from googletrans import Translator
 from cog.commands.event import eventbot
+import random
+
 class bot(commands.Bot):
     def __init__(self):
         super().__init__(
@@ -17,8 +19,18 @@ class bot(commands.Bot):
         
     async def on_ready(self):
         print(self.user)
-        ch_ready = int(secret.ch_onready)
-        print(ch_ready)
+        @tasks.loop(seconds=5) #using module tasks
+        async def loop_status(): #create func
+            #create variable for text to loop it
+            status = [
+                ".help|V1.0.0",
+                "to give bot idea",
+                "just dm Pond, Zquka"
+            ]
+            await self.change_presence(activity=discord.Game(random.choice(status)))
+        loop_status.start()
+
+
     async def setup_hook(self):
         extensions = [
     "cog.commands.General",

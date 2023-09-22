@@ -120,5 +120,17 @@ class General(commands.Cog):
             delete_after=0.1
         )
 
+    @commands.hybrid_command(name="remove") #this is text remove command
+    async def _removetext(self,ctx:commands.Context,value:int):
+        try:
+            await ctx.send("removing",ephemeral=True, delete_after=3)
+            await ctx.channel.purge(limit=value) #put value to remove
+            await ctx.message.delete()#here for delete message
+            
+        except discord.Forbidden:
+            await ctx.send("I can't remove the message due permission!!")
+
+   
+   
 async def setup(bot):
     await bot.add_cog(General(bot))
