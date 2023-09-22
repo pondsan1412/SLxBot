@@ -18,7 +18,14 @@ Text_replying = [
     "Done",
     "your TT has been update!",
     "thanks for submit your TT!!",
-    "great job!! your TT is amazing!"
+    "great job!! your TT is amazing!",
+    "All good",
+    "Updated!",
+    "submit complete",
+    "vollständig einreichen",
+    "Schön!",
+    "fertig!",
+    "Danke!"
 ]
 class admins(commands.Cog):
     def __init__(self,bot:commands.Bot):
@@ -68,6 +75,7 @@ class admins(commands.Cog):
         
         update_row_submit = [track,category,player,time]
         file_in_sheet_testsheet.insert_row(update_row_submit, 3)
+        await ctx.send(random.choice(Text_replying))
     @commands.hybrid_command(
         name="show",
         help=".",
