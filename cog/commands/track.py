@@ -12,7 +12,7 @@ commands_info = {
 class trackbot(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-    #here for loop    
+    
 
     @commands.Cog.listener()    
     async def on_message(
