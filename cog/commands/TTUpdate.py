@@ -86,57 +86,6 @@ class admins(commands.Cog):
         update_row_submit = [track,category,player,time]
         file_in_sheet_testsheet.insert_row(update_row_submit, 3)
         await ctx.send(random.choice(Text_replying))
-   
 
-    @commands.hybrid_command(
-        name="topranking",
-        help=".",
-        description=""
-    )
-    async def _overall(self,ctx:commands.Context):
-        show_topranking = top_ranking.get("G2:J22")
-        await ctx.send("https://cdn.discordapp.com/attachments/1066363054473883658/1155036284205674507/New_Project_1.png")
-        for row in show_topranking:
-            await ctx.send(row)
-
-    @commands.hybrid_command(name="overall_s")
-    async def _overall_s(self,ctx:commands.Context):
-        show_overall_s = overall_s.get("V4:Y22")
-        await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155032907350552616/S.PNG")
-        for row in show_overall_s:
-            await ctx.send(row)
-
-    @commands.hybrid_command(name="overall_dlc")
-    async def _overall_dlc(self,ctx:commands.Context):
-        show_overall_dlc = overall_dlc.get("V4:Y22")
-        await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155032393049194526/DLC.PNG")
-        for row in show_overall_dlc:
-            await ctx.send(row)
-
-
-
-
-
-
-
-@commands.hybrid_command(
-    name="show",
-    description="to show overall specific track"
-)
-@app_commands.choices(track=[
-    app_commands.Choice(name="bSCS",value="bSCS"),
-     app_commands.Choice(name="bTB",value="bTB"),
-])
-async def _showtrack(
-    self,
-    ctx,
-    track
-):
-    bSCS = overall_dlc.get("Q108:T119")
-    await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155550731605123196/bSCS.PNG")
-    for row in bSCS:
-        await ctx.send(row)
-        
-        
 async def setup(bot):
     await bot.add_cog(admins(bot))

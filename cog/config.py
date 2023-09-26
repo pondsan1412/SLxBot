@@ -190,5 +190,10 @@ help_info = "https://cdn.discordapp.com/attachments/1088911898638045246/10889126
 
 
 #banner track
+#standard track
+MKS = "https://cdn.discordapp.com/attachments/1156152527193133079/1156184794196086826/MKS.png?ex=65140c7f&is=6512baff&hm=f272c7ec0e5029474572b0577a0c434bfd70fb31b52b0b97ae531a9aa9e8a770&"
+
+#DLC track
 bSCS = "https://cdn.discordapp.com/attachments/1155032331619405875/1155550731605123196/bSCS.PNG"
 bTB = "https://cdn.discordapp.com/attachments/1155032331619405875/1156147640749281290/bTB.png?ex=6513e9e5&is=65129865&hm=45aadafd8ef036dc531f9a3b819c75ff6e454479618d0004ac2421f41bcda074&"
+bBL = ""
