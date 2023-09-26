@@ -23,38 +23,25 @@ class leaderboard(commands.Cog):
     def __init__(self,bot:commands.Bot):
         self.bot = bot
 
-#this command show up track leaderboard  
-    @commands.hybrid_command(
-        name="topranking",
-        help=".",
-        description=""
-    )
-    async def _overall(self,ctx:commands.Context):
-        show_topranking = top_ranking.get("G2:J22")
-        await ctx.send("https://cdn.discordapp.com/attachments/1066363054473883658/1155036284205674507/New_Project_1.png")
-        for row in show_topranking:
-            await ctx.send(row)
-
-    @commands.hybrid_command(name="overall_s")
-    async def _overall_s(self,ctx:commands.Context):
-        show_overall_s = overall_s.get("V4:Y22")
-        await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155032907350552616/S.PNG")
-        for row in show_overall_s:
-            await ctx.send(row)
-
-    @commands.hybrid_command(name="overall_dlc")
-    async def _overall_dlc(self,ctx:commands.Context):
-        show_overall_dlc = overall_dlc.get("V4:Y22")
-        await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155032393049194526/DLC.PNG")
-        for row in show_overall_dlc:
-            await ctx.send(row)    
-
 #from here all of specific track             
-    @commands.hybrid_command(name="show", description="to show overall specific track")
+    @commands.hybrid_command(name="show", description="to show overall and specific track")
     async def show_track(self,ctx, track:str):
         valid_tracks = dlc_track.keys()
-        
         valid2_track = standard_track.keys()
+        overall_s_track = top_s.keys()
+        overall_dlc_track = top_dlc.keys()
+        valid_top = top_all.keys()
+
+        if track in top_s:
+            image_url = top_s[track]["image_url"]
+            if image_url:
+                await ctx.send(image_url)
+        else:
+            if track in top_dlc:
+                image_url = top_dlc[track]["image_url"]
+                if image_url:
+                    await ctx.send(image_url)
+
         if track in dlc_track:
                 image_url = dlc_track[track]["image_url"]
                 if image_url:
@@ -64,6 +51,10 @@ class leaderboard(commands.Cog):
                 image_url = standard_track[track]["image_url"]
                 if image_url:
                     await ctx.send(image_url)
+        if track in top_all:
+            image_url = top_all[track]["image_url"]
+            if image_url:
+                await ctx.send(image_url)
         
         if track in valid_tracks:
             data = get_data_for_track(overall_dlc, dlc_track[track]["range"])
@@ -77,7 +68,38 @@ class leaderboard(commands.Cog):
                 format2 = "\n".join([" ".join(row) for row in data2])
                 format2 = format2.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
                 await ctx.send(f"\n{format2}")
-        
+
+        if track in overall_s_track:
+            data3 = get_data_for_track(overall_s, top_s[track]["range"])
+
+            format3 = "\n".join([" ".join(row) for row in data3])
+            format3 = format3.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
+            await ctx.send(f"\n{format3}")
+        else:
+            if track in overall_dlc_track :
+                data4 = get_standard_track(overall_dlc, top_dlc[track]["range"])
+                format4 = "\n".join([" ".join(row) for row in data4])
+                format4 = format4.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
+                await ctx.send(f"\n{format4}")
+        if track in valid_top:
+            data5 = get_standard_track(top_ranking, top_all[track]["range"])
+            format5 = "\n".join([" ".join(row) for row in data5])
+            format5.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
+            await ctx.send(f"\n{format5}")
+#overall
+top_all ={
+    "top_all":{
+        "range":"G2:J22",
+        "image_url":"https://cdn.discordapp.com/attachments/1066363054473883658/1155036284205674507/New_Project_1.png?ex=65147c1d&is=65132a9d&hm=9b4aeba7711ff3f836d0286c5266b62933f6f3841c2087ca51a9df7f715f8103&"
+    },
+}
+top_s  = {
+    "top_s":{
+        "range":"V4:Y22",
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1156152806986752031/S.png?ex=6513eeb5&is=65129d35&hm=eeddfdf42a93d048b4449b8e5aa7c4802d2efe6ddd6005964537fc37f20190d0&="
+    },
+}     
+top_dlc = {"top_dlc":{"range":"V4:Y22","image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1156287206747549806/DLC.png?ex=65146be0&is=65131a60&hm=74093c16774afa1996fc4638c0d88455972435814009bf4f5f3bdf9d1f5a00b6&"}}  
 #track variable for worksheet get value
 #add anytrack here bro
 dlc_track = {

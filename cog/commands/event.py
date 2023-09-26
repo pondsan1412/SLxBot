@@ -15,6 +15,7 @@ class eventbot(commands.Cog):
         try:
             if message.author == self.bot.user:
                 return
+            
             if "Fire" in message.content.split()[0]:
                 await message.channel.send(content=config.x3Fire)
         except IndexError:
