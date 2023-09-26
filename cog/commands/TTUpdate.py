@@ -86,16 +86,7 @@ class admins(commands.Cog):
         update_row_submit = [track,category,player,time]
         file_in_sheet_testsheet.insert_row(update_row_submit, 3)
         await ctx.send(random.choice(Text_replying))
-    @commands.hybrid_command(
-        name="show",
-        help=".",
-        description=""
-    )
-    async def _show(self,ctx:commands.Context):
-        show_info = shroom_150cc.get("B4:E15")  
-        await ctx.send("https://cdn.discordapp.com/attachments/1154810370884640833/1154810420943655094/MKS.PNG")
-        for row in show_info:
-            await ctx.send(row)
+   
 
     @commands.hybrid_command(
         name="topranking",
@@ -121,5 +112,31 @@ class admins(commands.Cog):
         await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155032393049194526/DLC.PNG")
         for row in show_overall_dlc:
             await ctx.send(row)
+
+
+
+
+
+
+
+@commands.hybrid_command(
+    name="show",
+    description="to show overall specific track"
+)
+@app_commands.choices(track=[
+    app_commands.Choice(name="bSCS",value="bSCS"),
+     app_commands.Choice(name="bTB",value="bTB"),
+])
+async def _showtrack(
+    self,
+    ctx,
+    track
+):
+    bSCS = overall_dlc.get("Q108:T119")
+    await ctx.send("https://cdn.discordapp.com/attachments/1155032331619405875/1155550731605123196/bSCS.PNG")
+    for row in bSCS:
+        await ctx.send(row)
+        
+        
 async def setup(bot):
     await bot.add_cog(admins(bot))

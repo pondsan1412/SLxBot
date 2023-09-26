@@ -187,3 +187,8 @@ pond_icon_url = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
 #picture_url for embed set_image
 some_of_anime_girl = "https://media.tenor.com/vgH7rtApnPUAAAAM/jinx-flipzflops.gif"
 help_info = "https://cdn.discordapp.com/attachments/1088911898638045246/1088912694423339191/image.png"
+
+
+#banner track
+bSCS = "https://cdn.discordapp.com/attachments/1155032331619405875/1155550731605123196/bSCS.PNG"
+bTB = "https://cdn.discordapp.com/attachments/1155032331619405875/1156147640749281290/bTB.png?ex=6513e9e5&is=65129865&hm=45aadafd8ef036dc531f9a3b819c75ff6e454479618d0004ac2421f41bcda074&"
