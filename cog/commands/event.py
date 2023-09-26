@@ -12,10 +12,13 @@ class eventbot(commands.Cog):
         self,
         message
     ):
-        if message.author == self.bot.user:
-            return
-        if "Fire" in message.content.split()[0]:
-            await message.channel.send(content=config.x3Fire)
+        try:
+            if message.author == self.bot.user:
+                return
+            if "Fire" in message.content.split()[0]:
+                await message.channel.send(content=config.x3Fire)
+        except IndexError:
+            pass
     
 async def setup(bot):
     await bot.add_cog(eventbot(bot))

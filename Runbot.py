@@ -7,12 +7,56 @@ from cog import secret
 from googletrans import Translator
 from cog.commands.event import eventbot
 import random
+import asyncio
+import sys
+from discord.gateway import DiscordWebSocket, _log
+from discord.ext.commands import Bot
+
+
+async def identify(self):
+    payload = {
+        'op': self.IDENTIFY,
+        'd': {
+            'token': self.token,
+            'properties': {
+                '$os': sys.platform,
+                '$browser': 'Discord Android',
+                '$device': 'Discord Android',
+                '$referrer': '',
+                '$referring_domain': ''
+            },
+            'compress': True,
+            'large_threshold': 250,
+            'v': 3
+        }
+    }
+
+    if self.shard_id is not None and self.shard_count is not None:
+        payload['d']['shard'] = [self.shard_id, self.shard_count]
+
+    state = self._connection
+    if state._activity is not None or state._status is not None:
+        payload['d']['presence'] = {
+            'status': state._status,
+            'game': state._activity,
+            'since': 0,
+            'afk': False
+        }
+
+    if state._intents is not None:
+        payload['d']['intents'] = state._intents.value
+
+    await self.call_hooks('before_identify', self.shard_id, initial=self._initial_identify)
+    await self.send_as_json(payload)
+    _log.info('Shard ID %s has sent the IDENTIFY payload.', self.shard_id)
+DiscordWebSocket.identify = identify
 
 class bot(commands.Bot):
     def __init__(self):
         super().__init__(
             command_prefix=commands.when_mentioned_or("."),
             intents=discord.Intents.all(),
+            
             no_category=None
             )
             
@@ -23,11 +67,10 @@ class bot(commands.Bot):
         async def loop_status(): #create func
             #create variable for text to loop it
             status = [
-                ".help|V1.0.0",
-                "to give bot idea",
-                "just dm Pond, Zquka"
+                "who is ass"
             ]
             await self.change_presence(activity=discord.Game(random.choice(status)))
+            
         loop_status.start()
 
 
@@ -67,9 +110,7 @@ class bot(commands.Bot):
             await bot.load_extension(extension)
         await bot.tree.sync()
     
-       
-    
-   
+
 
 bot = bot()
 bot.run(secret.discord_token, reconnect=True)

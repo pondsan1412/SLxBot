@@ -51,11 +51,10 @@ class leaderboard(commands.Cog):
 
 #from here all of specific track             
     @commands.hybrid_command(name="show", description="to show overall specific track")
-    async def show_track(self,ctx, track):
+    async def show_track(self,ctx, track:str):
         valid_tracks = dlc_track.keys()
-
+        
         valid2_track = standard_track.keys()
-
         if track in dlc_track:
                 image_url = dlc_track[track]["image_url"]
                 if image_url:
@@ -65,7 +64,7 @@ class leaderboard(commands.Cog):
                 image_url = standard_track[track]["image_url"]
                 if image_url:
                     await ctx.send(image_url)
-
+        
         if track in valid_tracks:
             data = get_data_for_track(overall_dlc, dlc_track[track]["range"])
 
@@ -82,182 +81,366 @@ class leaderboard(commands.Cog):
 #track variable for worksheet get value
 #add anytrack here bro
 dlc_track = {
-    "bSCS": {
-        "range": "Q108:T119",
-        "image_url": config.bSCS
+    "bPP":{
+        "range":"B4:E15",
+        "image_url":""
+    },
+    "bTC":{
+        "range":"G4:J15",
+        "image_url":""
+    },
+    "bCM":{
+        "range":"L4:O15",
+        "image_url":""
+    },
+    "bCMa":{
+        "range":"Q4:T15",
+        "image_url":""
     },
     "bTB":{
         "range":"B17:E28",
-        "image_url": config.bTB
+        "image_url":""
+    },
+    "bSR":{
+        "range":"G17:J28",
+        "image_url":""
+    },
+    "bSG":{
+        
+        "range":"L17:O28",
+        "image_url":""
+    },
+    "bNH":{
+        "range":"Q17:T28",
+        "image_url":""
+    },
+    "bNYM":{
+        "range":"B30:E41",
+        "image_url":""
+    },
+    "bMC3":{
+        "range":"G30:J41",
+        "image_url":""
+    },
+    "bKD":{
+        "range":"L30:J41",
+        "image_url":""
+    },
+    "bWP":{
+        "range":"Q30:T41",
+        "image_url":""
+    },
+    "bSS":{
+        "range":"B43:E54",
+        "image_url":""
+    },
+    "bSN":{
+        "range":"G43:J54",
+        "image_url":""
+    },
+    "bMG":{
+        "range":"L43:O54",
+        "image_url":""
+    },
+    "bSHS":{
+        "range":"Q43:O54",
+        "image_url":""
+    },
+    "bLL":{
+        "range":"B56:E67",
+        "image_url":""
     },
     "bBL":{
         "range":"G56:J67",
-        "image_url": config.BooLake
+        "image_url":""
     },
+    "bRRM":{
+        "range":"L56:O67",
+        "image_url":""
+    },
+    "bMT":{
+        "range":"Q56:T67",
+        "image_url":""
+    },
+    "bBB":{
+        "range":"B69:E80",
+        "image_url":""
+    },
+    "bPG":{
+        "range":"G69:J80",
+        "image_url":""
+    },
+    "bMM":{
+        "range":"L69:J80",
+        "image_url":""
+    },
+    "bRR7":{
+        "range":"Q69:T80",
+        "image_url":""
+    },
+    "bAD":{
+        "range":"B82:E93",
+        "image_url":""
+    },
+    "bRP":{
+        "range":"G82:J93",
+        "image_url":""
+    },
+    "bDKS":{
+        "range":"L82:O93",
+        "image_url":""
+    },
+    "bYI":{
+        "range":"Q82:T93",
+        "image_url":""
+    },
+    "bBR":{
+        "range":"B95:E106",
+        "image_url":""
+    },
+    "bMC":{
+        "range":"G95:J106",
+        "image_url":""
+    },
+    "bWS":{
+        "range":"L95:O106",
+        "image_url":""
+    },
+    "bSSy":{
+        "range":"Q95:T106",
+        "image_url":""
+    },
+    "bAtD":{
+        "range":"B108:E119",
+        "image_url":""
+    },
+    "bDC":{
+        "range":"G108:J119",
+        "image_url":""
+    },
+    "bMH":{
+        "range":"L108:O119",
+        "image_url":""
+    },
+    "bSCS":{
+        "range":"Q108:T119",
+        "image_url":""
+    },
+    "bLAL":{
+        "range":"B121:E132",
+        "image_url":""
+    },
+    "bSW":{
+        "range":"G121:J132",
+        "image_url":""
+    },
+    "bKC":{
+        "range":"L121:O132",
+        "image_url":""
+    },
+    "bVV":{
+        "range":"Q121:T132",
+        "image_url":""
+    },
+    
 }
+    
+    
+
 standard_track = {
     "MKS":{
         "range":"B4:E15",
-        "image_url":config.MKS
+        "image_url":config.t_MKS
     },
     "WP":{
-        "range":"" 
+        "range":"G6:J15",
+        "image_url":config.t_WP
     },
     "SSC":{
-        "range":"" 
+        "range":"L6:O15",
+        "image_url":config.t_SSC
     },
     "TR":{
-        "range":"" 
+        "range":"Q4:T15",
+        "image_url":config.t_TR 
     },
     "MC":{
-        "range":"" 
+        "range":"B17:E28",
+        "image_url":config.t_MC 
     },
     "TH":{
-        "range":"" 
+        "range":"G17:J28",
+        "image_url":config.t_TH 
     },
     "TM":{
-        "range":"" 
+        "range":"L17:O28",
+        "image_url":config.t_TM 
     },
     "SGF":{
-        "range":"" 
+        "range":"Q17:T28",
+        "image_url":config.t_SGF 
     },
     "SA":{
-        "range":"" 
+        "range":"B30:E41",
+        "image_url":config.t_SA 
     },
     "DS":{
-        "range":"" 
+        "range":"G30:J41",
+        "image_url":config.t_DS 
     },
     "Ed":{
-        "range":"" 
+        "range":"L30:O41",
+        "image_url":config.t_Ed 
     },
     "MW":{
-        "range":"" 
+        "range":"Q30:T41",
+        "image_url":config.t_MW
     },
-    "CC":{
-        "range":"" 
-    },
+    
     "BDD":{
-        "range":"" 
+        "range":"G43:J54",
+        "image_url":config.t_BDD 
     },
     "BC":{
-        "range":"" 
+        "range":"L43:O54",
+        "image_url":config.t_BC 
     },
     "RR":{
-        "range":"" 
+        "range":"Q43:T54",
+        "image_url":config.t_RR 
     },
     "rMMM":{
-        "range":"" 
+        "range":"B56:E67",
+        "image_url":"_____________"
     },
     "rMC":{
-        "range":"" 
+        "range":"G56:J67",
+        "image_url":"_____________"
     },
     "rCCB":{
-        "range":"" 
+        "range":"L56:J67",
+       "image_url":"_____________"
     },
     "rTT":{
-        "range":"" 
+        "range":"Q56:T67",
+        "image_url":"_____________"
     },
     "rDDD":{
-        "range":"" 
+        "range":"B69:E80",
+       "image_url":"."
     },
     "rDP3":{
-        "range":"" 
+        "range":"G69:J80",
+        "image_url":"_____________"
     },
     "rRRy":{
-        "range":"" 
+        "range":"L69:O80",
+        "image_url":"_____________"
     },
     "rDKJ":{
-        "range":"" 
+        "range":"Q69:T80",
+        "image_url":"_____________"
     },
     "rWS":{
-        "range":"" 
+        "range":"B82:E93",
+        "image_url":"_____________"
     },
     "rSL":{
-        "range":"" 
+        "range":"G82:J93",
+        "image_url":"_____________"
     },
     "rMP":{
-        "range":"" 
+        "range":"L82:O93",
+        "image_url":"_____________"
     },
     "rYV":{
-        "range":"" 
+        "range":"Q82:T93",
+        "image_url":"_____________"
     },
     "rTTC":{
-        "range":"" 
+        "range":"B95:E106",
+        "image_url":"_____________"
     },
     "rPPS":{
-        "range":"" 
+        "range":"G95:J106",
+        "image_url":"_____________"
     },
     "rGV":{
-        "range":"" 
+        "range":"L95:O106",
+         "image_url":"_____________"
+
     },
     "rRRd":{
-        "range":"" 
+        "range":"Q95:T106",
+        "image_url":"_____________"
     },
     "dYC":{
-        "range":"" 
+        "range":"B108:E119",
+        "image_url":"_____________"
     },
     "dEA":{
-        "range":"" 
+        "range":"G108:J119",
+        "image_url":"_____________"
     },
     "dDD":{
-        "range":"" 
+        "range":"L108:O119",
+        "image_url":"_____________"
     },
     "dMC":{
-        "range":"" 
+        "range":"Q108:T119",
+        "image_url":"_____________"
     },
     "dWGM":{
-        "range":"" 
+        "range":"B121:E132",
+        "image_url":"_____________"
     },
     "dRR":{
-        "range":"" 
+        "range":"G121:J132",
+        "image_url":"_____________"
     },
     "dIIO":{
-        "range":"" 
+        "range":"L121:O132",
+        "image_url":"_____________"
     },
     "dHC":{
-        "range":"" 
+        "range":"Q121:T132",
+        "image_url":"_____________"
     },
     "dBP":{
-        "range":"" 
-    },
-    "dLC":{
-        "range":"" 
-    },
-    "dWW":{
-        "range":"" 
-    },
-    "dWW":{
-        "range":"" 
-    },
-    "dAC":{
-        "range":"" 
-    },
-    "dNBC":{
-        "range":"" 
-    },
-    "dRiR":{
-        "range":"" 
-    },
-    "dSBS":{
-        "range":"" 
-    },
-    "bYI":{
-        "range":"" 
-    },
-    "CC":{
-        "range":"" 
-    },
-    "dAC":{
-        "range":"" 
-    },
-    "dBB":{
-        "range":"" 
-    },
-    "dBP":{
-        "range":"" 
+        "range":"B134:E145",
+        "image_url":"_____________"
     },
     "dCL":{
-        "range":"" 
+        "range":"G134:J145",
+        "image_url":"_____________"
+    },
+    "dWW":{
+        "range":"L134:O145",
+        "image_url":"_____________"
+    },
+    "dAC":{
+        "range":"Q134:T145",
+        "image_url":"_____________"
+    },
+    "dNBC":{
+        "range":"B147:E158",
+        "image_url":"_____________"
+    },
+    "dRiR":{
+        "range":"G147:J158",
+        "image_url":"_____________"
+    },
+    "dSBS":{
+        "range":"L147:O158",
+        "image_url":"_____________"
+    },
+    "dBB":{
+        "range":"Q147:T158",
+         "image_url":"_____________"
+    },
+    "CC":{
+        "range":"B43:E54",
+        "image_url":config.t_CC 
     },
 }
 #function to get data from variable "normal_track" and return it to parameter
