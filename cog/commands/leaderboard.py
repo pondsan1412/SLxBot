@@ -311,132 +311,132 @@ standard_track = {
     },
     "rMMM":{
         "range":"B56:E67",
-        "image_url":"_____________"
+        "image_url":config.rMMM
     },
     "rMC":{
         "range":"G56:J67",
-        "image_url":"_____________"
+        "image_url":config.rMC
     },
     "rCCB":{
         "range":"L56:J67",
-       "image_url":"_____________"
+       "image_url":config.rCCB
     },
     "rTT":{
         "range":"Q56:T67",
-        "image_url":"_____________"
+        "image_url":config.rTT
     },
     "rDDD":{
         "range":"B69:E80",
-       "image_url":"."
+       "image_url":config.rDDD
     },
     "rDP3":{
         "range":"G69:J80",
-        "image_url":"_____________"
+        "image_url":config.rDP3
     },
     "rRRy":{
         "range":"L69:O80",
-        "image_url":"_____________"
+        "image_url":config.rRRy
     },
     "rDKJ":{
         "range":"Q69:T80",
-        "image_url":"_____________"
+        "image_url":config.rDKJ
     },
     "rWS":{
         "range":"B82:E93",
-        "image_url":"_____________"
+        "image_url":config.rWS
     },
     "rSL":{
         "range":"G82:J93",
-        "image_url":"_____________"
+        "image_url":config.rSL
     },
     "rMP":{
         "range":"L82:O93",
-        "image_url":"_____________"
+        "image_url":config.rMP
     },
     "rYV":{
         "range":"Q82:T93",
-        "image_url":"_____________"
+        "image_url":config.rYV
     },
     "rTTC":{
         "range":"B95:E106",
-        "image_url":"_____________"
+        "image_url":config.rTTC
     },
     "rPPS":{
         "range":"G95:J106",
-        "image_url":"_____________"
+        "image_url":config.rPPS
     },
     "rGV":{
         "range":"L95:O106",
-         "image_url":"_____________"
+         "image_url":config.rGV
 
     },
     "rRRd":{
         "range":"Q95:T106",
-        "image_url":"_____________"
+        "image_url":config.rRRd
     },
     "dYC":{
         "range":"B108:E119",
-        "image_url":"_____________"
+        "image_url":config.t_dYC
     },
     "dEA":{
         "range":"G108:J119",
-        "image_url":"_____________"
+        "image_url":config.t_dEA
     },
     "dDD":{
         "range":"L108:O119",
-        "image_url":"_____________"
+        "image_url":config.t_dDD
     },
     "dMC":{
         "range":"Q108:T119",
-        "image_url":"_____________"
+        "image_url":config.t_dMC
     },
     "dWGM":{
         "range":"B121:E132",
-        "image_url":"_____________"
+        "image_url":config.dWGM
     },
     "dRR":{
         "range":"G121:J132",
-        "image_url":"_____________"
+        "image_url":config.dRR
     },
     "dIIO":{
         "range":"L121:O132",
-        "image_url":"_____________"
+        "image_url":config.dIIo
     },
     "dHC":{
         "range":"Q121:T132",
-        "image_url":"_____________"
+        "image_url":config.dHC
     },
     "dBP":{
         "range":"B134:E145",
-        "image_url":"_____________"
+        "image_url":config.dBP
     },
     "dCL":{
         "range":"G134:J145",
-        "image_url":"_____________"
+        "image_url":config.dCL
     },
     "dWW":{
         "range":"L134:O145",
-        "image_url":"_____________"
+        "image_url":config.dWW
     },
     "dAC":{
         "range":"Q134:T145",
-        "image_url":"_____________"
+        "image_url":config.dAC
     },
     "dNBC":{
         "range":"B147:E158",
-        "image_url":"_____________"
+        "image_url":config.dNBC
     },
     "dRiR":{
         "range":"G147:J158",
-        "image_url":"_____________"
+        "image_url":config.dRiR
     },
     "dSBS":{
         "range":"L147:O158",
-        "image_url":"_____________"
+        "image_url":config.dSBS
     },
     "dBB":{
         "range":"Q147:T158",
-         "image_url":"_____________"
+         "image_url":config.dBB
     },
     "CC":{
         "range":"B43:E54",
