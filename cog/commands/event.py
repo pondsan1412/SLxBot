@@ -3,7 +3,7 @@ from discord.ext import commands
 from cog import config
 from cog import embedconfig
 from cog import embedtrack
-from googletrans import Translator
+
 class eventbot(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

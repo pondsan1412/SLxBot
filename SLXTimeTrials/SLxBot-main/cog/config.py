@@ -177,8 +177,7 @@ Successful = "<a:MarioWin:1087800676215701604>"
 Pass = "<a:RosalinaDodge:1087794095243665425>"
 Problem = "<a:LuigiBlind:1087800673569087578>"
 Lucky = "<a:PeachStar:1087800677427859586>"
-mariothinking = "<:MarioThink:945866781132746832>"
-gigachad = "<:GIGACHAD:1022244779666456687>"
+
 #user_id for embed
 developer_id = "<@324207503816654859> (Founder) \n <@257332011075764224> (Co-Founder) \n \n **Assistant:** \n <@209006928272162816> (Assistant for (TT))"
 
@@ -244,35 +243,3 @@ dSBS = "https://cdn.discordapp.com/attachments/1156152527193133079/1156286762885
 bSCS = "https://cdn.discordapp.com/attachments/1155032331619405875/1155550731605123196/bSCS.PNG"
 bTB = "https://cdn.discordapp.com/attachments/1155032331619405875/1156147640749281290/bTB.png?ex=6513e9e5&is=65129865&hm=45aadafd8ef036dc531f9a3b819c75ff6e454479618d0004ac2421f41bcda074&"
 bBL = ""
-
-
-
-
-
-
-
-
-
-#spreadsheets
-feed_t = "https://spreadsheets.google.com/feeds"
-spread_t="https://www.googleapis.com/auth/spreadsheets"
-file_t="https://www.googleapis.com/auth/drive.file"
-drive_t="https://www.googleapis.com/auth/drive"
-sheet_name="Silent Lightning's TT Leaderboard"
-sheet_file_Submission="Submissions"
-#General > stats
-#variable for random text
-Text_replying = [
-    "Finished",
-    "Done",
-    "your TT has been update!",
-    "thanks for submit your TT!!",
-    "great job!! your TT is amazing!",
-    "All good",
-    "Updated!",
-    "submit complete",
-    "vollständig einreichen",
-    "Schön!",
-    "fertig!",
-    "Danke!"
-]

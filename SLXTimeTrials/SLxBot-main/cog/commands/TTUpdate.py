@@ -1,20 +1,17 @@
-
 import discord
 from discord.ext import commands
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
 from discord import app_commands
-from discord.ext.commands import HelpCommand, CommandNotFound
 import random
-from cog import config
 
-#connect to JSON
-scope = [config.feed_t,config.spread_t,config.file_t,config.drive_t]
+#connect to creds 
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
-sheet = client.open(config.sheet_name)
-file_in_sheet_testsheet = sheet.worksheet(config.sheet_file_Submission)
+sheet = client.open("Silent Lightning's TT Leaderboard")
+file_in_sheet_testsheet = sheet.worksheet("Submissions")
 
 #Gspread pages
 shroom_150cc = sheet.worksheet("150ccS")
@@ -22,16 +19,29 @@ top_ranking = sheet.worksheet("Top Ranking")
 overall_s = sheet.worksheet("150ccS")
 overall_dlc = sheet.worksheet("150ccDLC")
 
-
-
-class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
-    def __init__(self, bot: commands.Bot):
+#random text 
+Text_replying = [
+    "Finished",
+    "Done",
+    "your TT has been update!",
+    "thanks for submit your TT!!",
+    "great job!! your TT is amazing!",
+    "All good",
+    "Updated!",
+    "submit complete",
+    "vollständig einreichen",
+    "Schön!",
+    "fertig!",
+    "Danke!"
+]
+#build class
+class admins(commands.Cog):
+    def __init__(self,bot:commands.Bot):
         self.bot = bot
-    
 
 #commands
     @commands.has_any_role('TT Updater')
-    @commands.command(
+    @commands.hybrid_command(
         name="submit",
         help="Submissions Update",
         description="Time Trial Update",
@@ -72,14 +82,10 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
         player,
         time,
     ):
-        if update_row_submit:
-            update_row_submit = [track,category,player,time]
-            file_in_sheet_testsheet.insert_row(update_row_submit, 3)
-            await ctx.send(random.choice(config.Text_replying))
-        else:
-            await ctx.send("please update with correct info")
+        
+        update_row_submit = [track,category,player,time]
+        file_in_sheet_testsheet.insert_row(update_row_submit, 3)
+        await ctx.send(random.choice(Text_replying))
 
-    @commands.command(name="remove_tt",description="to remove tt when you failed update")
-    async def _remove_tt(self,ctx):
-        file_in_sheet_testsheet.delete_rows(3)
-
+async def setup(bot):
+    await bot.add_cog(admins(bot))

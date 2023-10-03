@@ -1,0 +1,4 @@
+discord.py==
+gspread==
+oauth2client==
+googletrans==3.1.0a0

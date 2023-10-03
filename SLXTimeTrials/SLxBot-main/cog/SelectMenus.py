@@ -194,3 +194,5 @@ class SelectView(discord.ui.View):
         super().__init__(timeout=timeout)
         self.add_item(Select())
         
+async def setup(bot):
+    await bot.add_cog(Select(bot))

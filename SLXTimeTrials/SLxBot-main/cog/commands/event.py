@@ -3,8 +3,8 @@ from discord.ext import commands
 from cog import config
 from cog import embedconfig
 from cog import embedtrack
-
-class trackbot(commands.Cog):
+from googletrans import Translator
+class eventbot(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     @commands.Cog.listener()    
@@ -15,10 +15,11 @@ class trackbot(commands.Cog):
         try:
             if message.author == self.bot.user:
                 return
-            command = message.content.split()[0]
-            if command == "1-1":
-                do what ever here
+            
+            if "Fire" in message.content.split()[0]:
+                await message.channel.send(content=config.x3Fire)
         except IndexError:
             pass
-
-        
+    
+async def setup(bot):
+    await bot.add_cog(eventbot(bot))

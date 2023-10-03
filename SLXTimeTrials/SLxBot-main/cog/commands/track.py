@@ -1,4 +1,3 @@
-#mario kart track code for deaf germans but doesn't update yet
 import discord
 from discord.ext import commands
 from cog import config

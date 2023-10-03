@@ -5,25 +5,22 @@ from cog import embedconfig
 import os
 import asyncio,time
 from discord.ext.commands import HelpCommand, CommandNotFound
-from discord import option
+from discord import app_commands
 from discord.ui import View,Button
 from googletrans import Translator
 from cog.SelectMenus import *
 from cog.button import *
-import requests
-from bs4 import BeautifulSoup
-import re
-#from cog.commands.TTUpdate import SelectTTupdater
-class General(commands.Cog,name='General'):
-    def __init__(self, bot: commands.Bot):
-        self.bot : commands.Bot = bot
+class General(commands.Cog):
+    def __init__(self, bot:commands.Bot):
+        self.bot = bot
         self.words_txt = ""
         
     def cog_unload(self):
         self.bot.help_command = self._original_help_command
     
-    
-    @commands.command(
+    async def help(self, ctx):
+        pass
+    @commands.hybrid_command(
         name="translate",
         help="useful command to translate ",
         description="Useful command to translate",
@@ -86,21 +83,9 @@ class General(commands.Cog,name='General'):
             except asyncio.TimeoutError:
                 asyncio.create_task(message.edit(content=f"Timeout❌"))
                 break
-    #@commands.command(
-        name="help",
-        description="Help Information"
-    #)
-    async def _selectmenus(
-        self,
-        ctx:commands.Context
-    ):
-        await ctx.send(
-            embed=embedconfig.embedSelect,
-            view=SelectView(),
-            delete_after=100
-        )
+    
     @commands.has_any_role('dev')            
-    @commands.command(
+    @commands.hybrid_command(
         name="send",
         help="Bot send a message to any channel with commands",
         description="send messages to channel"
@@ -108,7 +93,7 @@ class General(commands.Cog,name='General'):
     async def _send_messages(
         self,
         ctx:commands.Context,
-        channel_to_send:discord.TextChannel,*,
+        channel_to_send:discord.TextChannel,
         messages_to_send:str
     ):
         channel = discord.utils.get(
@@ -123,7 +108,7 @@ class General(commands.Cog,name='General'):
             delete_after=0.1
         )
 
-    @commands.command(name="remove") #this is text remove command
+    @commands.hybrid_command(name="remove") #this is text remove command
     async def _removetext(self,ctx:commands.Context,value:int):
         try:
             await ctx.send("removing",ephemeral=True, delete_after=3)
@@ -132,7 +117,8 @@ class General(commands.Cog,name='General'):
             
         except discord.Forbidden:
             await ctx.send("I can't remove the message due permission!!")
-    
-    
+
    
-    
+   
+async def setup(bot):
+    await bot.add_cog(General(bot))

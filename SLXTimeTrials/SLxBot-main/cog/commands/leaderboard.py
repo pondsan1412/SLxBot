@@ -1,10 +1,9 @@
-#team SLx  Timetrials Leaderboard in mario kart games
 import discord
 from discord.ext import commands
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
-
+from discord import app_commands
 import random
 from cog import config
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
@@ -18,20 +17,24 @@ top_ranking = sheet.worksheet("Top Ranking")
 overall_s = sheet.worksheet("150ccS")
 overall_dlc = sheet.worksheet("150ccDLC")
 
-class Slxleaderboard(commands.Cog, name='leaderboard'):
-    def __init__(self, bot: commands.Bot):
-        self.bot: commands.Bot = bot
 
+#build class
+class leaderboard(commands.Cog):
+    def __init__(self,bot:commands.Bot):
+        self.bot = bot
 
 #from here all of specific track             
-    @commands.command(name="show", description="to show overall and specific track")
+    @commands.hybrid_command(name="show", description="to show overall and specific track")
     async def show_track(self,ctx, track:str):
         valid_tracks = dlc_track.keys()
         valid2_track = standard_track.keys()
         overall_s_track = top_s.keys()
         overall_dlc_track = top_dlc.keys()
         valid_top = top_all.keys()
-
+        embed = discord.Embed(
+        title=f"{track}",
+        color=discord.Color.blue()
+    )
         if track in top_s:
             image_url = top_s[track]["image_url"]
             if image_url:
@@ -86,6 +89,7 @@ class Slxleaderboard(commands.Cog, name='leaderboard'):
             format5 = "\n".join([" ".join(row) for row in data5])
             format5.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
             await ctx.send(f"\n{format5}")
+
 #overall
 top_all ={
     "top_all":{
@@ -193,7 +197,7 @@ dlc_track = {
         "image_url":""
     },
     "bMM":{
-        "range":"L69:O80",
+        "range":"L69:J80",
         "image_url":""
     },
     "bRR7":{
@@ -470,3 +474,5 @@ def get_data_for_track(worksheet, range):
     return worksheet.get(range)
 def get_standard_track(worksheet, range):
     return worksheet.get(range)
+async def setup(bot):
+    await bot.add_cog(leaderboard(bot))
