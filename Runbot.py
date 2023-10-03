@@ -7,7 +7,8 @@ from track.cog import TrackCog
 from lounge.cog import LoungeCog
 from cog.commands.leaderboard import Slxleaderboard
 from cog.commands.General import General
-
+from cog.commands.event import eventbot
+from cog.commands.error import error
 from cog.commands.TTUpdate import UpdateTimeTrials
 import task
 intents=discord.Intents.all()
@@ -41,7 +42,9 @@ for cog in {
     TrackCog,
     General,
     UpdateTimeTrials,
-    Slxleaderboard
+    Slxleaderboard,
+    eventbot,
+    error
     
 }:
    
