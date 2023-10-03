@@ -13,7 +13,7 @@ import task
 intents=discord.Intents.all()
 prefix=commands.when_mentioned_or(".")
 intents.message_content = True
-bot = commands.Bot(intents=intents,command_prefix=prefix)
+bot = commands.Bot(intents=intents,command_prefix=prefix,help_command=None)
 
 
 
@@ -46,7 +46,7 @@ for cog in {
 }:
    
     bot.add_cog(cog(bot))
-
+    
 async def update_activity():
     activity = discord.Activity(name=f'YO WTF AMDX - {len(bot.guilds)} servers', type=discord.ActivityType.playing)
     await bot.change_presence(activity=activity,status=discord.Status.do_not_disturb)

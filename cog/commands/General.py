@@ -86,10 +86,10 @@ class General(commands.Cog,name='General'):
             except asyncio.TimeoutError:
                 asyncio.create_task(message.edit(content=f"Timeout❌"))
                 break
-    #@commands.command(
+    @commands.command(
         name="help",
         description="Help Information"
-    #)
+    )
     async def _selectmenus(
         self,
         ctx:commands.Context
@@ -126,13 +126,18 @@ class General(commands.Cog,name='General'):
     @commands.command(name="remove") #this is text remove command
     async def _removetext(self,ctx:commands.Context,value:int):
         try:
-            await ctx.send("removing",ephemeral=True, delete_after=3)
-            await ctx.channel.purge(limit=value) #put value to remove
-            await ctx.message.delete()#here for delete message
-            
+            await ctx.send("Removing messages...", delete_after=1)  # ส่งข้อความ "Removing messages..." และลบมันหลังจาก 3 วินาที
+
+            # หากคุณต้องการเพิ่มความสาธารณะให้คำสั่ง "removing" ให้ไม่ใช้ ephemeral=True
+            await asyncio.sleep(3)
+            await ctx.channel.purge(limit=value)  # ลบข้อความตามจำนวนที่ระบุ
+        except commands.MissingRequiredArgument:
+            await ctx.send("Please provide the number of messages to remove.")
         except discord.Forbidden:
-            await ctx.send("I can't remove the message due permission!!")
-    
+            await ctx.send("I can't remove the message due to permissions!")
+    @commands.command(name="test")
+    async def _test(self,ctx:commands.Context,text:str):
+        await ctx.send("hi")
     
    
     

@@ -1,6 +1,8 @@
 
 import discord
-from discord.ext import commands
+from discord.ext import commands,bridge
+from discord.ui import Select, View
+
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
@@ -31,12 +33,8 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
 
 #commands
     @commands.has_any_role('TT Updater')
-    @commands.command(
-        name="submit",
-        help="Submissions Update",
-        description="Time Trial Update",
-        aliases=["tt"]
-    )
+    @commands.slash_command(name="submit")
+    
     @app_commands.choices(category=[
         app_commands.Choice(name="S",value="S"),
         app_commands.Choice(name="DLC",value="DLC")])
@@ -66,18 +64,21 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
     ])
     async def _update_tt(
         self,
-        ctx,
-        track,
-        category,
-        player,
-        time,
+        ctx:discord.Interaction,
+        track:str,
+        category:str,
+        player:str,
+        time:int,
     ):
+       
+
+        update_row_submit = [track, category, player, time]  # กำหนดค่า update_row_submit ก่นใช้งาน
         if update_row_submit:
-            update_row_submit = [track,category,player,time]
             file_in_sheet_testsheet.insert_row(update_row_submit, 3)
-            await ctx.send(random.choice(config.Text_replying))
+            await ctx.response.send_message(random.choice(config.Text_replying))
         else:
-            await ctx.send("please update with correct info")
+            await ctx.followup.send("please update with correct info")
+
 
     @commands.command(name="remove_tt",description="to remove tt when you failed update")
     async def _remove_tt(self,ctx):
