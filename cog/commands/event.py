@@ -15,7 +15,8 @@ class eventbot(commands.Cog):
         try:
             if message.author == self.bot.user:
                 return
-            
+            if message.guild and message.guild.id == 1039904904833150986:
+                return
             if "Fire" in message.content.split()[0]:
                 await message.channel.send(content=config.x3Fire)
             
@@ -30,9 +31,11 @@ class eventbot(commands.Cog):
             embed.set_author(name=message.author.name, icon_url=message.author.display_avatar.url)  # ข้อมูลผู้ส่ง
             
             embed.add_field(name='server', value=message.guild.name, inline=True)
-            embed.add_field(name='channel', value=message.channel.name, inline=True)
+            embed.add_field(name='channel', value=message.channel.mention, inline=True)
 
             target_channel = self.bot.get_channel(1158721318200549446)
+        
+            
             if target_channel:
                 await target_channel.send(embed=embed)
         except IndexError:

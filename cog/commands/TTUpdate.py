@@ -65,10 +65,10 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
     async def _update_tt(
         self,
         ctx:discord.Interaction,
-        track:str,
-        category:str,
-        player:str,
-        time:int,
+        track,
+        category,
+        player,
+        time
     ):
        
 
@@ -79,8 +79,9 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
         else:
             await ctx.followup.send("please update with correct info")
 
-
-    @commands.command(name="remove_tt",description="to remove tt when you failed update")
-    async def _remove_tt(self,ctx):
+    @commands.has_any_role('TT Updater')
+    @commands.slash_command(name="remove_tt",description="to remove tt when you failed update")
+    async def _remove_tt(self,ctx:discord.Interaction):
         file_in_sheet_testsheet.delete_rows(3)
+        await ctx.response.send_message(f"removed")
 

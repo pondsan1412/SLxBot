@@ -79,6 +79,8 @@ class TrackCog(commands.Cog, name='Track'):
     async def catch_track(self, message: Message):
         if message.author.bot:
             return
+        if message.guild and message.guild.name == "Silent Lightning [MK8D Server]":
+                return
         is_ham = (message.guild is not None and message.guild.id == HAM_GUILD_ID)
         msg = self.track_info(nick=message.content, include_joke=is_ham)
         if msg is not None:

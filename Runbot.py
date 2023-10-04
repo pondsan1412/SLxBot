@@ -10,6 +10,7 @@ from cog.commands.General import General
 from cog.commands.event import eventbot
 from cog.commands.error import error
 from cog.commands.TTUpdate import UpdateTimeTrials
+from sokuji.cog import SokujiCog
 import task
 intents=discord.Intents.all()
 prefix=commands.when_mentioned_or(".")
@@ -41,10 +42,9 @@ for cog in {
     LoungeCog,
     TrackCog,
     General,
-    UpdateTimeTrials,
-    Slxleaderboard,
     eventbot,
-    error
+    error,
+    SokujiCog
     
 }:
    
