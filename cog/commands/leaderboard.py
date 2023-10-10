@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from cog import secret
+from discord import Embed
 
 import random
 from cog import config
@@ -17,75 +17,7 @@ file_in_sheet_testsheet = sheet.worksheet("Submissions")
 top_ranking = sheet.worksheet("Top Ranking")
 overall_s = sheet.worksheet("150ccS")
 overall_dlc = sheet.worksheet("150ccDLC")
-
-class Slxleaderboard(commands.Cog, name='leaderboard'):
-    def __init__(self, bot: commands.Bot):
-        self.bot: commands.Bot = bot
-
-
-#from here all of specific track             
-    @commands.command(name="show", description="to show overall and specific track")
-    async def show_track(self,ctx, track:str):
-        valid_tracks = dlc_track.keys()
-        valid2_track = standard_track.keys()
-        overall_s_track = top_s.keys()
-        overall_dlc_track = top_dlc.keys()
-        valid_top = top_all.keys()
-
-        if track in top_s:
-            image_url = top_s[track]["image_url"]
-            if image_url:
-                await ctx.send(image_url)
-        else:
-            if track in top_dlc:
-                image_url = top_dlc[track]["image_url"]
-                if image_url:
-                    await ctx.send(image_url)
-
-        if track in dlc_track:
-                image_url = dlc_track[track]["image_url"]
-                if image_url:
-                    await ctx.send(image_url)
-        else:
-            if track in standard_track:
-                image_url = standard_track[track]["image_url"]
-                if image_url:
-                    await ctx.send(image_url)
-        if track in top_all:
-            image_url = top_all[track]["image_url"]
-            if image_url:
-                await ctx.send(image_url)
-        
-        if track in valid_tracks:
-            data = get_data_for_track(overall_dlc, dlc_track[track]["range"])
-
-            formatted_data = "\n".join([" ".join(row) for row in data])
-            formatted_data = formatted_data.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
-            await ctx.send(f"\n{formatted_data}")
-        else:
-            if track in valid2_track:
-                data2 = get_standard_track(overall_s, standard_track[track]["range"])
-                format2 = "\n".join([" ".join(row) for row in data2])
-                format2 = format2.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
-                await ctx.send(f"\n{format2}")
-
-        if track in overall_s_track:
-            data3 = get_data_for_track(overall_s, top_s[track]["range"])
-
-            format3 = "\n".join([" ".join(row) for row in data3])
-            format3 = format3.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
-            await ctx.send(f"\n{format3}")
-        else:
-            if track in overall_dlc_track :
-                data4 = get_standard_track(overall_dlc, top_dlc[track]["range"])
-                format4 = "\n".join([" ".join(row) for row in data4])
-                format4 = format4.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
-                await ctx.send(f"\n{format4}")
-        if track in valid_top:
-            data5 = get_standard_track(top_ranking, top_all[track]["range"])
-            format5 = "\n".join([" ".join(row) for row in data5])
-            format5.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
-            await ctx.send(f"\n{format5}")
+player_tab = sheet.worksheet("Players")
 #overall
 top_all ={
     "top_all":{
@@ -165,7 +97,7 @@ dlc_track = {
         "image_url":""
     },
     "bSHS":{
-        "range":"Q43:O54",
+        "range":"Q43:T54",
         "image_url":""
     },
     "bLL":{
@@ -470,3 +402,93 @@ def get_data_for_track(worksheet, range):
     return worksheet.get(range)
 def get_standard_track(worksheet, range):
     return worksheet.get(range)
+async def setup(bot):
+    await bot.add_cog(Slxleaderboard(bot))
+class Slxleaderboard(commands.Cog, name='leaderboard'):
+    def __init__(self, bot: commands.Bot):
+        self.bot: commands.Bot = bot
+
+#from here all of specific track             
+    
+
+   
+
+    
+
+    @commands.command(name="show", description="to show overall and specific track")
+    async def show_track(self, ctx, track: str):
+        valid_tracks = dlc_track.keys()
+        valid2_track = standard_track.keys()
+        overall_s_track = top_s.keys()
+        overall_dlc_track = top_dlc.keys()
+        valid_top = top_all.keys()
+
+        embed = Embed()  # สร้าง Embed เปล่า
+
+        if track in top_s:
+            image_url = top_s[track]["image_url"]
+            if image_url:
+                embed.set_image(url=image_url)  # เพิ่มรูปภาพใน Embed
+
+        # ตรวจสอบและเพิ่มรูปภาพใน Embed
+        if track in top_dlc:
+            image_url = top_dlc[track]["image_url"]
+            if image_url:
+                embed.set_image(url=image_url)
+
+        # เริ่มสร้าง Embed สำหรับข้อมูล track
+        track_embed = Embed()
+
+        if track in dlc_track:
+            image_url = dlc_track[track]["image_url"]
+            if image_url:
+                await ctx.send(image_url)  # ส่งรูปภาพก่อน
+
+        elif track in standard_track:
+            image_url = standard_track[track]["image_url"]
+            if image_url:
+                await ctx.send(image_url)  # ส่งรูปภาพก่อน
+
+        if track in top_all:
+            image_url = top_all[track]["image_url"]
+            if image_url:
+                await ctx.send(image_url)  # ส่งรูปภาพก่อน
+
+        if track in valid_tracks:
+            data = get_data_for_track(overall_dlc, dlc_track[track]["range"])
+            formatted_data = "\n".join([" ".join(row) for row in data])
+            formatted_data = formatted_data.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
+            track_embed.add_field(name="", value=f"**{track}**\n{formatted_data}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
+
+        elif track in valid2_track:
+            data2 = get_standard_track(overall_s, standard_track[track]["range"])
+            format2 = "\n".join([" ".join(row) for row in data2])
+            format2 = format2.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
+            track_embed.add_field(name="", value=f"**{track}**\n{format2}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
+
+        if track in overall_s_track:
+            data3 = get_data_for_track(overall_s, top_s[track]["range"])
+            format3 = "\n".join([" ".join(row) for row in data3])
+            format3 = format3.replace("[", "").replace("]", "").replace("'","").replace(",", "")
+            track_embed.add_field(name="", value=f"**{track}**\n{format3}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
+
+        elif track in overall_dlc_track:
+            data4 = get_standard_track(overall_dlc, top_dlc[track]["range"])
+            format4 = "\n".join([" ".join(row) for row in data4])
+            format4 = format4.replace("[", "").replace("]", "").replace("'", "").replace(",", "")
+            track_embed.add_field(name="", value=f"**{track}**\n{format4}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
+
+        if track in valid_top:
+            data5 = get_standard_track(top_ranking, top_all[track]["range"])
+            format5 = "\n".join([" ".join(row) for row in data5])
+            format5.replace("[", "").replace("]","").replace("'","").replace(",", "")
+            track_embed.add_field(name="", value=f"**{track}**\n{format5}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
+
+        await ctx.send(embed=track_embed)  # ส่ง Embed ข้อมูล track
+
+    @commands.command(name="player")
+    async def _player(self,ctx):
+        worksheet = player_tab.get("A1:C24")
+        data = "\n".join([" ".join(row) for row in worksheet])
+        await ctx.send(data)
+

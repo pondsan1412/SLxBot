@@ -276,3 +276,43 @@ Text_replying = [
     "fertig!",
     "Danke!"
 ]
+
+
+#players variable for TTupdate.py
+player = [
+"AMDX",
+"Ant",
+"Benjames",
+"BIGWILLI",
+"FalseKing",
+"FreeDobby",
+"Holycomb",
+"Icedoutcol5n",
+"JacKo",
+"Kaleb112",
+"Leftyginger",
+"Ness",
+"Ole",
+"Paulo22",
+"Pond",
+"Rick",
+"Robertala",
+"Rush",
+"Staff",
+"Stan",
+"Torasshi",
+"Vonz",
+]
+
+#annoying channel
+annoying_channel = [
+            873021519897448518,#bot-channel
+            873023136092815450, #announcements
+            1056810345412427846,#mku-bot-sbx
+            1030858079585177761,#mku bot-slx
+            1046609392222617620,#streamers-annoucements
+            874381861424607314,#TT submit chat
+            1054505211206586499,#TT sl
+
+        ]
+network_community_dc  = 1158721318200549446

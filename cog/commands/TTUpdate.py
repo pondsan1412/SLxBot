@@ -6,7 +6,7 @@ from discord.ui import Select, View
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
-from discord import app_commands
+from discord import ApplicationContext,Option
 from discord.ext.commands import HelpCommand, CommandNotFound
 import random
 from cog import config
@@ -34,40 +34,18 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
 #commands
     @commands.has_any_role('TT Updater')
     @commands.slash_command(name="submit")
-    
-    @app_commands.choices(category=[
-        app_commands.Choice(name="S",value="S"),
-        app_commands.Choice(name="DLC",value="DLC")])
-    @app_commands.choices(player=[
-        app_commands.Choice(name="AMDX",value="AMDX"),
-        app_commands.Choice(name="Ant",value="Ant"),
-        app_commands.Choice(name="Benjames",value="Benjames"),
-        app_commands.Choice(name="BIGWILLI",value="BIGWILLI"),
-        app_commands.Choice(name="FalseKing",value="FalseKing"),
-        app_commands.Choice(name="FreeDobby",value="FreeDobby"),
-        app_commands.Choice(name="Holycomb",value="Holycomb"),
-        app_commands.Choice(name="JacKo",value="JacKo"),
-        app_commands.Choice(name="Kaleb112",value="Kaleb112"),
-        app_commands.Choice(name="Leftyginger",value="Leftyginger"),
-        app_commands.Choice(name="Ness",value="Ness"),
-        app_commands.Choice(name="Ole",value="Ole"),
-        app_commands.Choice(name="Paulo22",value="Paulo22"),
-        app_commands.Choice(name="Pond",value="Pond"),
-        app_commands.Choice(name="Rick",value="Rick"),
-        app_commands.Choice(name="Robertala",value="Robertala"),
-        app_commands.Choice(name="Rush",value="Rush"),
-        app_commands.Choice(name="Stan",value="Stan"),
-        app_commands.Choice(name="Torasshi",value="Torasshi"),
-        app_commands.Choice(name="Vonz",value="Vonz"),
-        app_commands.Choice(name="Xenoph",value="Xenoph"),
-        app_commands.Choice(name="Zquka",value="Zquka"),
-    ])
     async def _update_tt(
         self,
-        ctx:discord.Interaction,
+        ctx:ApplicationContext,
         track,
-        category,
-        player,
+        category:Option(str,choices=['S','DLC','SL'],name='category'),
+        player:Option(
+            str,
+            choices=
+                config.player
+            ,
+            name='player',
+        ),
         time
     ):
        
@@ -80,7 +58,7 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
             await ctx.followup.send("please update with correct info")
 
     @commands.has_any_role('TT Updater')
-    @commands.slash_command(name="remove_tt",description="to remove tt when you failed update")
+    @commands.command(name="remove_tt",description="to remove tt when you failed update")
     async def _remove_tt(self,ctx:discord.Interaction):
         file_in_sheet_testsheet.delete_rows(3)
         await ctx.response.send_message(f"removed")

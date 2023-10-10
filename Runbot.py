@@ -10,20 +10,12 @@ from cog.commands.General import General
 from cog.commands.event import eventbot
 from cog.commands.error import error
 from cog.commands.TTUpdate import UpdateTimeTrials
-from sokuji.cog import SokujiCog
+from cog.commands.leaderboard import Slxleaderboard
 import task
 intents=discord.Intents.all()
 prefix=commands.when_mentioned_or(".")
 intents.message_content = True
 bot = commands.Bot(intents=intents,command_prefix=prefix,help_command=None)
-
-
-
-    
-
-    
-
-
 @bot.event
 async def on_ready():
     print('bot ready.')
@@ -44,14 +36,15 @@ for cog in {
     General,
     eventbot,
     error,
-    SokujiCog
+    UpdateTimeTrials,
+    Slxleaderboard,
     
 }:
    
     bot.add_cog(cog(bot))
     
 async def update_activity():
-    activity = discord.Activity(name=f'YO WTF AMDX - {len(bot.guilds)} servers', type=discord.ActivityType.playing)
+    activity = discord.Activity(name=f'I wants FD foods HEHE- {len(bot.guilds)} servers', type=discord.ActivityType.playing)
     await bot.change_presence(activity=activity,status=discord.Status.do_not_disturb)
 
 
