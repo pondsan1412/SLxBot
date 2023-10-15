@@ -554,4 +554,3 @@ class LoungeCog(commands.Cog, name='Lounge'):
         except Exception as e:
             await self.bot.cogs['Dev'].log_error(ctx.message.content, e)
     
-

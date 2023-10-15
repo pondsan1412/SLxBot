@@ -3,6 +3,10 @@ from discord.ext import commands
 from cog import config
 from cog import embedconfig
 from cog import embedtrack
+import os
+import openai
+import asyncio
+import discord
 
 class eventbot(commands.Cog):
     def __init__(self, bot):
@@ -43,7 +47,7 @@ class eventbot(commands.Cog):
 
             if target_channel:
                 await target_channel.send(embed=embed)
-
+            
         except IndexError:
             pass
-    
+            

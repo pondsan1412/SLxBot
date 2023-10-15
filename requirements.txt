@@ -1,7 +1,6 @@
-discord.py https://github.com/pondsan1412/discord.py/archive/refs/tags/v.2.3.2.tar.gz
-py-cord
 gspread
 oauth2client
 googletrans==3.1.0a0
 mk8dx
-oauth2client
+discord.py
+py-cord

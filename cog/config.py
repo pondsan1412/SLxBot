@@ -274,7 +274,10 @@ Text_replying = [
     "vollständig einreichen",
     "Schön!",
     "fertig!",
-    "Danke!"
+    "Danke!",
+    "you should do more TT?",
+    
+
 ]
 
 
@@ -283,7 +286,7 @@ player = [
 "AMDX",
 "Ant",
 "Benjames",
-"BIGWILLI",
+"BIGW",
 "FalseKing",
 "FreeDobby",
 "Holycomb",

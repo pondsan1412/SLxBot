@@ -35,164 +35,164 @@ top_dlc = {"top_dlc":{"range":"V4:Y22","image_url":"https://cdn.discordapp.com/a
 #track variable for worksheet get value
 #add anytrack here bro
 dlc_track = {
-    "bPP":{
+    "Paris Promenade":{
         "range":"B4:E15",
         "image_url":""
     },
-    "bTC":{
+    "Toad Circuit":{
         "range":"G4:J15",
         "image_url":""
     },
-    "bCM":{
+    "Choco Mountain":{
         "range":"L4:O15",
         "image_url":""
     },
-    "bCMa":{
+    "Coconut Mall":{
         "range":"Q4:T15",
         "image_url":""
     },
-    "bTB":{
+    "Tokyo Blur":{
         "range":"B17:E28",
         "image_url":""
     },
-    "bSR":{
+    "Shroom Ridge":{
         "range":"G17:J28",
         "image_url":""
     },
-    "bSG":{
+    "Sky Garden":{
         
         "range":"L17:O28",
         "image_url":""
     },
-    "bNH":{
+    "Ninja Hideaway":{
         "range":"Q17:T28",
         "image_url":""
     },
-    "bNYM":{
+    "New York Minute":{
         "range":"B30:E41",
         "image_url":""
     },
-    "bMC3":{
+    "Mario Circuit 3":{
         "range":"G30:J41",
         "image_url":""
     },
-    "bKD":{
+    "Kalimari Desert":{
         "range":"L30:J41",
         "image_url":""
     },
-    "bWP":{
+    "Waluigi Pinball":{
         "range":"Q30:T41",
         "image_url":""
     },
-    "bSS":{
+    "Sydney Sprint":{
         "range":"B43:E54",
         "image_url":""
     },
-    "bSN":{
+    "Snow Land":{
         "range":"G43:J54",
         "image_url":""
     },
-    "bMG":{
+    "Mushroom Gorge":{
         "range":"L43:O54",
         "image_url":""
     },
-    "bSHS":{
+    "Sky-High Sundae":{
         "range":"Q43:T54",
         "image_url":""
     },
-    "bLL":{
+    "London Loop":{
         "range":"B56:E67",
         "image_url":""
     },
-    "bBL":{
+    "Boo Lake":{
         "range":"G56:J67",
         "image_url":""
     },
-    "bRRM":{
+    "Rock Rock Mountain":{
         "range":"L56:O67",
         "image_url":""
     },
-    "bMT":{
+    "Maple Treeway":{
         "range":"Q56:T67",
         "image_url":""
     },
-    "bBB":{
+    "Berlin Byways":{
         "range":"B69:E80",
         "image_url":""
     },
-    "bPG":{
+    "Peach Gardens":{
         "range":"G69:J80",
         "image_url":""
     },
-    "bMM":{
+    "Merry Mountain":{
         "range":"L69:O80",
         "image_url":""
     },
-    "bRR7":{
+    "3DS Rainbow Road":{
         "range":"Q69:T80",
         "image_url":""
     },
-    "bAD":{
+    "Amsterdam Drift":{
         "range":"B82:E93",
         "image_url":""
     },
-    "bRP":{
+    "Riverside Park":{
         "range":"G82:J93",
         "image_url":""
     },
-    "bDKS":{
+    "DK Summit":{
         "range":"L82:O93",
         "image_url":""
     },
-    "bYI":{
+    "Yoshi\'s Island":{
         "range":"Q82:T93",
         "image_url":""
     },
-    "bBR":{
+    "Bangkok Rush":{
         "range":"B95:E106",
         "image_url":""
     },
-    "bMC":{
+    "Mario Circuit":{
         "range":"G95:J106",
         "image_url":""
     },
-    "bWS":{
+    "Waluigi Stadium":{
         "range":"L95:O106",
         "image_url":""
     },
-    "bSSy":{
+    "Singapore Speedway":{
         "range":"Q95:T106",
         "image_url":""
     },
-    "bAtD":{
+    "Athens Dash":{
         "range":"B108:E119",
         "image_url":""
     },
-    "bDC":{
+    "Daisy Cruiser":{
         "range":"G108:J119",
         "image_url":""
     },
-    "bMH":{
+    "Moonview Highway":{
         "range":"L108:O119",
         "image_url":""
     },
-    "bSCS":{
+    "Squeaky Clean Sprint":{
         "range":"Q108:T119",
         "image_url":""
     },
-    "bLAL":{
+    "Los Angeles Laps":{
         "range":"B121:E132",
         "image_url":""
     },
-    "bSW":{
+    "Sunset Wilds":{
         "range":"G121:J132",
         "image_url":""
     },
-    "bKC":{
+    "Koopa Cape":{
         "range":"L121:O132",
         "image_url":""
     },
-    "bVV":{
+    "Vancouver Velocity":{
         "range":"Q121:T132",
         "image_url":""
     },
@@ -202,197 +202,197 @@ dlc_track = {
     
 
 standard_track = {
-    "MKS":{
+    "Mario Kart Stadium":{
         "range":"B4:E15",
         "image_url":config.t_MKS
     },
-    "WP":{
+    "Water Park":{
         "range":"G6:J15",
         "image_url":config.t_WP
     },
-    "SSC":{
+    "Sweet Sweet Canyon":{
         "range":"L6:O15",
         "image_url":config.t_SSC
     },
-    "TR":{
+    "Thwomp Ruins":{
         "range":"Q4:T15",
         "image_url":config.t_TR 
     },
-    "MC":{
+    "Mario Circuit":{
         "range":"B17:E28",
         "image_url":config.t_MC 
     },
-    "TH":{
+    "Toad Harbor":{
         "range":"G17:J28",
         "image_url":config.t_TH 
     },
-    "TM":{
+    "Twisted Mansion":{
         "range":"L17:O28",
         "image_url":config.t_TM 
     },
-    "SGF":{
+    "Shy Guy Falls":{
         "range":"Q17:T28",
         "image_url":config.t_SGF 
     },
-    "SA":{
+    "Sunshine Airport":{
         "range":"B30:E41",
         "image_url":config.t_SA 
     },
-    "DS":{
+    "Dolphin Shoals":{
         "range":"G30:J41",
         "image_url":config.t_DS 
     },
-    "Ed":{
+    "Electrodrome":{
         "range":"L30:O41",
         "image_url":config.t_Ed 
     },
-    "MW":{
+    "Mount Wario":{
         "range":"Q30:T41",
         "image_url":config.t_MW
     },
     
-    "BDD":{
+    "Bone-Dry Dunes":{
         "range":"G43:J54",
         "image_url":config.t_BDD 
     },
-    "BC":{
+    "Bowser's Castle":{
         "range":"L43:O54",
         "image_url":config.t_BC 
     },
-    "RR":{
+    "Rainbow Road":{
         "range":"Q43:T54",
         "image_url":config.t_RR 
     },
-    "rMMM":{
+    "Moo Moo Meadows":{
         "range":"B56:E67",
         "image_url":config.rMMM
     },
-    "rMC":{
+    "Mario Circuit":{
         "range":"G56:J67",
         "image_url":config.rMC
     },
-    "rCCB":{
+    "Cheep Cheep Beach":{
         "range":"L56:J67",
        "image_url":config.rCCB
     },
-    "rTT":{
+    "Toad's Turnpike":{
         "range":"Q56:T67",
         "image_url":config.rTT
     },
-    "rDDD":{
+    "Dry Dry Desert":{
         "range":"B69:E80",
        "image_url":config.rDDD
     },
-    "rDP3":{
+    "Donut Plains 3":{
         "range":"G69:J80",
         "image_url":config.rDP3
     },
-    "rRRy":{
+    "Royal Raceway":{
         "range":"L69:O80",
         "image_url":config.rRRy
     },
-    "rDKJ":{
+    "DK Jungle":{
         "range":"Q69:T80",
         "image_url":config.rDKJ
     },
-    "rWS":{
+    "Wario Stadium":{
         "range":"B82:E93",
         "image_url":config.rWS
     },
-    "rSL":{
+    "Sherbet Land":{
         "range":"G82:J93",
         "image_url":config.rSL
     },
-    "rMP":{
+    "Music Park":{
         "range":"L82:O93",
         "image_url":config.rMP
     },
-    "rYV":{
+    "Music Park":{
         "range":"Q82:T93",
         "image_url":config.rYV
     },
-    "rTTC":{
+    "Tick-Tock Clock":{
         "range":"B95:E106",
         "image_url":config.rTTC
     },
-    "rPPS":{
+    "Piranha Planet Slide":{
         "range":"G95:J106",
         "image_url":config.rPPS
     },
-    "rGV":{
+    "Grumble Volcano":{
         "range":"L95:O106",
          "image_url":config.rGV
 
     },
-    "rRRd":{
+    "Rainbow Road":{
         "range":"Q95:T106",
         "image_url":config.rRRd
     },
-    "dYC":{
+    "Yoshi Circuit":{
         "range":"B108:E119",
         "image_url":config.t_dYC
     },
-    "dEA":{
+    "Excitebike Arena":{
         "range":"G108:J119",
         "image_url":config.t_dEA
     },
-    "dDD":{
+    "Dragon Driftway":{
         "range":"L108:O119",
         "image_url":config.t_dDD
     },
-    "dMC":{
+    "Mute City":{
         "range":"Q108:T119",
         "image_url":config.t_dMC
     },
-    "dWGM":{
+    "Wario's Gold Mine":{
         "range":"B121:E132",
         "image_url":config.dWGM
     },
-    "dRR":{
+    "SNES Rainbow Road":{
         "range":"G121:J132",
         "image_url":config.dRR
     },
-    "dIIO":{
+    "Ice Ice Outpost":{
         "range":"L121:O132",
         "image_url":config.dIIo
     },
-    "dHC":{
+    "Hyrule Circuit":{
         "range":"Q121:T132",
         "image_url":config.dHC
     },
-    "dBP":{
+    "Baby Park":{
         "range":"B134:E145",
         "image_url":config.dBP
     },
-    "dCL":{
+    "Cheese Land":{
         "range":"G134:J145",
         "image_url":config.dCL
     },
-    "dWW":{
+    "Wild Woods":{
         "range":"L134:O145",
         "image_url":config.dWW
     },
-    "dAC":{
+    "Animal Crossing":{
         "range":"Q134:T145",
         "image_url":config.dAC
     },
-    "dNBC":{
+    "Neo Bowser City":{
         "range":"B147:E158",
         "image_url":config.dNBC
     },
-    "dRiR":{
+    "Ribbon Road":{
         "range":"G147:J158",
         "image_url":config.dRiR
     },
-    "dSBS":{
+    "Super Bell Subway":{
         "range":"L147:O158",
         "image_url":config.dSBS
     },
-    "dBB":{
+    "Big Blue":{
         "range":"Q147:T158",
          "image_url":config.dBB
     },
-    "CC":{
+    "Cloudtop Cruise":{
         "range":"B43:E54",
         "image_url":config.t_CC 
     },
@@ -404,19 +404,17 @@ def get_standard_track(worksheet, range):
     return worksheet.get(range)
 async def setup(bot):
     await bot.add_cog(Slxleaderboard(bot))
+#import mk8dx
+from mk8dx import Track
 class Slxleaderboard(commands.Cog, name='leaderboard'):
     def __init__(self, bot: commands.Bot):
         self.bot: commands.Bot = bot
 
-#from here all of specific track             
-    
-
-   
-
-    
-
     @commands.command(name="show", description="to show overall and specific track")
     async def show_track(self, ctx, track: str):
+        dcl = Track.from_nick(track)
+        track = dcl.name
+        
         valid_tracks = dlc_track.keys()
         valid2_track = standard_track.keys()
         overall_s_track = top_s.keys()

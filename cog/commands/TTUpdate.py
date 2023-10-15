@@ -1,13 +1,12 @@
 
 import discord
-from discord.ext import commands,bridge
-from discord.ui import Select, View
+from discord.ext import commands
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from cog import secret
 from discord import ApplicationContext,Option
-from discord.ext.commands import HelpCommand, CommandNotFound
+
 import random
 from cog import config
 
