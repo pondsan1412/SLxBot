@@ -307,7 +307,7 @@ standard_track = {
         "range":"L82:O93",
         "image_url":config.rMP
     },
-    "Music Park":{
+    "Yoshi Valley":{
         "range":"Q82:T93",
         "image_url":config.rYV
     },

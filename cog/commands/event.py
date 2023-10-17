@@ -21,32 +21,10 @@ class eventbot(commands.Cog):
         try:
             if message.author == self.bot.user:
                 return
-            if message.guild and message.guild.id == 1039904904833150986:
-                return
-            if message.channel.id in config.annoying_channel:
-                return
-            # สร้าง Embed
-            embed = discord.Embed(
-                title='message',
-                description=message.content,
-                color=0x3498db  # สีของ Embed
-            )
-
-            embed.set_author(name=message.author.name, icon_url=message.author.display_avatar.url)  # ข้อมูลผู้ส่ง
-            
-            embed.add_field(name='server', value=message.guild.name, inline=True)
-            embed.add_field(name='channel', value=message.channel.mention, inline=True)
-
-            # ตรวจสอบว่าข้อความมีรูปภาพหรือไม่
-            if message.attachments:
-                for attachment in message.attachments:
-                    image_url = attachment.url
-                    embed.set_image(url=image_url)  # เพิ่มรูปภาพลงใน Embed
-
-            target_channel = self.bot.get_channel(config.network_community_dc)
-
-            if target_channel:
-                await target_channel.send(embed=embed)
+            code = message.content.lower()
+            if code.startswith("code"):
+                await message.reply("https://cdn.discordapp.com/attachments/1123118531328872498/1163411249674076181/dddddddd.jpg?ex=653f7a29&is=652d0529&hm=6b6db29bc42dc667cee461708e08389ddaf18c950685f28bb8babf2aadb50856&")
+           
             
         except IndexError:
             pass

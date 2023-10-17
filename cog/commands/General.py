@@ -139,5 +139,5 @@ class General(commands.Cog,name='General'):
     async def _test(self,ctx:commands.Context,text:str):
         await ctx.send("hi")
     
-   
+    
     
