@@ -1,11 +1,8 @@
 #team SLx  Timetrials Leaderboard in mario kart games
-import discord
 from discord.ext import commands
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from discord import Embed
-
-import random
 from cog import config
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
@@ -272,7 +269,7 @@ standard_track = {
         "image_url":config.rMC
     },
     "Cheep Cheep Beach":{
-        "range":"L56:J67",
+        "range":"L58:O67",
        "image_url":config.rCCB
     },
     "Toad's Turnpike":{
@@ -324,7 +321,7 @@ standard_track = {
          "image_url":config.rGV
 
     },
-    "Rainbow Road":{
+    "N64 Rainbow Road":{
         "range":"Q95:T106",
         "image_url":config.rRRd
     },
@@ -404,7 +401,7 @@ def get_standard_track(worksheet, range):
     return worksheet.get(range)
 async def setup(bot):
     await bot.add_cog(Slxleaderboard(bot))
-#import mk8dx
+#API from Sheat-git
 from mk8dx import Track
 class Slxleaderboard(commands.Cog, name='leaderboard'):
     def __init__(self, bot: commands.Bot):
@@ -490,3 +487,7 @@ class Slxleaderboard(commands.Cog, name='leaderboard'):
         data = "\n".join([" ".join(row) for row in worksheet])
         await ctx.send(data)
 
+async def setup(bot):
+    await bot.add_cog(
+        Slxleaderboard(bot)
+    )

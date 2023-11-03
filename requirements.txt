@@ -1,6 +1,7 @@
+discord.py
+py-cord
 gspread
 oauth2client
 googletrans==3.1.0a0
+easygoogletranslate
 mk8dx
-discord.py
-py-cord

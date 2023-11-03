@@ -1,22 +1,13 @@
 import discord
 from discord.ext import commands
-import json
-from cog import embedconfig
-import os
-import asyncio,time
-from discord.ext.commands import HelpCommand, CommandNotFound
-from discord import option
-from discord.ui import View,Button
+import asyncio
 from googletrans import Translator
-from cog.SelectMenus import *
-from cog.button import *
-import requests
-from bs4 import BeautifulSoup
-import re
+import random  
 #from cog.commands.TTUpdate import SelectTTupdater
-class General(commands.Cog,name='General'):
-    def __init__(self, bot: commands.Bot):
-        self.bot : commands.Bot = bot
+class General(commands.Cog):
+    def __init__(self, bot) ->None:
+        self.bot = bot
+       
         self.words_txt = ""
         
     def cog_unload(self):
@@ -82,47 +73,11 @@ class General(commands.Cog,name='General'):
         # Wait for the user to react with the flag emoji
         while True:
             try:
-                reaction, user = await self.bot.wait_for('reaction_add', timeout=20.0, check=check)
+                reaction, user = await self.bot.wait_for('reaction_add', timeout=600.0, check=check)
             except asyncio.TimeoutError:
                 asyncio.create_task(message.edit(content=f"Timeout❌"))
                 break
-    @commands.command(
-        name="help",
-        description="Help Information"
-    )
-    async def _selectmenus(
-        self,
-        ctx:commands.Context
-    ):
-        await ctx.send(
-            embed=embedconfig.embedSelect,
-            view=SelectView(),
-            delete_after=100
-        )
-    @commands.has_any_role('dev')            
-    @commands.command(
-        name="send",
-        help="Bot send a message to any channel with commands",
-        description="send messages to channel"
-    )
-    async def _send_messages(
-        self,
-        ctx:commands.Context,
-        channel_to_send:discord.TextChannel,*,
-        messages_to_send:str
-    ):
-        channel = discord.utils.get(
-            ctx.guild.channels,
-            name=f"{channel_to_send}"
-        )
-        channel_id = channel.id
-        ch_to_send = self.bot.get_channel(channel_id)
-        await ch_to_send.send(messages_to_send)
-        await ctx.send(
-            f"channel id is :{channel_id}",
-            delete_after=0.1
-        )
-
+    
     @commands.command(name="remove") #this is text remove command
     async def _removetext(self,ctx:commands.Context,value:int):
         try:
@@ -135,9 +90,11 @@ class General(commands.Cog,name='General'):
             await ctx.send("Please provide the number of messages to remove.")
         except discord.Forbidden:
             await ctx.send("I can't remove the message due to permissions!")
-    @commands.command(name="test")
-    async def _test(self,ctx:commands.Context,text:str):
-        await ctx.send("hi")
+
     
     
+async def setup(bot):
+    await bot.add_cog(
+        General(bot)
+    )
     
