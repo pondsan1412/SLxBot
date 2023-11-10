@@ -18,6 +18,13 @@ the discord bot made for Silent Lightning team discord server
 * run ```pip3 install -r requirements.txt```
 **make `secret.py` for `discord token`**
 * Recommended python version `3.10` only because `mk8dx` api
+## Step 1: Create Cred.json
+1. for project folder you must create `creds.json` for your own googlesheet to sync with bot
+2. go to `https://console.cloud.google.com/marketplace/product/google/sheets.googleapis.com` to enable google sheet api and get credential file
+3. `https://www.youtube.com/shorts/BBgrgA96n-Q` you follow this video and you will get creds file
+## Step 2: add player infomation data
+1. go to `player` tab inside googlesheet and add your own player in here and after you done make sure you sort a-z
+![image](https://cdn.discordapp.com/attachments/1172493621732327495/1172502188279472218/player_tab.PNG?ex=65608cc1&is=654e17c1&hm=acca34a9edba8a27e5542bbbbb37931eebeb63509282c522745942c22d87fa76&)
 ---
 ## Commands
 * `.show [track abbra]` to show track leaderboard in googlesheet files!
