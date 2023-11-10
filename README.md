@@ -33,3 +33,5 @@ the discord bot made for Silent Lightning team discord server
 * `.tl` to translate any message
 * `Apps > Translate ` this command just right click on any massage you want to translate and click on `Apps` tab and click `translate`
 * `Apps > Submit TimeTrials` this command just right click on any tt post and click on `Apps` and go to `Submit TimeTrials`
+*`.remove [value]` to remove massage
+*`player` to display player in your team 
