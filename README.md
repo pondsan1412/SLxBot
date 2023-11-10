@@ -4,7 +4,7 @@ the discord bot made for Silent Lightning team discord server
 ---
 > **Warning**
 >
-> #### 2023-11-10 Lounge command is not supported
+> #### 2023-11-10 Lounge command is not supported (fixing)
 > #### 2023-11-10 General, Leaderboard, TTupdate, context is supported
 
 ### Apps commands for updating people's Time Trials
