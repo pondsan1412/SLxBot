@@ -63,7 +63,6 @@ async def main():
             await bot.add_cog(cog(bot))
         random_activity_loop.start()
         await update_activity()
-        
         await bot.start(secret.discord_token)
         
 

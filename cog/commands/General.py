@@ -3,7 +3,30 @@ from discord.ext import commands
 import asyncio
 from googletrans import Translator
 import random  
+import json
+from new_command import function
+from new_command import player_id
 #from cog.commands.TTUpdate import SelectTTupdater
+
+DATA_FILE = "player_data.txt"
+
+# อ่านข้อมูลผู้เล่นจากไฟล์ JSON
+def load_player_data():
+    player_data = {}
+    try:
+        with open(DATA_FILE, "r") as file:
+            for line in file:
+                discord_id, twitch_link = line.strip().split(",")
+                player_data[int(discord_id)] = twitch_link
+    except FileNotFoundError:
+        pass
+    return player_data
+
+# บันทึกข้อมูลผู้เล่นไปยังไฟล์ข้อความ
+def save_player_data(player_data):
+    with open(DATA_FILE, "w") as file:
+        for discord_id, twitch_link in player_data.items():
+            file.write(f"{discord_id},{twitch_link}\n")
 class General(commands.Cog):
     def __init__(self, bot) ->None:
         self.bot = bot
@@ -91,7 +114,27 @@ class General(commands.Cog):
         except discord.Forbidden:
             await ctx.send("I can't remove the message due to permissions!")
 
+    @commands.command(name="mystream")
+    async def _mystream(self,ctx):
+        discord_id = ctx.author.id
+        player_data = load_player_data()
+
+        if discord_id in player_data:
+            player_link = player_data[discord_id]
+            await ctx.send(player_link)
+        else:
+            await ctx.send("You have not registered yet. Please use .register {yourlink}")
+                
+    @commands.command(name="register")
+    async def _register(self,ctx, twitch_link):
+        discord_id = ctx.author.id
+        player_data = load_player_data()
+        player_data[discord_id] = twitch_link
+        save_player_data(player_data)
+        await ctx.send(f"Registered your Twitch stream: {twitch_link}")
+
     
+
     
 async def setup(bot):
     await bot.add_cog(

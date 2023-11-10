@@ -87,8 +87,6 @@ class context(commands.Cog):
                 asyncio.create_task(msg.edit(content=f"Timeout❌"))
                 break
 
-    
-    
     @app_commands.checks.has_any_role('TT Updater')
     async def submit(self, i: discord.Interaction, msg: discord.Message):
         role = discord.utils.get(i.guild.roles, name="TT Updater")
@@ -152,103 +150,27 @@ class context(commands.Cog):
             track = filtertext(match="")
             lower_track = track.lower()
             dlc_tracks = [
-                'bpp',
-                'btc',
-                'bcmo',
-                'bcma',
-                'btb',
-                'bsr',
-                'bsg',
-                'bnh',
-                'bnym',
-                'bmc3',
-                'bkd',
-                'bwp',
-                'bss',
-                'bsl',
-                'bmg',
-                'bshs',
-                'bll',
-                'bbl',
-                'brrm',
-                'bmt',
-                'bbb',
-                'bpg',
-                'bmm',
-                'brr7',
-                'bad',
-                'brp',
-                'bdks',
-                'byi',
-                'bbr',
-                'bmc',
-                'bws',
-                'bssy',
-                'batd',
-                'bdc',
-                'bmh',
-                'bscs',
-                'blal',
-                'bsw',
-                'bkc',
-                'bvv'
+                'bpp', 'btc', 'bcmo', 'bcma', 'btb', 'bsr', 'bsg', 'bnh', 'bnym',
+                'bmc3', 'bkd', 'bwp', 'bss', 'bsl', 'bmg', 'bshs', 'bll', 'bbl',
+                'brrm', 'bmt', 'bbb', 'bpg', 'bmm', 'brr7', 'bad', 'brp', 'bdks',
+                'byi', 'bbr', 'bmc', 'bws', 'bssy', 'batd', 'bdc', 'bmh', 'bscs',
+                'blal', 'bsw', 'bkc', 'bvv','bra','bdkm','bdci','bppc','bmd','briw',
+                'bbc3','brr',
             ]
             
             if lower_track in dlc_tracks:
                 return 'DLC'
             elif lower_track in [
-                'mks',
-                'wp',
-                'ssc',
-                'tr',
-                'mc',
-                'th',
-                'tm',
-                'sgf',
-                'sa',
-                'ds',
-                'ed',
-                'mw',
-                'cc',
-                'bdd',
-                'bc',
-                'rr',
-                'rmmm',
-                'rmc',
-                'rccb',
-                'rtt',
-                'rddd',
-                'rdp3',
-                'rry',
-                'rdkj',
-                'rws',
-                'rsl',
-                'rmp',
-                'ryv',
-                'rttc',
-                'rpps',
-                'rgv',
-                'rrd',
-                'dyc',
-                'dea',
-                'ddd',
-                'dmc',
-                'dwgm',
-                'drr',
-                'diio',
-                'dhc',
-                'dbp',
-                'dcl',
-                'dww',
-                'dac',
-                'dnbc',
-                'drir',
-                'dsbs',
-                'dbb'
+                'mks', 'wp', 'ssc', 'tr', 'mc', 'th', 'tm', 'sgf', 'sa', 'ds',
+                'ed', 'mw', 'cc', 'bdd', 'bc', 'rr', 'rmmm', 'rmc', 'rccb', 'rtt',
+                'rddd', 'rdp3', 'rry', 'rdkj', 'rws', 'rsl', 'rmp', 'ryv', 'rttc',
+                'rpps', 'rgv', 'rrd', 'dyc', 'dea', 'ddd', 'dmc', 'dwgm', 'drr',
+                'diio', 'dhc', 'dbp', 'dcl', 'dww', 'dac', 'dnbc', 'drir', 'dsbs', 'dbb'
             ]:
                 return 'S'
             else:
-                return None
+                return 'wrong abbr!'
+
 
 
                 
@@ -263,8 +185,11 @@ class context(commands.Cog):
         if trackname=='':
             error_message_track = f"player {msg.author.mention} didn't put **track abbr** did you forget it?. \ngo to post {msg_id} \n`error: missing **track abbr**`"
             await i.response.send_message(error_message_track)
-            
-        
+            return
+        if category=='wrong abbr!':
+            error_message_time = f"can't submit due {msg.author.mention} put wrong track abbr. in their post.\n go to post {msg_id} \n`error: incorrect track abbr.`"
+            await i.response.send_message(error_message_time)
+            return
         elif time is None:
             error_message_time = f"can't submit because {msg.author.mention}  forgor to put **time** in their post.\n go to post {msg_id} \n`error: missing **time**`"
             await i.response.send_message(error_message_time)
@@ -275,17 +200,11 @@ class context(commands.Cog):
             await msg.add_reaction(check)
             embed = Embed(title=f"Update for {msg.author.name}", colour=discord.Color.gold())
             embed.add_field(name="description",value=f"Track: **{trackname}** time: **{time}**",)
-            embed.add_field(name="Proof",value=msg_id)
+            embed.add_field(name="Proof ",value=msg_id)
             embed.set_author(name=f"Verified by: {i.user.name}",icon_url=i.user.display_avatar)
             embed.set_thumbnail(url=msg.author.display_avatar)
             await i.response.send_message(embed=embed)
 
-
-    
-
-
-
-        
 
     
     @commands.command(name="c")

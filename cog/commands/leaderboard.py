@@ -34,164 +34,196 @@ top_dlc = {"top_dlc":{"range":"V4:Y22","image_url":"https://cdn.discordapp.com/a
 dlc_track = {
     "Paris Promenade":{
         "range":"B4:E15",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172473780979904604/pa.PNG?ex=6560724c&is=654dfd4c&hm=1e4da7b9521148590de88ae89e21b4c6c185a6b65a0c87567d1af421366e7787&"
     },
     "Toad Circuit":{
         "range":"G4:J15",
-        "image_url":""
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1172472137290887188/toad.png?ex=656070c5&is=654dfbc5&hm=af0fa32972797726c1025666aa6c8a9824916688e266402e5f2593951ed779cd&="
     },
     "Choco Mountain":{
         "range":"L4:O15",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471986555986001/cho.png?ex=656070a1&is=654dfba1&hm=4517232483c52c9455cdfc5c84d4186265202a62651105ee2c9fe62737598df3&"
     },
     "Coconut Mall":{
         "range":"Q4:T15",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172474884341895178/coconut.PNG?ex=65607353&is=654dfe53&hm=299c7e970e248994bf2be075833be02f048288d09d383c9f77dc1b41966d1497&"
     },
     "Tokyo Blur":{
         "range":"B17:E28",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472137483833344/tokyo.png?ex=656070c5&is=654dfbc5&hm=4e3a7878b2768c7c3909917851387808c64885d51a7cee16149b052424731cb5&"
     },
     "Shroom Ridge":{
         "range":"G17:J28",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472135948705852/shroom_ridge.png?ex=656070c4&is=654dfbc4&hm=dc1bbec662c1890c3791a539a3f77c1a3e9b9ac01a367c2d6949c806061a867a&"
     },
     "Sky Garden":{
         
         "range":"L17:O28",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472136141647892/sky_garden.png?ex=656070c4&is=654dfbc4&hm=2f806cc47b114aea806c940b1429be1df68b9e17542ace7b19afaac58c13c24d&"
     },
     "Ninja Hideaway":{
         "range":"Q17:T28",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472107335176212/ninja.png?ex=656070bd&is=654dfbbd&hm=495ad3da70bd1ee739e05a217afe6a2bc7faf8b278c13cb2028f1124f057a5c6&"
     },
     "New York Minute":{
         "range":"B30:E41",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472107087695922/newyork.png?ex=656070bd&is=654dfbbd&hm=117a49362f29f67a06f20fcf7d7c81567d5ad91b41da6da8777fe7e23a3cf437&"
     },
     "Mario Circuit 3":{
         "range":"G30:J41",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471985670995968/bmc3.png?ex=656070a0&is=654dfba0&hm=34ed4b5ac046f026d60850dfeb657e069d1f80d444b13a2d0dbe6445161b6152&"
     },
     "Kalimari Desert":{
         "range":"L30:J41",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472057313898536/desert.png?ex=656070b1&is=654dfbb1&hm=29e29556278a906266330abfd73473885de74e7b20a4f042eb6dde56d0cbf257&"
     },
     "Waluigi Pinball":{
         "range":"Q30:T41",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472160351162408/wp.png?ex=656070ca&is=654dfbca&hm=48a3787d17b3729a15e26cd1bed0c5a44a3a3acaa28fb38834daccdea2230312&"
     },
     "Sydney Sprint":{
         "range":"B43:E54",
-        "image_url":""
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1172472137081167932/sydney.png?ex=656070c4&is=654dfbc4&hm=cf4d6351bfa4b10fe63ce1c6e8c6503651ede1dbff595cad827f572385834ca8&="
     },
     "Snow Land":{
         "range":"G43:J54",
-        "image_url":""
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1172472136523325510/snow_land.png?ex=656070c4&is=654dfbc4&hm=c17bd8f33ac5ba02a3309aa608b438ee709908565e1e9ed2dc962dc7fbea84c1&="
     },
     "Mushroom Gorge":{
         "range":"L43:O54",
-        "image_url":""
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1172472106592784384/mg.png?ex=656070bd&is=654dfbbd&hm=b5901034690ca83814ead6415407246a04d028e3afa919f0780e6e84ab894e49&="
     },
     "Sky-High Sundae":{
         "range":"Q43:T54",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472136322011146/sky.png?ex=656070c4&is=654dfbc4&hm=5f741c832288ce53cebd8adc69dc0ee7c7a30aa3b7e3d0b19b009c9c5ba50fc1&"
     },
     "London Loop":{
         "range":"B56:E67",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472057980792842/london.png?ex=656070b2&is=654dfbb2&hm=fe43a5264a44f73688aaf3bc36c548702bb50f12a47a287f13746482626bf1fc&"
     },
     "Boo Lake":{
         "range":"G56:J67",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471985863917578/boo.png?ex=656070a0&is=654dfba0&hm=ddb369db563076771cb9493d5090d2d59f01a816a1f8277c08965346583fc023&"
     },
     "Rock Rock Mountain":{
         "range":"L56:O67",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472135709642762/roc.png?ex=656070c4&is=654dfbc4&hm=2b9ac7ccf4557d26ac32d8782c4e43c991c6b6ce28422fa1fae9bfb051762430&"
     },
     "Maple Treeway":{
         "range":"Q56:T67",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472058203078666/maple.png?ex=656070b2&is=654dfbb2&hm=08246d1812f18b7f378bdad9d974e474bce8026fa87a34ede6db1d5b0183820b&"
     },
     "Berlin Byways":{
         "range":"B69:E80",
-        "image_url":""
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1172471985217994762/bbb.png?ex=656070a0&is=654dfba0&hm=dfc68087a0ebeb5648536f092e54e243df953106cd382285fe314a78ef0c3089&="
     },
     "Peach Gardens":{
         "range":"G69:J80",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472107536494592/peach_garden.png?ex=656070bd&is=654dfbbd&hm=93427b95b818c492ff15256eea58d8640345160a244fe28c2950b9e890a87dcf&"
     },
     "Merry Mountain":{
         "range":"L69:O80",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472058899333130/merry.png?ex=656070b2&is=654dfbb2&hm=d1d6ad7c4823c23d907476e445feb0b361299ab818dcf60e7f1fffcf2cd78970&"
     },
     "3DS Rainbow Road":{
         "range":"Q69:T80",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471986274959360/brr7.png?ex=656070a1&is=654dfba1&hm=1d63f3155c5aaa17c903c38fc32e9c0d17ce62bcd49166761c3ce24e8a076fe7&"
     },
     "Amsterdam Drift":{
         "range":"B82:E93",
-        "image_url":""
+        "image_url":"https://media.discordapp.net/attachments/1156152527193133079/1172471984773398589/amsterdam.png?ex=656070a0&is=654dfba0&hm=5bc0426099922cc00657efff98aa95cac64c63b14d234a2b86ed00a335b72793&="
     },
     "Riverside Park":{
         "range":"G82:J93",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472108610244630/riverside_park.png?ex=656070be&is=654dfbbe&hm=ed6f423e4e6ceca7c00b10c18b2724c54378bc84a3c5c3b6d312a2a0ea0bc1e3&"
     },
     "DK Summit":{
         "range":"L82:O93",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172477342627659856/dk.PNG?ex=6560759e&is=654e009e&hm=9925016f1a3f25277fafab0eebd14e83c17dfdcd5a35ecf6f2c09aa92e51a882&"
     },
     "Yoshi\'s Island":{
         "range":"Q82:T93",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472160925798481/yoshi.png?ex=656070ca&is=654dfbca&hm=d492baa9817aaabf967ad50fb9c429cd3b664ba06ae8c00cc22162c6e304a21d&"
     },
     "Bangkok Rush":{
         "range":"B95:E106",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471985431912459/bbr.png?ex=656070a0&is=654dfba0&hm=2f14d598895de215c179d461b62d7c811572405617991dfc7db88e2a5841ac82&"
     },
     "Mario Circuit":{
         "range":"G95:J106",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472058681241710/mc.png?ex=656070b2&is=654dfbb2&hm=ab23d5cbf338a60be74e1398d1c8627852018d1b528a1d79ac748764d6129001&"
     },
     "Waluigi Stadium":{
         "range":"L95:O106",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472160623800370/ws.png?ex=656070ca&is=654dfbca&hm=7f64fd94033fcdffd4780c139d969c9cef41213903514b77c6fb701ae43bf723&"
     },
     "Singapore Speedway":{
         "range":"Q95:T106",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472136703684658/ssry.png?ex=656070c4&is=654dfbc4&hm=de0c28d3bfbe35cff76408064ac2bcc15aaaab3b7b6a7e74c9d4df50d7b8d788&"
     },
     "Athens Dash":{
         "range":"B108:E119",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471984551116830/ad.png?ex=656070a0&is=654dfba0&hm=7b247cfacec136bb8037c25dbf0fac842f4fda12d70eb241af480d3f5ace15fc&"
     },
     "Daisy Cruiser":{
         "range":"G108:J119",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472056881872936/dc.jpg?ex=656070b1&is=654dfbb1&hm=d2c2e39d0509c12b1de7bdcc880c20a5a517a6135a73e401bdb0f5005b37d320&"
     },
     "Moonview Highway":{
         "range":"L108:O119",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472106844434452/mh.png?ex=656070bd&is=654dfbbd&hm=d2c5db564a3953da9013dbf020578d26cef56f7865bc1367ab93c5528d23dd6c&"
     },
     "Squeaky Clean Sprint":{
         "range":"Q108:T119",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172471985008296026/bathroom.png?ex=656070a0&is=654dfba0&hm=4b24c9fdadff1c8234b47abacae15001048cb865872ad1d7016e1587a7b50869&"
     },
     "Los Angeles Laps":{
         "range":"B121:E132",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472057766879232/la.png?ex=656070b2&is=654dfbb2&hm=8cb9594683311b3bf80888888eb4ef6a48ddcc7975b5c0b49f0a5e9c23adaac3&"
     },
     "Sunset Wilds":{
         "range":"G121:J132",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472136909213706/sw.png?ex=656070c4&is=654dfbc4&hm=cbb8c85f461d38157a056b7766fcffcb366ac1d01fba76e1b1f7259b851c4a88&"
     },
     "Koopa Cape":{
         "range":"L121:O132",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172478497252450334/kc.PNG?ex=656076b1&is=654e01b1&hm=0766d91914b22def8dfd31072335a0d8b1bf2272f6e2f4622bf03d3b9521ce8e&"
     },
     "Vancouver Velocity":{
         "range":"Q121:T132",
-        "image_url":""
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472160124686406/vc.png?ex=656070ca&is=654dfbca&hm=2bead0bbc2e2ddb1f5f3d292759d65a454bac3ef7d2e9b69dc7f3368f4936d19&"
+    },
+    "Rome Avanti":{
+        "range":"B134:E145",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472108174028840/raw.bra.png?ex=656070be&is=654dfbbe&hm=19a339bc0e3a414a71441514a7a565aec127ae01f486a8cc8a99dc6793a2cb39&"
+    },
+    "DK Mountain":{
+        "range":"G134:J145",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472057531990077/dkm.png?ex=656070b1&is=654dfbb1&hm=2684565ef539af2690aceeb9ddc7ae09ca8eece0f15428518a2b9d8ab19de79c&"
+    },
+    "Daisy Circuit":{
+        "range":"L134:O145",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472057104179211/dci.jpg?ex=656070b1&is=654dfbb1&hm=4b48a4bc31fc1f1e8719ec55b160a76004f6b57bf10bad6065bcabc8b5b39249&"
+    },
+    "Piranha Plant Cove":{
+        "range":"Q134:T145",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472107972710400/raw.bppc.jpg?ex=656070be&is=654dfbbe&hm=7ceafd1d75e8a299e945dbc84def43b62d97365fabc5e9655d16d1c2cc9cab46&"
+    },
+    "Madrid Drive":{
+        "range":"B147:E158",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472058429579324/marid.png?ex=656070b2&is=654dfbb2&hm=61a3eff95d3694be5aa6317eed13a5214b5788b0b1cffea358da9565d289a4f1&"
+    },
+    "Rosalina\'s Ice World":{
+        "range":"G147:E158",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472108392124426/raw.ice.jpg?ex=656070be&is=654dfbbe&hm=2e4d5e3a0396770bf4b2a2d46f96bb3b159e449b2fb501e4d9536b977dde368d&"
+    },
+    "Bowser\'s Castle 3":{
+        "range":"L147:O158",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472107754590228/raw.bc3.jpg?ex=656070bd&is=654dfbbd&hm=25a1803d11ef92b70b7b0464401fd2d859e8d17b34193669dc80e2f6ac042dbe&"
+    },
+    "Wii Rainbow Road":{
+        "range":"Q147:T158",
+        "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172479632562466857/brr.png?ex=656077c0&is=654e02c0&hm=4a21fb5b3fff7d113c6d9f1cba3aa593650957e3395fc28681861467e9681ca6&"
     },
     
 }
@@ -407,8 +439,8 @@ class Slxleaderboard(commands.Cog, name='leaderboard'):
     def __init__(self, bot: commands.Bot):
         self.bot: commands.Bot = bot
 
-    @commands.command(name="show", description="to show overall and specific track")
-    async def show_track(self, ctx, track: str):
+    @commands.hybrid_command(name="show", description="to show overall and specific track")
+    async def show_track(self, ctx:commands.Context, track: str):
         dcl = Track.from_nick(track)
         track = dcl.name
         
@@ -478,14 +510,24 @@ class Slxleaderboard(commands.Cog, name='leaderboard'):
             format5 = "\n".join([" ".join(row) for row in data5])
             format5.replace("[", "").replace("]","").replace("'","").replace(",", "")
             track_embed.add_field(name="", value=f"**{track}**\n{format5}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
-
+        await ctx.defer()
         await ctx.send(embed=track_embed)  # ส่ง Embed ข้อมูล track
 
     @commands.command(name="player")
-    async def _player(self,ctx):
-        worksheet = player_tab.get("A1:C24")
-        data = "\n".join([" ".join(row) for row in worksheet])
-        await ctx.send(data)
+    async def _player(self, ctx):
+        
+        worksheet = player_tab.get("A1:C24")  # ดึงข้อมูลผู้เล่นจาก worksheet
+        player_flags = {}  # สร้าง dict เพื่อเก็บธงของผู้เล่น
+
+        for row in worksheet:
+            player_name, country = row
+            player_flags[player_name.lower()] = country  # ใส่ข้อมูลใน dict โดยเปลี่ยนชื่อผู้เล่นเป็นตัวพิมพ์เล็ก
+
+        if player_flags:
+            formatted_data = "\n".join([f"{player} = {country}" for player, country in player_flags.items()])
+            await ctx.send(formatted_data)
+        else:
+            await ctx.send("player's infomation is not found!")
 
 async def setup(bot):
     await bot.add_cog(

@@ -53,7 +53,7 @@ class UpdateTimeTrials(commands.Cog, name='UpdateTT'):
         app_commands.Choice(name="Pond",value="Pond"),
         app_commands.Choice(name="Rick",value="Rick"),
         app_commands.Choice(name="Robertala",value="Robertala"),
-        app_commands.Choice(name="Rush",value="Rush"),
+        app_commands.Choice(name="Rushh",value="Rushh"),
         app_commands.Choice(name="Stan",value="Stan"),
         app_commands.Choice(name="Torasshi",value="Torasshi"),
         app_commands.Choice(name="Vonz",value="Vonz"),
