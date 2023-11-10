@@ -1,4 +1,4 @@
-# Time Trials & leaderboard discord bot
+# MK8DX Time Trials & leaderboard discord bot
 the discord bot made for Silent Lightning team discord server
 
 ---
