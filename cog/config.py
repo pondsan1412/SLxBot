@@ -249,7 +249,8 @@ bBL = ""
 
 
 
-
+#example picture
+example_picture_tt = "https://cdn.discordapp.com/attachments/1091774870024634488/1173520504158687232/Capture.PNG?ex=65644123&is=6551cc23&hm=e48354d04624168a40de0b61430c9cd65cb1a68bdb21ff469b78b9d90369f7a8&"
 
 
 

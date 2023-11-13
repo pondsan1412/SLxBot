@@ -512,23 +512,19 @@ class Slxleaderboard(commands.Cog, name='leaderboard'):
             track_embed.add_field(name="", value=f"**{track}**\n{format5}")  # เพิ่มข้อมูลในรูปแบบ Field ใน Embed ข้อมูล track
         await ctx.defer()
         await ctx.send(embed=track_embed)  # ส่ง Embed ข้อมูล track
-
-    @commands.command(name="player")
-    async def _player(self, ctx):
+    
         
+    @commands.hybrid_command(name="player")
+    async def _player(self, ctx):
+    
         worksheet = player_tab.get("A1:C24")  # ดึงข้อมูลผู้เล่นจาก worksheet
-        player_flags = {}  # สร้าง dict เพื่อเก็บธงของผู้เล่น
-
-        for row in worksheet:
-            player_name, country = row
-            player_flags[player_name.lower()] = country  # ใส่ข้อมูลใน dict โดยเปลี่ยนชื่อผู้เล่นเป็นตัวพิมพ์เล็ก
-
-        if player_flags:
-            formatted_data = "\n".join([f"{player} = {country}" for player, country in player_flags.items()])
-            await ctx.send(formatted_data)
-        else:
-            await ctx.send("player's infomation is not found!")
-
+        embed = Embed()
+        format = "\n".join([" ".join(row) for row in worksheet])
+        format.replace("[", "").replace("]","").replace("'","").replace(",", "")
+        embed.add_field(name="Player in SLx&SBx team",value=f"\n{format}")
+        await ctx.send(embed=embed)
+        
+            
 async def setup(bot):
     await bot.add_cog(
         Slxleaderboard(bot)

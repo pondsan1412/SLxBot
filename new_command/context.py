@@ -138,7 +138,7 @@ class context(commands.Cog):
                 return None
 
         def filtertext(match):
-            pattern = r'[a-zA-Z]+'
+            pattern = r'[a-zA-Z0-9]+'
             msg_content = msg.content
             matches = re.findall(pattern, msg_content)
             for match in matches:
@@ -172,6 +172,8 @@ class context(commands.Cog):
                 return 'wrong abbr!'
 
 
+        
+
 
                 
         author_id = msg.author.id
@@ -179,7 +181,6 @@ class context(commands.Cog):
         trackname = filtertext(msg.content)
         time = filterregex(msg.content)
         category = categorize_track(trackname)
-        update_row_submit =[trackname, category, player, time]
         msg_id = msg.jump_url
 
         if trackname=='':
@@ -195,6 +196,10 @@ class context(commands.Cog):
             await i.response.send_message(error_message_time)
             return
         else:
+            if trackname == 'bdct' or trackname == 'bDCt':
+                trackname = 'bdci'
+
+            update_row_submit =[trackname, category, player, time]
             file_in_sheet_testsheet.insert_row(update_row_submit, 3)
             check = "<:SL:916870427232567328>"
             await msg.add_reaction(check)

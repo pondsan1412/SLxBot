@@ -52,18 +52,18 @@ from cog.commands.General import General
 from cog.commands.leaderboard import Slxleaderboard
 from cog.commands.TTUpdate import UpdateTimeTrials
 async def main():
-        for cog in{
-            context,
-            General,
-            eventbot,
-            Slxleaderboard,
-            UpdateTimeTrials,
-            
-        }:
-            await bot.add_cog(cog(bot))
-        random_activity_loop.start()
-        await update_activity()
-        await bot.start(secret.discord_token)
+    for cog in{
+        context,
+        General,
+        eventbot,
+        Slxleaderboard,
+        UpdateTimeTrials,
+        
+    }:
+        await bot.add_cog(cog(bot))
+    random_activity_loop.start()
+    await update_activity()
+    await bot.start(secret.discord_token)
         
 
 
