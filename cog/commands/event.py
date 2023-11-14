@@ -661,7 +661,6 @@ class eventbot(commands.Cog):
                  
         filter_text = filtertext(message.content)        
         filter_time = filterregex(message.content)
-        
         if message.channel.id == time_trials_channel:
             
             if message.attachments and not message.content:
@@ -671,10 +670,10 @@ class eventbot(commands.Cog):
                 sent_messages.add(message.id)
         # ตรวจสอบว่ามีไฟล์ attachments และมีข้อความ และข้อความไม่ตรงรูปแบบ
             elif message.attachments and not is_valid_format(message.content):
-                await message.reply("**Warning**: Missing **time**\nPlease follow format [track] [time] or you will get super slow verify or missed verify\n***For example***\n`rGV 1:01.100`",delete_after=100)
+                await message.reply("**Warning**: Missing **time format**\nPlease follow format [track] [time] or you will get super slow verify or missed verify\n***For example***\n`rGV 1:01.100` \n error: probably wrong time format or missing time",delete_after=100)
                 sent_messages.add(message.id)
-            elif message.attachments and filter_time is not None and filter_text is not None:
-                await message.reply("did you forgot to put time in your post? huh?")
+            elif message.attachments and filter_time is not None and filter_text.isdigit() and 0 <= int(filter_text) <= 9:
+                await message.reply("why did you only post picture with time format? \n did you forgot to put track's abbra in your post? huh? \n MISSING: **[track]**")
             if message.attachments and message.content:
                 category, time = categorize_track_and_time(message.content)
                 if category !='wrong abbr!':
