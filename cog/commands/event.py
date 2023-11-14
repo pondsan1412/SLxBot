@@ -440,12 +440,20 @@ def get_standard_track(worksheet, range):
     return worksheet.get(range)
 
 class TTbutton(discord.ui.View):
-    def __init__(self,message_id,content):
+    def __init__(
+            self,
+            content,
+            message_id,
+            user_id,
+            msg_jump,
+    ):
         super().__init__(timeout=600000)
         self.value = None
         self.content = content
-        self.verified_users = set()
         self.message_id = message_id
+        self.user_id = user_id
+        self.msg_jump = msg_jump
+        
     # When the confirm button is pressed, set the inner value to `True` and
     # stop the View from listening to more input.
     # We also send the user an ephemeral message that we're confirming their choice.
@@ -485,7 +493,7 @@ class TTbutton(discord.ui.View):
             elif user ==player_id.Torasshi:
                 return "Torasshi"
             else:
-                return interaction.user.name
+                return None 
             
         def filterregex(match):
             pattern = r'\d+:\d+\.\d+'
@@ -531,43 +539,45 @@ class TTbutton(discord.ui.View):
                 return 'wrong abbr!'
 
         msg = self.content
-        author_id = interaction.user.id
+        author_id = self.user_id
         player = slxmember_id(author_id)
         trackname = filtertext(msg)
         time = filterregex(msg)
         category = categorize_track(trackname)
-        msg_id = interaction.message.jump_url
-        msg_previus = self.message_id
+        msgjump = self.msg_jump
+        message_id = self.message_id
+        
 
         if trackname=='':
-            error_message_track = f"player {interaction.user.mention} didn't put **track abbr** did you forget it?. \ngo to post {msg_id} \n`error: missing **track abbr**`"
+            error_message_track = f"player <@{author_id}> didn't put **track abbr** did you forget it?. \ngo to post{msgjump}  \n`error: missing **track abbr**`"
             await interaction.response.send_message(error_message_track)
             return
         if category=='wrong abbr!':
-            error_message_time = f"can't submit due {interaction.user.mention} put wrong track abbr. in their post.\n go to post {msg_id} \n`error: incorrect track abbr.`"
+            error_message_time = f"can't submit due <@{author_id}> put wrong track abbr. in their post.\n go to post {msgjump}  \n`error: incorrect track abbr.`"
             await interaction.response.send_message(error_message_time)
             await interaction.followup.send(msg)
             return
         elif time is None:
-            error_message_time = f"can't submit because {interaction.user.mention}  forgor to put **time** in their post.\n go to post {msg_id} \n`error: missing **time**`"
+            error_message_time = f"can't submit because <@{author_id}>  forgor to put **time** in their post.\n go to post {msgjump}  \n`error: missing **time**`"
             await interaction.response.send_message(error_message_time)
             return
+        
         else:
             if trackname == 'bdct' or trackname == 'bDCt':
                 trackname = 'bdci'
 
             update_row_submit =[trackname, category, player, time]
             file_in_sheet_testsheet.insert_row(update_row_submit, 3)
-            check = "<:SL:916870427232567328>"
+            check = "<a:EvilParrot:1107572692175040513>"
             try:
-                message = await interaction.channel.fetch_message(self.message_id)
+                message = await interaction.channel.fetch_message(message_id)
                 await message.add_reaction(check)
             except discord.NotFound:
                 await interaction.channel.send("error")
             
 
-            view=showTT(content=self.content)
-            await interaction.response.edit_message(content=f"{player}'s  TT has been verified <a:ShyPraiseRainbow:962036491062771713> \n {trackname} {time} \n proof: {msg_id}",view=view)
+            view=showTT(content=msg)
+            await interaction.response.edit_message(content=f"<@{author_id}>  TT has been verified \n {trackname} {time} \n proof: {msgjump}",view=view)
             
             
             
@@ -595,7 +605,7 @@ class eventbot(commands.Cog):
             
         except IndexError:
             pass
-        time_trials_channel = 874381861424607314
+        time_trials_channel = 1163800972867416064
         sent_messages = set()
 
         def is_valid_format(content):
@@ -632,8 +642,25 @@ class eventbot(commands.Cog):
                 else:
                     return 'wrong abbr!', time
         
-
-        
+        def filtertext(match):
+            pattern = r'[a-zA-Z0-9]+'
+            msg_content = message.content
+            matches = re.findall(pattern, msg_content)
+            for match in matches:
+                return match
+            else:
+                return ''
+        def filterregex(match):
+            pattern = r'\d+:\d+\.\d+'
+            msg_content = message.content
+            matches = re.findall(pattern, msg_content)
+            for match in matches:
+                return match
+            else:
+                return None
+                 
+        filter_text = filtertext(message.content)        
+        filter_time = filterregex(message.content)
         
         if message.channel.id == time_trials_channel:
             
@@ -645,15 +672,22 @@ class eventbot(commands.Cog):
         # ตรวจสอบว่ามีไฟล์ attachments และมีข้อความ และข้อความไม่ตรงรูปแบบ
             elif message.attachments and not is_valid_format(message.content):
                 await message.reply("**Warning**: Missing **time**\nPlease follow format [track] [time] or you will get super slow verify or missed verify\n***For example***\n`rGV 1:01.100`",delete_after=100)
-                
                 sent_messages.add(message.id)
+            elif message.attachments and filter_time is not None and filter_text is not None:
+                await message.reply("did you forgot to put time in your post? huh?")
             if message.attachments and message.content:
                 category, time = categorize_track_and_time(message.content)
                 if category !='wrong abbr!':
-                    msg_id = message.jump_url
-                    view = TTbutton(message_id=message.id, content=message.content)
+                    msg_jump = message.jump_url
+                    #need to return all these value in on_message function to TTbutton class 
+                    view = TTbutton(
+                        content = message.content,
+                        message_id=message.id,
+                        user_id=message.author.id,
+                        msg_jump=message.jump_url
+                    )
                     
-                    await message.channel.send(f"request from **{message.author.name}**\n info: **{message.content}** \n proof: {msg_id} ",view=view)
+                    await message.channel.send(f"request from **{message.author.name}**\n info: **{message.content}** \n proof: {msg_jump} ",view=view)
                 else:
                     await message.reply(f"wrong abbra or wrong time format please check again {message.author.mention}",delete_after=100)
 
