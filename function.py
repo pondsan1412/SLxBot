@@ -1,6 +1,8 @@
 import re
+import discord
 from new_command import player_id
 msg = None
+
 def categorize_track(track):
             track = filtertext(match="")
             lower_track = track.lower()
@@ -27,39 +29,49 @@ def categorize_track(track):
                 return 'wrong abbr!'
             
 def slxmember_id(user,user_id):
-            if user == player_id.Pond:
-                return "Pond"
-            elif user == player_id.Stan:
-                return "Stan"
-            elif user == player_id.Robertala:
-                return "Robertala"
+            if user == player_id.AMDX:
+                return "AMDX"
             elif user == player_id.Ant:
                 return "Ant"
-            elif user == player_id.FreeDobby:
-                return "FreeDobby"
-            elif user == player_id.FalseKing:
-                return "FalseKing"
-            elif user == player_id.AMDX:
-                return "AMDX"
-            elif user == player_id.Vonz:
-                return "Vonz"
-            elif user == player_id.JacKo:
-                return "JacKo"
-            elif user == player_id.Rick:
-                return "Rick"
-            elif user == player_id.Rushh:
-                return "Rushh"
-            elif user == player_id.BIGW:
-                return "BIGW"
             elif user == player_id.BenJames:
                 return "Benjames"
+            elif user == player_id.BIGW:
+                return "BigW"
+            elif user == player_id.FalseKing:
+                return "FalseKing"
+            elif user == player_id.FreeDobby:
+                return "FreeDobby"
+            elif user == player_id.Holycomb:
+                return "Holycomb"
+            elif user == player_id.JacKo:
+                return "JacKo"
             elif user == player_id.Kaleb112:
                 return "Kaleb112"
-            elif user ==player_id.Torasshi:
+            elif user == player_id.leftyginger:
+                return "leftyginger"
+            elif user == player_id.Nesszomi:
+                return "Nesszomi"
+            elif user == player_id.Paulo22:
+                return "Paulo22"
+            elif user == player_id.Pond:
+                return "Pond"
+            elif user == player_id.Rick:
+                return "Rick"
+            elif user == player_id.Robertala:
+                return "Robertala"
+            elif user == player_id.Rushh:
+                return "Rushh"
+            elif user == player_id.Stan:
+                return "Stan"
+            elif user == player_id.SUIIced:
+                return "SUIIced"
+            elif user == player_id.Torasshi:
                 return "Torasshi"
+            elif user == player_id.Vonz:
+                return "Vonz"
             else:
-                return msg.author.name
-            
+                return user_id
+
 def filterregex(match):
     pattern = r'\d+:\d+\.\d+'
     msg_content = msg.content
@@ -77,3 +89,4 @@ def filtertext(match):
         return match
     else:
         return '' 
+    
