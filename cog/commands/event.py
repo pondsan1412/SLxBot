@@ -298,7 +298,7 @@ standard_track = {
         "range":"Q43:T54",
         "image_url":config.t_RR 
     },
-    "Moo Moo Meadows":{
+    "message.content":{
         "range":"B56:E67",
         "image_url":config.rMMM
     },

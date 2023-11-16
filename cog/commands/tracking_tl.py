@@ -46,19 +46,18 @@ class tracking_tl(commands.Cog):
         translator= filter_translate(result="")
         lang_list = ['fr','th','de','ja','nl']
         player_list=[pond_,robert_,stan_]
-        if message.author in player_list:
-            if detect_ not in lang_list:
-                return
-            else:
-                embed = Embed()
-                embed.add_field(name='', value=f'`{message.content}` \n meaning is: **{translator}**')
-                embed.set_author(name=f'{message.author.name} said:', icon_url=message.author.display_avatar)
-                view = Button(message=message)
-                sent_message = await message.channel.send(embed=embed, view=view)
-                # Save the ID of the sent message to use in the Button class
-                view.message = sent_message
-        else:
+        
+        if detect_ not in lang_list:
             return
+        else:
+            embed = Embed()
+            embed.add_field(name='', value=f'`{message.content}` \n meaning is: **{translator}**')
+            embed.set_author(name=f'{message.author.name} said:', icon_url=message.author.display_avatar)
+            view = Button(message=message)
+            sent_message = await message.channel.send(embed=embed, view=view)
+            # Save the ID of the sent message to use in the Button class
+            view.message = sent_message
+    
 
 async def setup(bot):
     await bot.add_cog(
