@@ -26,8 +26,14 @@ def categorize_track(track):
             ]:
                 return 'S'
             else:
-                return 'wrong abbr!'
-            
+                return 'wrong abbreviation!'
+
+def slx_id(user_id:discord.Member):
+            if user_id.id not in player_id:
+                return
+            else:
+                 return user_id.id    
+        
 def slxmember_id(user,user_id):
             if user == player_id.AMDX:
                 return "AMDX"
@@ -71,6 +77,12 @@ def slxmember_id(user,user_id):
                 return "Vonz"
             else:
                 return user_id
+
+def slx_id(user_id:discord.Member):
+            if user_id.id not in player_id:
+                return
+            else:
+                 return user_id.id
 
 def filterregex(match):
     pattern = r'\d+:\d+\.\d+'
