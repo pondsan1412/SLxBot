@@ -394,7 +394,7 @@ all_track = [
     "Cheese Land",
     "Wild Woods",
     "Animal Crossing",
-    "message.content",
+    "Moo Moo Meadows",
     "Mario Circuit",
     "Cheep Cheep Beach",
     "Toad's Turnpike",

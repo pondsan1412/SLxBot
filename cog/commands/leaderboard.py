@@ -296,59 +296,59 @@ standard_track = {
         "range":"B56:E67",
         "image_url":config.rMMM
     },
-    "Mario Circuit":{
+    "GBA Mario Circuit":{
         "range":"G56:J67",
         "image_url":config.rMC
     },
-    "Cheep Cheep Beach":{
+    "DS Cheep Cheep Beach":{
         "range":"L58:O67",
        "image_url":config.rCCB
     },
-    "Toad's Turnpike":{
+    "N64 Toad's Turnpike":{
         "range":"Q56:T67",
         "image_url":config.rTT
     },
-    "Dry Dry Desert":{
+    "GCN Dry Dry Desert":{
         "range":"B69:E80",
        "image_url":config.rDDD
     },
-    "Donut Plains 3":{
+    "SNES Donut Plains 3":{
         "range":"G69:J80",
         "image_url":config.rDP3
     },
-    "Royal Raceway":{
+    "N64 Royal Raceway":{
         "range":"L69:O80",
         "image_url":config.rRRy
     },
-    "DK Jungle":{
+    "3DS DK Jungle":{
         "range":"Q69:T80",
         "image_url":config.rDKJ
     },
-    "Wario Stadium":{
+    "DS Wario Stadium":{
         "range":"B82:E93",
         "image_url":config.rWS
     },
-    "Sherbet Land":{
+    "GCN Sherbet Land":{
         "range":"G82:J93",
         "image_url":config.rSL
     },
-    "Music Park":{
+    "3DS Music Park":{
         "range":"L82:O93",
         "image_url":config.rMP
     },
-    "Yoshi Valley":{
+    "N64 Yoshi Valley":{
         "range":"Q82:T93",
         "image_url":config.rYV
     },
-    "Tick-Tock Clock":{
+    "DS Tick-Tock Clock":{
         "range":"B95:E106",
         "image_url":config.rTTC
     },
-    "Piranha Planet Slide":{
+    "3DS Piranha Planet Slide":{
         "range":"G95:J106",
         "image_url":config.rPPS
     },
-    "Grumble Volcano":{
+    "Wii Grumble Volcano":{
         "range":"L95:O106",
          "image_url":config.rGV
 
@@ -389,11 +389,11 @@ standard_track = {
         "range":"Q121:T132",
         "image_url":config.dHC
     },
-    "Baby Park":{
+    "GCN Baby Park":{
         "range":"B134:E145",
         "image_url":config.dBP
     },
-    "Cheese Land":{
+    "GBA Cheese Land":{
         "range":"G134:J145",
         "image_url":config.dCL
     },
@@ -409,7 +409,7 @@ standard_track = {
         "range":"B147:E158",
         "image_url":config.dNBC
     },
-    "Ribbon Road":{
+    "GBA Ribbon Road":{
         "range":"G147:J158",
         "image_url":config.dRiR
     },
