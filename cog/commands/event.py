@@ -457,10 +457,20 @@ class TTbutton(discord.ui.View):
     # When the confirm button is pressed, set the inner value to `True` and
     # stop the View from listening to more input.
     # We also send the user an ephemeral message that we're confirming their choice.
+    
     @discord.ui.button(label='Verify', style=discord.ButtonStyle.green)
     async def confirm(self, interaction: discord.Interaction, button: discord.ui.Button):
-        
-
+        user = interaction.user
+        if any(role.name == 'TT Updater' for role in user.roles):
+            self.value = True
+            pass
+        else:
+        # กรณีที่ผู้ใช้ไม่มี role TTupdater
+            await interaction.response.send_message(f'`{interaction.user.name}` You do not have the required role to verify.')
+            channel_id = 1168451851289624616
+            channel = self.bot.get_channel(channel_id)
+            msg
+            return
         def slxmember_id(user):
             if user == player_id.Pond:
                 return "Pond"
@@ -568,7 +578,7 @@ class TTbutton(discord.ui.View):
 
             update_row_submit =[trackname, category, player, time]
             file_in_sheet_testsheet.insert_row(update_row_submit, 3)
-            check = "<a:EvilParrot:1107572692175040513>"
+            check = "<:SL:916870427232567328>"
             try:
                 message = await interaction.channel.fetch_message(message_id)
                 await message.add_reaction(check)
@@ -605,7 +615,10 @@ class eventbot(commands.Cog):
             
         except IndexError:
             pass
-        time_trials_channel = 1163800972867416064
+        
+
+        #time trials feature
+        time_trials_channel = 874381861424607314
         sent_messages = set()
 
         def is_valid_format(content):
