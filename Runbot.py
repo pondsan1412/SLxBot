@@ -51,7 +51,8 @@ from cog.commands.event import eventbot
 from cog.commands.General import General
 from cog.commands.leaderboard import Slxleaderboard
 from cog.commands.TTUpdate import UpdateTimeTrials
-
+from cog.commands.tracking_tl import tracking_tl
+from error_handler import ErrorHandler
 async def main():
     for cog in{
         context,
@@ -59,12 +60,14 @@ async def main():
         eventbot,
         Slxleaderboard,
         UpdateTimeTrials,
+        tracking_tl,
+        ErrorHandler
         
     }:
         await bot.add_cog(cog(bot))
     random_activity_loop.start()
     await update_activity()
-    await bot.start(secret.debugging_bot)
+    await bot.start(secret.discord_token)
         
 
 

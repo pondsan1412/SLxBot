@@ -214,7 +214,7 @@ dlc_track = {
         "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472058429579324/marid.png?ex=656070b2&is=654dfbb2&hm=61a3eff95d3694be5aa6317eed13a5214b5788b0b1cffea358da9565d289a4f1&"
     },
     "Rosalina\'s Ice World":{
-        "range":"G147:E158",
+        "range":"G147:J158",
         "image_url":"https://cdn.discordapp.com/attachments/1156152527193133079/1172472108392124426/raw.ice.jpg?ex=656070be&is=654dfbbe&hm=2e4d5e3a0396770bf4b2a2d46f96bb3b159e449b2fb501e4d9536b977dde368d&"
     },
     "Bowser\'s Castle 3":{
