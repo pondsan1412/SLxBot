@@ -28,12 +28,12 @@ the discord bot made for Silent Lightning team discord server
 ![image](https://cdn.discordapp.com/attachments/1172493621732327495/1172502188279472218/player_tab.PNG?ex=65608cc1&is=654e17c1&hm=acca34a9edba8a27e5542bbbbb37931eebeb63509282c522745942c22d87fa76&)
 ---
 ## Commands
-* `.show [track abbra]` to show track leaderboard in googlesheet files!
+* `.show [track abbreviation]` to show track leaderboard in googlesheet files!
 * `/submit` to submitting people's Time Trials (recommended Apps > updating time trials) is better for this command and much easier
 * `.tl` to translate any message
 * `Apps > Translate ` this command just right click on any massage you want to translate and click on `Apps` tab and click `translate`
 * `Apps > Submit TimeTrials` this command just right click on any tt post and click on `Apps` and go to `Submit TimeTrials`
 *`.remove [value]` to remove massage
 *`player` to display player in your team
-*`code` type code to make bot sent track's abbra picture
+*`code` type code to make bot sent track's abbreviation picture
 
