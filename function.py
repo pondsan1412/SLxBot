@@ -12,11 +12,12 @@ def categorize_track(track):
                 'brrm', 'bmt', 'bbb', 'bpg', 'bmm', 'brr7', 'bad', 'brp', 'bdks',
                 'byi', 'bbr', 'bmc', 'bws', 'bssy', 'batd', 'bdc', 'bmh', 'bscs',
                 'blal', 'bsw', 'bkc', 'bvv','bra','bdkm','bdci','bppc','bmd','briw',
-                'bbc3','brrw',
+                'bbc3','brrw','brr','bdct'
             ]
             
             if lower_track in dlc_tracks:
                 return 'DLC'
+            
             elif lower_track in [
                 'mks', 'wp', 'ssc', 'tr', 'mc', 'th', 'tm', 'sgf', 'sa', 'ds',
                 'ed', 'mw', 'cc', 'bdd', 'bc', 'rr', 'rmmm', 'rmc', 'rccb', 'rtt',
@@ -24,6 +25,7 @@ def categorize_track(track):
                 'rpps', 'rgv', 'rrd', 'dyc', 'dea', 'ddd', 'dmc', 'dwgm', 'drr',
                 'diio', 'dhc', 'dbp', 'dcl', 'dww', 'dac', 'dnbc', 'drir', 'dsbs', 'dbb'
             ]:
+            
                 return 'S'
             else:
                 return 'wrong abbr!'
