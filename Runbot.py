@@ -53,6 +53,7 @@ from cog.commands.leaderboard import Slxleaderboard
 from cog.commands.TTUpdate import UpdateTimeTrials
 from cog.commands.tracking_tl import tracking_tl
 from error_handler import ErrorHandler
+from new_command.mk8dxwr import mk8dxwr
 async def main():
     for cog in{
         context,
@@ -61,7 +62,8 @@ async def main():
         Slxleaderboard,
         UpdateTimeTrials,
         tracking_tl,
-        ErrorHandler
+        ErrorHandler,
+        mk8dxwr
         
     }:
         await bot.add_cog(cog(bot))
