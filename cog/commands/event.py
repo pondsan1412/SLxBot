@@ -469,36 +469,46 @@ class TTbutton(discord.ui.View):
             await interaction.response.send_message(f'`{interaction.user.name}` You do not have the required role to verify.')
             return
         def slxmember_id(user):
-            if user == player_id.Pond:
-                return "Pond"
-            elif user == player_id.Stan:
-                return "Stan"
-            elif user == player_id.Robertala:
-                return "Robertala"
+            if user == player_id.AMDX:
+                return "AMDX"
             elif user == player_id.Ant:
                 return "Ant"
-            elif user == player_id.FreeDobby:
-                return "FreeDobby"
-            elif user == player_id.FalseKing:
-                return "FalseKing"
-            elif user == player_id.AMDX:
-                return "AMDX"
-            elif user == player_id.Vonz:
-                return "Vonz"
-            elif user == player_id.JacKo:
-                return "JacKo"
-            elif user == player_id.Rick:
-                return "Rick"
-            elif user == player_id.Rushh:
-                return "Rushh"
-            elif user == player_id.BIGW:
-                return "BIGW"
             elif user == player_id.BenJames:
                 return "Benjames"
+            elif user == player_id.BIGW:
+                return "BIGW"
+            elif user == player_id.FalseKing:
+                return "FalseKing"
+            elif user == player_id.FreeDobby:
+                return "FreeDobby"
+            elif user == player_id.Holycomb:
+                return "Holycomb"
+            elif user == player_id.JacKo:
+                return "JacKo"
             elif user == player_id.Kaleb112:
                 return "Kaleb112"
-            elif user ==player_id.Torasshi:
+            elif user == player_id.leftyginger:
+                return "leftyginger"
+            elif user == player_id.Nesszomi:
+                return "Nesszomi"
+            elif user == player_id.Paulo22:
+                return "Paulo22"
+            elif user == player_id.Pond:
+                return "Pond"
+            elif user == player_id.Rick:
+                return "Rick"
+            elif user == player_id.Robertala:
+                return "Robertala"
+            elif user == player_id.Rushh:
+                return "Rushh"
+            elif user == player_id.Stan:
+                return "Stan"
+            elif user == player_id.SUIIced:
+                return "SUIIced"
+            elif user == player_id.Torasshi:
                 return "Torasshi"
+            elif user == player_id.Vonz:
+                return "Vonz"
             else:
                 return None 
             
@@ -543,7 +553,7 @@ class TTbutton(discord.ui.View):
             ]:
                 return 'S'
             else:
-                return 'wrong abbr!'
+                return 'Wrong abbreviation!'
 
         msg = self.content
         author_id = self.user_id
@@ -556,16 +566,16 @@ class TTbutton(discord.ui.View):
         
 
         if trackname=='':
-            error_message_track = f"player <@{author_id}> didn't put **track abbr** did you forget it?. \ngo to post{msgjump}  \n`error: missing **track abbr**`"
+            error_message_track = f"Can't submit because <@{author_id}> didn't put a **track abbreviation**, did you forget it?. \n go to post{msgjump}  \n`ERROR: Missing **Track abbreviation**.`"
             await interaction.response.send_message(error_message_track)
             return
-        if category=='wrong abbr!':
-            error_message_time = f"can't submit due <@{author_id}> put wrong track abbr. in their post.\n go to post {msgjump}  \n`error: incorrect track abbr.`"
+        if category=='Wrong abbreviation!':
+            error_message_time = f"Can't submit because <@{author_id}> put wrong **track abbreviation** in their post.\n go to post {msgjump}  \n`ERROR: **Incorrect track abbreviation**.`"
             await interaction.response.send_message(error_message_time)
             await interaction.followup.send(msg)
             return
         elif time is None:
-            error_message_time = f"can't submit because <@{author_id}>  forgor to put **time** in their post.\n go to post {msgjump}  \n`error: missing **time**`"
+            error_message_time = f"Can't submit because <@{author_id}> forgot to put a **time** in their post.\n go to post {msgjump}  \n`ERROR: Missing **Time**.`"
             await interaction.response.send_message(error_message_time)
             return
         
@@ -584,7 +594,7 @@ class TTbutton(discord.ui.View):
             
 
             view=showTT(content=msg)
-            await interaction.response.edit_message(content=f"<@{author_id}>  TT has been verified \n {trackname} {time} \n proof: {msgjump}",view=view)
+            await interaction.response.edit_message(content=f"<@{author_id}>, Your TT has been verified \n {trackname} {time} \n proof: {msgjump}",view=view)
             
             
             
@@ -647,7 +657,7 @@ class eventbot(commands.Cog):
                 ]:
                     return 'S', time
                 else:
-                    return 'wrong abbr!', time
+                    return 'Wrong abbreviation!', time
         
         def filtertext(match):
             pattern = r'[a-zA-Z0-9]+'
@@ -673,17 +683,17 @@ class eventbot(commands.Cog):
             if message.attachments and not message.content:
                 file_path = "images/example_tt.png"
                 file = discord.File(file_path, filename="example_tt.png")
-                await message.reply("Please follow the format when you upload your time trials [track] [time]\nFor example", file=file,delete_after=100)
+                await message.reply("Please follow the format when you upload your time trials, [track] [time].\nFor example:", file=file,delete_after=100)
                 sent_messages.add(message.id)
         # ตรวจสอบว่ามีไฟล์ attachments และมีข้อความ และข้อความไม่ตรงรูปแบบ
             elif message.attachments and not is_valid_format(message.content):
-                await message.reply("**Warning**: Missing **time format**\nPlease follow format [track] [time] or you will get super slow verify or missed verify\n***For example***\n`rGV 1:01.100` \n error: probably wrong time format or missing time",delete_after=100)
+                await message.reply("**Warning**: Missing **time format**\nPlease follow format [track] [time], or you will get super slow verify or missed verify\n***For example***\n`rGV 1:01.100` \n ERROR: Probably the wrong time format or missing time",delete_after=100)
                 sent_messages.add(message.id)
             elif message.attachments and filter_time is not None and filter_text.isdigit() and 0 <= int(filter_text) <= 9:
-                await message.reply("why did you only post picture with time format? \n did you forgot to put track's abbra in your post? huh? \n MISSING: **[track]**")
+                await message.reply("Why did you only post picture with time format? \n Did you forgot to put track's abbreviation in your post? Huh? \n MISSING: **[Track]**")
             if message.attachments and message.content:
                 category, time = categorize_track_and_time(message.content)
-                if category !='wrong abbr!':
+                if category !='Wrong abbreviation!':
                     msg_jump = message.jump_url
                     #need to return all these value in on_message function to TTbutton class 
                     view = TTbutton(
@@ -693,9 +703,9 @@ class eventbot(commands.Cog):
                         msg_jump=message.jump_url
                     )
                     
-                    await message.channel.send(f"request from **{message.author.name}**\n info: **{message.content}** \n proof: {msg_jump} ",view=view)
+                    await message.channel.send(f"Request from **{message.author.name}**\n info: **{message.content}** \n proof: {msg_jump} ",view=view)
                 else:
-                    await message.reply(f"wrong abbra or wrong time format please check again {message.author.mention}",delete_after=100)
+                    await message.reply(f"Wrong abbreviation or time format please check again. {message.author.mention}",delete_after=100)
 
 class showTT(discord.ui.View):
     def __init__(self,content):

@@ -1,6 +1,8 @@
 import re
+import discord
 from new_command import player_id
 msg = None
+
 def categorize_track(track):
             track = filtertext(match="")
             lower_track = track.lower()

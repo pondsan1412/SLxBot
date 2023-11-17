@@ -5,3 +5,4 @@ oauth2client
 googletrans==3.1.0a0
 easygoogletranslate
 mk8dx
+langdetect
