@@ -12,7 +12,7 @@ def categorize_track(track):
                 'brrm', 'bmt', 'bbb', 'bpg', 'bmm', 'brr7', 'bad', 'brp', 'bdks',
                 'byi', 'bbr', 'bmc', 'bws', 'bssy', 'batd', 'bdc', 'bmh', 'bscs',
                 'blal', 'bsw', 'bkc', 'bvv','bra','bdkm','bdci','bppc','bmd','briw',
-                'bbc3','brr',
+                'bbc3','brrw',
             ]
             
             if lower_track in dlc_tracks:

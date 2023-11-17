@@ -36,4 +36,4 @@ the discord bot made for Silent Lightning team discord server
 * `.remove [value]` to remove massage
 * `player` to display player in your team
 * `code` type code to make bot sent track's abbreviation picture
-
+* `wr` type wr with abbreviation track to display the top wr holder.
