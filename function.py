@@ -121,3 +121,35 @@ def check_user_id(user_id_check:int):
     else:
         for current_slx_member in list_member:
             return current_slx_member
+        
+def player_mii_pfp(player_name):
+    if player_name=="Alberto":
+        return "https://i.gyazo.com/d6ddd086e16f14b53fafcd05753f5780.png"
+    elif "Army":
+        return "https://i.gyazo.com/12b465eb7c0600e5452bd3885288b2a4.png"
+    elif "Panda":
+        return "https://i.gyazo.com/3eb3a940af6dc812c6444ab97175f8e1.jpg"
+    elif "StervtL":
+        return "https://i.gyazo.com/583ee34baab6131d8c4c4aaf0b32e01b.png"
+    elif "Jimmy":
+        return "https://gyazo.com/1d5c4ff0d1f1d4510c791c4d931e1ea2.png"
+    elif "Technical":
+        return "https://i.gyazo.com/63b6329a321fdc12d8fe55122d4f833f.png"
+    elif "K4I":
+        return "https://gyazo.com/06bdc3c68c5baf1e987e15b81a4fe980.png"
+    elif "Kevin":
+        return "https://gyazo.com/51dede1323d5fe7755e068afa9306c6c.png"
+    elif "Shaun":
+        return "https://gyazo.com/edcb7a068dee9b327580481e1650617a.png"
+    elif "JenZua":
+        return "https://i.gyazo.com/8749de065de445f330585667351ad555.png"
+    elif "Pii":
+        return "https://i.gyazo.com/ff76355cb6b1f47d9ea9d0ffbee09e68.png"
+    elif "SuperFX":
+        return "https://media.discordapp.net/attachments/360273303426039808/735824383016435812/image0.jpg"
+    elif "おまえモナー":
+        return "https://gyazo.com/43267f60c9e1b727241e12670c307b4c.png"
+    elif "Vincent":
+        return "https://i.gyazo.com/d565058807ffb5cb3a9665fea9612dc3.png"
+    else:
+        return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBD-Y75x88euisalAMvdnAmutQA9ISrptQSA&usqp=CAU"
