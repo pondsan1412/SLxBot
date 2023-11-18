@@ -52,7 +52,7 @@ class mk8dxwr(commands.Cog):
                         onmouseover_attr = columns[10].img.get('onmouseover', '')
                         splits_values = [value.strip() for value in onmouseover_attr[15:-2].split("', '")]
                         matches = re.search(r"show_splits\('([^']+)', '([^']+)', '([^']+)', '([^']+)', '([^']+)'", onmouseover_attr)
-
+                        player_profile = columns[2].a['href']
                         # Check if columns[1].a is not None before accessing its text attribute
                         time_ = columns[1].a.text.strip() if columns[1].a else None
 
@@ -60,9 +60,9 @@ class mk8dxwr(commands.Cog):
                             lap1, lap2, lap3, coins, shroom = splits_values[1:6]
                         else:
                             lap1, lap2, lap3, coins, shroom = '', '', '', '', ''
-
+                        
                         if track.lower() == trackname.lower():
-                            return columns[1].a['href'], date_, player_, nation_, full_url, time_, combo_charecter, combo_vehicle, combo_glider, combo_roller, duration_, lap1, lap2, lap3, coins, shroom
+                            return columns[1].a['href'], date_, player_, nation_, full_url, time_, combo_charecter, combo_vehicle, combo_glider, combo_roller, duration_, lap1, lap2, lap3, coins, shroom,player_profile
 
                     # Track not found
                     return None
@@ -73,12 +73,19 @@ class mk8dxwr(commands.Cog):
                 # Handle TypeError
                 return f"Error: {trackname}'s WR video hasn't been verified yet in mkwrs.com, so no video for you"
 
-
+            except AttributeError as e:
+                # Print relevant information for debugging
+                print(f"AttributeError: {e} ")
+                print(f"columns[0]: {columns[0] if columns else None}")
+                print(f"columns[0].a: {columns[0].a if columns and columns[0] else None}")
+                return f"Error: AttributeError in get_track_url for track {trackname} \n {e}"
 
 
 
         url = "https://mkwrs.com/mk8dx/wrs.php?date=0"
         trackname = result
+        if trackname == "SNES Bowser's Castle 3":
+            trackname = "SNES Bowser Castle 3"
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:
                 html_content = await response.text()
@@ -93,14 +100,18 @@ class mk8dxwr(commands.Cog):
                 return f"error: {e}"
 
         if isinstance(result, tuple):
-            track_url, date_, player_, nation_, full_url, time_,combo_charecter,combo_vegicle,combo_glider,combo_roller,duration_,lap1,lap2,lap3,coins,shroom = result
+            track_url, date_, player_, nation_, full_url, time_,combo_charecter,combo_vegicle,combo_glider,combo_roller,duration_,lap1,lap2,lap3,coins,shroom,player_profile = result
             video_picture_url = track_url
             video_id = youtube_id(video_picture_url)
             thumbnail_url = f'https://img.youtube.com/vi/{video_id}/maxresdefault.jpg'
+            player_ = f"{player_}"
+            name_parts = player_.split(" ")
+            cleaned_player = " ".join(name_parts[:-1]).rstrip()
+
             embed = Embed()
             
             embed.set_author(name=f"{player_}'s profile", icon_url=f"{full_url}",
-                            url=f"https://mkwrs.com/mk8dx/profile.php?player={player_}")
+                    url=f"https://mkwrs.com/mk8dx/{player_profile}")
             embed.add_field(name=f"Currently World Record Of **___{trackname}___** ",
                             value=f" \n Verified Date: **{date_}** \n Time: **{time_}** \n WR HOLDER: **{player_}**\n Country: **{nation_}**\nLength Day: **{duration_}** \n **__lap time__** :stopwatch: \n :one: {lap1}, \n:two: {lap2}, \n:three: {lap3} \n <:threemushrooms:1175155099971096679> **{shroom}** \n <:item000Coin:1175154443306668192> **{coins}** \n\n **___Combination___** \n charecter: **{combo_charecter}**\n vehicle: **{combo_vegicle}** \n roller: **{combo_roller}**\n glider: **{combo_glider}** ")
             embed.set_image(url=f"{thumbnail_url}").video
@@ -110,6 +121,7 @@ class mk8dxwr(commands.Cog):
             button = discord.ui.Button(style=style, url=track_url, label=f"Watch {player_}'s video")
             view.add_item(item=button)
             await ctx.send(embed=embed,view=view)
+            
         else:
             await ctx.send(result)
 async def setup(bot):

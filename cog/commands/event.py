@@ -621,8 +621,8 @@ class eventbot(commands.Cog):
                 await message.reply("https://cdn.discordapp.com/attachments/875217920131727451/875218003522912306/MK8D_ABBREV.png?ex=654c50c8&is=6539dbc8&hm=52aef9ebc759a8f2d8c8db9bb58c91a8cdbaef131ae172556d964eff6f24e066&")
             
         except IndexError:
-            pass
-        time_trials_channel = 874381861424607314
+            pass              
+        time_trials_channel = 874381861424607314 
         sent_messages = set()
 
         def is_valid_format(content):

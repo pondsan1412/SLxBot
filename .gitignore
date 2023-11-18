@@ -145,3 +145,6 @@ player_data.txt
 testtrack.py
 testtrack.py
 new_command/player_id.py
+TestBot.py
+Test_ping.py
+Test_emote_func.py
