@@ -7,7 +7,7 @@ import re
 from discord import Embed
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
-from new_command import player_id
+from cog import player_id
 from mk8dx import Track
 #connect to JSON
 scope = [config.feed_t,config.spread_t,config.file_t,config.drive_t]
@@ -466,7 +466,7 @@ class TTbutton(discord.ui.View):
             pass
         else:
         # กรณีที่ผู้ใช้ไม่มี role TTupdater
-            await interaction.response.send_message(f'`{interaction.user.name}` You do not have the required role to verify.')
+            await interaction.response.send_message(f'`{interaction.user.name}` you don\'s have permission to click this button! bruh')
             return
         def slxmember_id(user):
             if user == player_id.AMDX:
@@ -564,44 +564,45 @@ class TTbutton(discord.ui.View):
         msgjump = self.msg_jump
         message_id = self.message_id
         
+        try:
+            if trackname=='':
+                error_message_track = f"Can't submit because <@{author_id}> didn't put a **track abbreviation**, did you forget it?. \n go to post{msgjump}  \n`ERROR: Missing **Track abbreviation**.`"
+                await interaction.response.send_message(error_message_track)
+                return
+            if category=='Wrong abbreviation!':
+                error_message_time = f"Can't submit because <@{author_id}> put wrong **track abbreviation** in their post.\n go to post {msgjump}  \n`ERROR: **Incorrect track abbreviation**.`"
+                await interaction.response.send_message(error_message_time)
+                await interaction.followup.send(msg)
+                return
+            elif time is None:
+                error_message_time = f"Can't submit because <@{author_id}> forgot to put a **time** in their post.\n go to post {msgjump}  \n`ERROR: Missing **Time**.`"
+                await interaction.response.send_message(error_message_time)
+                return
+            
+            else:
+                try:
+                    if trackname == 'bdct' or trackname == 'bDCt':
+                        trackname = 'bdci'
 
-        if trackname=='':
-            error_message_track = f"Can't submit because <@{author_id}> didn't put a **track abbreviation**, did you forget it?. \n go to post{msgjump}  \n`ERROR: Missing **Track abbreviation**.`"
-            await interaction.response.send_message(error_message_track)
-            return
-        if category=='Wrong abbreviation!':
-            error_message_time = f"Can't submit because <@{author_id}> put wrong **track abbreviation** in their post.\n go to post {msgjump}  \n`ERROR: **Incorrect track abbreviation**.`"
-            await interaction.response.send_message(error_message_time)
-            await interaction.followup.send(msg)
-            return
-        elif time is None:
-            error_message_time = f"Can't submit because <@{author_id}> forgot to put a **time** in their post.\n go to post {msgjump}  \n`ERROR: Missing **Time**.`"
-            await interaction.response.send_message(error_message_time)
-            return
-        
-        else:
-            if trackname == 'bdct' or trackname == 'bDCt':
-                trackname = 'bdci'
+                    update_row_submit =[trackname, category, player, time]
+                    file_in_sheet_testsheet.insert_row(update_row_submit, 3)
+                    check = "<:SL:916870427232567328>"
+                    try:
+                        message = await interaction.channel.fetch_message(message_id)
+                        await message.add_reaction(check)
+                    except discord.NotFound:
+                        await interaction.channel.send("error")
+                    
+                    view=showTT(content=msg)
+                    await interaction.response.edit_message(content=f"<@{author_id}>, Your TT has been verified \n {trackname} {time} \n proof: {msgjump}",view=view)
+                    
+                    self.value = True
+                    self.stop()
+                except AttributeError as e:
+                    return e
 
-            update_row_submit =[trackname, category, player, time]
-            file_in_sheet_testsheet.insert_row(update_row_submit, 3)
-            check = "<:SL:916870427232567328>"
-            try:
-                message = await interaction.channel.fetch_message(message_id)
-                await message.add_reaction(check)
-            except discord.NotFound:
-                await interaction.channel.send("error")
-            
-
-            view=showTT(content=msg)
-            await interaction.response.edit_message(content=f"<@{author_id}>, Your TT has been verified \n {trackname} {time} \n proof: {msgjump}",view=view)
-            
-            
-            
-            self.value = True
-            self.stop()
-            
-        
+        except AttributeError as e:
+            return e
 class eventbot(commands.Cog):
     def __init__(self, bot:commands.Bot):
         self.bot = bot

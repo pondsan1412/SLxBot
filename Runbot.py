@@ -1,77 +1,41 @@
 import discord
 from discord.ext import commands, tasks
 import random
+import os
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
-class Slxbot(commands.AutoShardedBot):
-
-    def __init__(self, command_prefix=commands.when_mentioned_or("."), *, intents: discord.Intents = intents) -> None:
-        super().__init__(command_prefix, intents=intents)
-
-    async def setup_hook(self) -> None:
-        await bot.tree.sync()
-bot = Slxbot(intents=intents)
-activity_messages = [
-    ".show rgv",
-    ".tl ฉันรักคุณ",
-    "/submit",
-]
-
-# สร้างฟังก์ชันสำหรับอัปเดตกิจกรรมของบอท
-async def update_activity():
-    random_message = random.choice(activity_messages)
-    activity = discord.Activity(name=f'{random_message} ', type=discord.ActivityType.playing)
-    await bot.change_presence(activity=activity, status=discord.Status.do_not_disturb)
-
-@bot.event
-async def on_ready():
-    await update_activity()
-    random_activity_loop.start()
-    msg = bot.get_channel(1163800972867416064)
-    await msg.send("ready")
+intents.guilds = True
+class SlxBot(commands.Bot):
+    def __init__(self):
+        super().__init__(command_prefix=commands.when_mentioned_or("."),intents=intents)
+       
+    async def on_ready(self):
+        print("ready")
     
+    async def setup_hook(self):
+        cog_folder = "commands"  
 
-# เริ่มลูปสุ่มกิจกรรม
-@tasks.loop(seconds=7)
-async def random_activity_loop():
-    await update_activity()
+        for filename in os.listdir(cog_folder):
+            if filename.endswith(".py") and not filename.startswith("__"):
+                module_name = f"{cog_folder}.{filename[:-3]}"
+                try:
+                    await self.load_extension(module_name)
+                    print(f"Loaded extension: {module_name}")
+                except Exception as e:
+                    print(f"Failed to load extension {module_name}: {e}")
 
-@bot.event
-async def on_guild_join(_: discord.Guild):
-    await update_activity()
 
-@bot.event
-async def on_guild_remove(_: discord.Guild):
-    await update_activity()
+    async def update_activity(self):
+        activity_messages = [
+        ".show rgv",
+        ".tl ฉันรักคุณ",
+        "/submit",
+    ]
+        random_message = random.choice(activity_messages)
+        activity = discord.Activity(name=f'{random_message} ', type=discord.ActivityType.playing)
+        await self.change_presence(activity=activity, status=discord.Status.do_not_disturb)
 from cog import secret
+bot = SlxBot()
+bot.run(token=secret.discord_token)
 
-from new_command.context import context
-from cog.commands.event import eventbot
-from cog.commands.General import General
-from cog.commands.leaderboard import Slxleaderboard
-from cog.commands.TTUpdate import UpdateTimeTrials
-from cog.commands.tracking_tl import tracking_tl
-from error_handler import ErrorHandler
-from new_command.mk8dxwr import mk8dxwr
-async def main():
-    for cog in{
-        context,
-        General,
-        eventbot,
-        Slxleaderboard,
-        UpdateTimeTrials,
-        tracking_tl,
-        ErrorHandler,
-        mk8dxwr
-        
-    }:
-        await bot.add_cog(cog(bot))
-    random_activity_loop.start()
-    await update_activity()
-    await bot.start(secret.discord_token)
-        
-
-
-import asyncio
-asyncio.run(main())

@@ -4,7 +4,7 @@ import asyncio
 from googletrans import Translator
 import random  
 import json
-from new_command import player_id
+from cog import player_id
 #from cog.commands.TTUpdate import SelectTTupdater
 
 DATA_FILE = "player_data.txt"

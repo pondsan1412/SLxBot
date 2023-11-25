@@ -4,7 +4,7 @@ from discord import app_commands,Embed
 from easygoogletranslate import EasyGoogleTranslate
 import asyncio
 import re
-from new_command import player_id
+from cog import player_id
 from cog import config
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread

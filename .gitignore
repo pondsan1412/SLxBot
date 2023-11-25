@@ -139,12 +139,12 @@ test1.py
 images/mario-1697272527-0.png
 images/mario-1697272478-0.png
 images/dorae-1697272430-0.png
-new_command/player_id.py
+cog/player_id.py
 player_data.json
 player_data.txt
 testtrack.py
 testtrack.py
-new_command/player_id.py
+cog/player_id.py
 TestBot.py
 Test_ping.py
 Test_emote_func.py

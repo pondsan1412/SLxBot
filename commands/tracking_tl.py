@@ -6,7 +6,7 @@ from googletrans import Translator
 import random  
 from langdetect import detect
 import json
-from new_command import player_id
+from cog import player_id
 import function
 from easygoogletranslate import EasyGoogleTranslate
 from googletrans import Translator
@@ -46,8 +46,10 @@ class tracking_tl(commands.Cog):
         translator= filter_translate(result="")
         lang_list = ['fr','th','de','ja','nl']
         player_list=[pond_,robert_,stan_]
-        
+        special_characters = ['<','>',':',';']
         if detect_ not in lang_list:
+            return
+        elif any(char in message.content for char in special_characters):
             return
         else:
             embed = Embed()

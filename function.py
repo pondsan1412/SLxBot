@@ -1,10 +1,10 @@
 import re
 import discord
-from new_command import player_id
+from cog import player_id
 msg = None
 
 def categorize_track(track):
-            track = filtertext(match="")
+            track = filtertext(match=track)
             lower_track = track.lower()
             dlc_tracks = [
                 'bpp', 'btc', 'bcmo', 'bcma', 'btb', 'bsr', 'bsg', 'bnh', 'bnym',
@@ -28,7 +28,7 @@ def categorize_track(track):
             
                 return 'S'
             else:
-                return 'wrong abbr!'
+                return 'abbr not in anylist'
             
 def slxmember_id(user):
     if user == player_id.Pond:
@@ -98,16 +98,20 @@ def slx_member_id(current_slx_member):
             
 def filterregex(match):
     pattern = r'\d+:\d+\.\d+'
-    msg_content = msg.content
+    msg_content = ""
     matches = re.findall(pattern, msg_content)
     for match in matches:
         return match
     else:
         return None
+    
+def get_filter_content(track):
+    return track
+
 
 def filtertext(match):
     pattern = r'[a-zA-Z0-9]+'
-    msg_content = msg.content
+    msg_content = match
     matches = re.findall(pattern, msg_content)
     for match in matches:
         return match
@@ -151,5 +155,19 @@ def player_mii_pfp(player_name):
         return "https://gyazo.com/43267f60c9e1b727241e12670c307b4c.png"
     elif "Vincent":
         return "https://i.gyazo.com/d565058807ffb5cb3a9665fea9612dc3.png"
+    elif "しらぬい":
+        return "https://i.gyazo.com/75700e32ceac6acd9984d72dc22b8ed3.png"
+    elif "Lemon":
+        return "https://gyazo.com/5493870e38f06133fb083cdb0a72241a.png"
+    elif "TylerR":
+        return "https://gyazo.com/0f8ec2c284c30d8711c081c112317b21.png"
+    elif "Davi":
+        return "https://gyazo.com/68501b0fb879da67355f6889970ab51a.png"
+    elif "そうめん":
+        return "https://i.gyazo.com/879becac3bd86c3d09c5fe8dfc5d50ea.png"
+    elif "エル":
+        return "https://i.gyazo.com/f1985f99b69c0b50304537170c3b2822.png"
+    elif "Danny":
+        return "https://gyazo.com/a6040832be242407d60f5ebbe6346193.png"
     else:
         return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBD-Y75x88euisalAMvdnAmutQA9ISrptQSA&usqp=CAU"
