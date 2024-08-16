@@ -6,12 +6,14 @@ the discord bot made for Silent Lightning team discord server
 >
 > #### 2023-11-10 Lounge command is not supported (fixing)
 > #### 2023-11-10 General, Leaderboard, TTupdate, context is supported
-
+> currently UNDEPLOYED
 ### Apps commands for updating people's Time Trials
-![image](https://cdn.discordapp.com/attachments/1172493621732327495/1172495134395474020/updating.gif?ex=6560862f&is=654e112f&hm=6ba1a9b10920fa311a1ab44a18d794e0e8c7b1d74dac400931c0205edddb7a2a&)
+
+
 
 ### Show track's leaderboard 
-![image](https://cdn.discordapp.com/attachments/1172493621732327495/1172495675930447903/show_track.gif?ex=656086b1&is=654e11b1&hm=39670465510eacec7b523fb60a4a7899052a968c397224e4e1baccb867f9cc98&)
+![slx](https://github.com/user-attachments/assets/18fd92cb-88f7-495c-b3fb-73b68dff864f)
+
 
 #setup
 ## Critical prerequisites to install
