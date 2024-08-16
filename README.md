@@ -7,9 +7,6 @@ the discord bot made for Silent Lightning team discord server
 > #### 2023-11-10 Lounge command is not supported (fixing)
 > #### 2023-11-10 General, Leaderboard, TTupdate, context is supported
 > currently UNDEPLOYED
-### Apps commands for updating people's Time Trials
-
-
 
 ### Show track's leaderboard 
 ![slx](https://github.com/user-attachments/assets/18fd92cb-88f7-495c-b3fb-73b68dff864f)
